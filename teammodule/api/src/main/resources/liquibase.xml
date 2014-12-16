@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+ 
+    <!--
+    	See http://wiki.openmrs.org/display/docs/Module+liquibase+File for 
+    	documentation on this file.
+    
+        See http://www.liquibase.org/manual/home#available_database_refactorings
+        for a list of supported elements and attributes
+    -->
+ 
+ 	<!-- Uncomment this and edit the values below to use this file
+ 	
+	<changeSet id="mymoduleid-2010-05-25-15:50" author="bwolfe">
+		<preConditions onFail="MARK_RAN">
+			<not><tableExists tableName="mymoduleid_myobject"/></not>
+		</preConditions>
+		<comment>
+			Creating the mymoduleid_myobject table
+		</comment>
+		<createTable tableName="mymoduleid_myobject">
+			<column name="mymoduleid_myobject_id" type="int">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="firstname" type="varchar(255)"/>
+			<column name="lastname" type="varchar(255)"/>
+			<column name="username" type="varchar(255)">
+				<constraints unique="true" nullable="false"/>
+			</column>
+			<column name="testid" type="int" />
+		</createTable>
+    </changeSet>
+    
+    -->
+    
+   <!--  <changeSet id="1" author="Muhammad Safwan">
+        <createTable tableName="team">
+            <column name="team_id" type="int(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="identifier" type="varchar(45)"/>
+            <column name="name" type="varchar(45)"/>
+            <column name="location_id" type="int(11)"/>
+            <column name="date_created" type="datetime">
+             <constraints nullable="false"/>
+            </column>
+            <column name="creator" type="int(11)">
+             <constraints nullable="false"/>
+            </column>
+            <column name="changed_by" type="int(11)"/>
+            <column name="date_changed" type="datetime)"/>
+            <column name="voided" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="voided_by" type="int(11)"/>
+            <column name="date_voided" type="datetime"/>
+            <column name="void_reason" type="varchar(255)"/>
+            
+        </createTable>
+    </changeSet> -->
+ 
+</databaseChangeLog>
