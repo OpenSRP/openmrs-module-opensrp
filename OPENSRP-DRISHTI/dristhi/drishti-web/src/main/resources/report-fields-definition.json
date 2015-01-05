@@ -1,0 +1,112 @@
+{
+    "ec_registration": [
+        "id",
+        "currentMethod",
+        "familyPlanningMethodChangeDate",
+        "caste",
+        "economicStatus"
+    ],
+    "fp_complications": [
+    ],
+    "fp_change": [
+        "id",
+        "newMethod",
+        "familyPlanningMethodChangeDate"
+    ],
+    "anc_registration": [
+        "motherId",
+        "referenceDate",
+        "registrationDate"
+    ],
+    "anc_visit": [
+        "id",
+        "ancVisitDate",
+        "ancVisitNumber"
+    ],
+    "anc_close": [
+        "id",
+        "timeOfInducedAbortion",
+        "dateOfInducedAbortion",
+        "closeReason",
+        "dateOfSpontaneousAbortion",
+        "isMaternalDeath",
+        "maternalDeathDate"
+    ],
+    "tt": [
+        "id",
+        "ttDose",
+        "ttInjectionPlace",
+        "ttDate"
+    ],
+    "tt_1": [
+        "id",
+        "ttDose",
+        "ttInjectionPlace",
+        "ttDate"
+    ],
+    "tt_2": [
+        "id",
+        "ttDose",
+        "ttInjectionPlace",
+        "ttDate"
+    ],
+    "tt_booster": [
+        "id",
+        "ttDose",
+        "ttInjectionPlace",
+        "ttDate"
+    ],
+    "delivery_outcome": [
+        "id",
+        "deliveryOutcome",
+        "referenceDate",
+        "deliveryPlace",
+        "didWomanSurvive",
+        "didMotherSurvive",
+        "deliveryType"
+    ],
+    "pnc_close": [
+        "id",
+        "closeReason",
+        "isMaternalDeath",
+        "deathDate"
+    ],
+    "pnc_registration_oa": [
+        "motherId",
+        "deliveryType",
+        "deliveryPlace",
+        "referenceDate",
+        "deliveryOutcome"
+    ],
+    "pnc_visit": [
+        "id",
+        "pncVisitNumber",
+        "pncVisitDate",
+        "deliveryPlace",
+        "referenceDate"
+    ],
+    "child_immunizations": [
+        "id",
+        "immunizationsGiven",
+        "immunizationDate"
+    ],
+    "child_close": [
+        "id",
+        "closeReason",
+        "deathDate",
+        "deathCause"
+    ],
+    "child_illness": [
+        "id",
+        "childSigns",
+        "sickVisitDate",
+        "reportChildDisease",
+        "reportChildDiseaseDate",
+        "submissionDate"
+    ],
+    "vitamin_a": [
+        "id",
+        "vitaminADose",
+        "vitaminADate"
+    ]
+}

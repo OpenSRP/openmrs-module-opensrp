@@ -1,0 +1,449 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix" id="crvs_death_notification">
+    <!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSLT sheet created by Enketo LLC.-->
+    <section class="form-logo"></section>
+    <h3 id="form-title">Death notification</h3>
+    <select id="form-languages" style="display:none;" data-default-lang="default">
+        <option value="default">default</option>
+    </select>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Date data collected</span>
+        <span class="required">*</span>
+        <input type="date" name="/crvs_death_notification/encounter_date" required="required" data-type-xml="date"/>
+    </label>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">province</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="kpk" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Khyber Pakhtunkhwah</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="sindh" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Sindh</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="balochistan" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Balochistan</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="punjab" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Punjab</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="gilgit_baltistan" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Gilgit Baltistan</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="kashmir" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Kashmir</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="fata" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">FATA</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/province" data-name="/crvs_death_notification/province" value="out_of_country" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Out of Country</span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">district</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/district" data-name="/crvs_death_notification/district" value="abbottabad" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Abbottabad</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/district" data-name="/crvs_death_notification/district" value="other" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Other</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/district" data-name="/crvs_death_notification/district" value="not_applicable" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Not Applicable</span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <fieldset class="question or-branch pre-init ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">town</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/town" data-name="/crvs_death_notification/town" value="abbottabad" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Abbottabad</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/town" data-name="/crvs_death_notification/town" value="havalian" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Havalian</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/town" data-name="/crvs_death_notification/town" value="other" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Other</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/town" data-name="/crvs_death_notification/town" value="not_applicable" data-relevant="false()" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Not Applicable</span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="note non-select ">
+        <span lang="" class="question-label active">Province : 
+            
+            <span class="or-output" data-value=" /crvs_death_notification/province "></span>, District : 
+            
+            <span class="or-output" data-value=" /crvs_death_notification/district "></span>, Town : 
+            
+            <span class="or-output" data-value=" /crvs_death_notification/town "></span>
+        </span>
+        <input type="text" name="/crvs_death_notification/location_note" data-type-xml="string" readonly="readonly"/>
+    </label>
+    <label class="question or-appearance-minimal ">
+        <span lang="" class="question-label active">UC where death registered</span>
+        <span class="required">*</span>
+        <select name="/crvs_death_notification/encounter_location" data-name="/crvs_death_notification/encounter_location" required="required" data-type-xml="select1">
+            <option class="itemset-template" value="" data-items-path="instance('ucs')/root/item[province= /crvs_death_notification/province  and district= /crvs_death_notification/district  and town= /crvs_death_notification/town ]">...</option>
+        </select>
+        <span class="or-option-translations" style="display:none;"></span>
+        <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
+            <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+        </span>
+    </label>
+    <label class="note non-select ">
+        <span lang="" class="question-label active">Deceased information</span>
+        <input type="text" name="/crvs_death_notification/generated_note_name_10" data-type-xml="string" readonly="readonly"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Deceased Name</span>
+        <span class="required">*</span>
+        <input type="text" name="/crvs_death_notification/first_name" required="required" data-type-xml="string"/>
+    </label>
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Gender</span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/gender" data-name="/crvs_death_notification/gender" value="male" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Male</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/gender" data-name="/crvs_death_notification/gender" value="female" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Female</span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Father Name</span>
+        <span class="required">*</span>
+        <input type="text" name="/crvs_death_notification/father_name" required="required" data-type-xml="string"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Mother Name</span>
+        <input type="text" name="/crvs_death_notification/mother_name" data-type-xml="string"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Date of Birth</span>
+        <span class="required">*</span>
+        <input type="date" name="/crvs_death_notification/birth_date" required="required" data-constraint=".&lt;= /crvs_death_notification/today " data-type-xml="date"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Date of Death</span>
+        <span class="required">*</span>
+        <input type="date" name="/crvs_death_notification/death_date" required="required" data-constraint=".&lt;= /crvs_death_notification/today  and .&gt;= /crvs_death_notification/birth_date " data-type-xml="date"/>
+    </label>
+    <section class="or-group " name="/crvs_death_notification/group_address_usual_residence">
+        <h4>
+            <span lang="" class="question-label active">Usual Residence Address</span>
+        </h4>
+        <label class="question non-select ">
+            <span lang="" class="question-label active">House and Street</span>
+            <span class="required">*</span>
+            <input type="text" name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_street" required="required" data-type-xml="string"/>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">Province</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_province" data-name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_province" required="required" data-type-xml="select1">
+                <option value="">...</option>
+                <option value="kpk">Khyber Pakhtunkhwah</option>
+                <option value="sindh">Sindh</option>
+                <option value="balochistan">Balochistan</option>
+                <option value="punjab">Punjab</option>
+                <option value="gilgit_baltistan">Gilgit Baltistan</option>
+                <option value="kashmir">Kashmir</option>
+                <option value="fata">FATA</option>
+                <option value="out_of_country">Out of Country</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">District</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_district" data-name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_district" required="required" data-type-xml="select1">
+                <option class="itemset-template" value="" data-items-path="instance('districts')/root/item[province= /crvs_death_notification/group_address_usual_residence/address_usual_residence_province  or province='na']">...</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+            <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+                <span lang="default" class="option-label active" data-itext-id="static_instance-districts-0">Abbottabad</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-districts-1">Other</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-districts-2">Not Applicable</span>
+            </span>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">Town</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_town" data-name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_town" required="required" data-type-xml="select1">
+                <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_death_notification/group_address_usual_residence/address_usual_residence_province  and district= /crvs_death_notification/group_address_usual_residence/address_usual_residence_district  ) or district='na']">...</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+            <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-0">Abbottabad</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-1">Havalian</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-2">Other</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-3">Not Applicable</span>
+            </span>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">Union Council (UC)</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_uc" data-name="/crvs_death_notification/group_address_usual_residence/address_usual_residence_uc" required="required" data-type-xml="select1">
+                <option class="itemset-template" value="" data-items-path="instance('ucs')/root/item[(province= /crvs_death_notification/group_address_usual_residence/address_usual_residence_province  and district= /crvs_death_notification/group_address_usual_residence/address_usual_residence_district  and town= /crvs_death_notification/group_address_usual_residence/address_usual_residence_town ) or town='na']">...</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+            <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+            </span>
+        </label>
+    </section>
+    <!--end of group -->
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Cause of Death</span>
+        <input type="text" name="/crvs_death_notification/cause_of_death" data-type-xml="string"/>
+    </label>
+    <section class="or-group " name="/crvs_death_notification/address_deathplace">
+        <h4>
+            <span lang="" class="question-label active">Place of Death Address</span>
+        </h4>
+        <label class="question non-select ">
+            <span lang="" class="question-label active">House and Street</span>
+            <span class="required">*</span>
+            <input type="text" name="/crvs_death_notification/address_deathplace/address_deathplace_street" required="required" data-type-xml="string"/>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">Province</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/address_deathplace/address_deathplace_province" data-name="/crvs_death_notification/address_deathplace/address_deathplace_province" required="required" data-type-xml="select1">
+                <option value="">...</option>
+                <option value="kpk">Khyber Pakhtunkhwah</option>
+                <option value="sindh">Sindh</option>
+                <option value="balochistan">Balochistan</option>
+                <option value="punjab">Punjab</option>
+                <option value="gilgit_baltistan">Gilgit Baltistan</option>
+                <option value="kashmir">Kashmir</option>
+                <option value="fata">FATA</option>
+                <option value="out_of_country">Out of Country</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">District</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/address_deathplace/address_deathplace_district" data-name="/crvs_death_notification/address_deathplace/address_deathplace_district" required="required" data-type-xml="select1">
+                <option class="itemset-template" value="" data-items-path="instance('districts')/root/item[province= /crvs_death_notification/address_deathplace/address_deathplace_province  or province='na']">...</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+            <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+                <span lang="default" class="option-label active" data-itext-id="static_instance-districts-0">Abbottabad</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-districts-1">Other</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-districts-2">Not Applicable</span>
+            </span>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">Town</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/address_deathplace/address_deathplace_town" data-name="/crvs_death_notification/address_deathplace/address_deathplace_town" required="required" data-type-xml="select1">
+                <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_death_notification/address_deathplace/address_deathplace_province  and district= /crvs_death_notification/address_deathplace/address_deathplace_district  ) or district='na']">...</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+            <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-0">Abbottabad</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-1">Havalian</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-2">Other</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-towns-3">Not Applicable</span>
+            </span>
+        </label>
+        <label class="question or-appearance-minimal ">
+            <span lang="" class="question-label active">Union Council (UC)</span>
+            <span class="required">*</span>
+            <select name="/crvs_death_notification/address_deathplace/address_deathplace_uc" data-name="/crvs_death_notification/address_deathplace/address_deathplace_uc" required="required" data-type-xml="select1">
+                <option class="itemset-template" value="" data-items-path="instance('ucs')/root/item[(province= /crvs_death_notification/address_deathplace/address_deathplace_province  and district= /crvs_death_notification/address_deathplace/address_deathplace_district  and town= /crvs_death_notification/address_deathplace/address_deathplace_town ) or town='na']">...</option>
+            </select>
+            <span class="or-option-translations" style="display:none;"></span>
+            <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
+                <span lang="default" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+            </span>
+        </label>
+    </section>
+    <!--end of group -->
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Place of Death</span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/place_of_death" data-name="/crvs_death_notification/place_of_death" value="1536" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Home</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_death_notification/place_of_death" data-name="/crvs_death_notification/place_of_death" value="1537" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Health Facility</span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
+    <label class="question non-select ">
+        <span lang="" class="or-constraint-msg active">NIC number should be 11 or 13 digits</span>
+        <span lang="" class="question-label active">NIC</span>
+        <span class="required">*</span>
+        <span lang="" class="or-hint active">Digits only; without dashes</span>
+        <input type="number" name="/crvs_death_notification/nic" required="required" data-constraint=". &gt;= 10000000000 and . &lt;= 9999999999999" data-type-xml="int"/>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="or-constraint-msg active">NIC number not matches</span>
+        <span lang="" class="question-label active">Confirm NIC</span>
+        <span class="required">*</span>
+        <input type="number" name="/crvs_death_notification/nic_confirm" required="required" data-constraint=".=  /crvs_death_notification/nic " data-type-xml="int"/>
+    </label>
+    <label class="question or-appearance-minimal ">
+        <span lang="" class="question-label active">Marital Status</span>
+        <span class="required">*</span>
+        <select name="/crvs_death_notification/marital_status" data-name="/crvs_death_notification/marital_status" required="required" data-type-xml="select1">
+            <option value="">...</option>
+            <option value="5555">Married</option>
+            <option value="1057">Unmarried</option>
+            <option value="1059">Widowed</option>
+            <option value="1058">Divorced</option>
+            <option value="1056">Separated</option>
+        </select>
+        <span class="or-option-translations" style="display:none;"></span>
+    </label>
+    <label class="question or-appearance-minimal ">
+        <span lang="" class="question-label active">Education</span>
+        <span class="required">*</span>
+        <select name="/crvs_death_notification/education" data-name="/crvs_death_notification/education" required="required" data-type-xml="select1">
+            <option value="">...</option>
+            <option value="160294">No Formal Education</option>
+            <option value="1713">Primary</option>
+            <option value="1714">Secondary</option>
+            <option value="160292">Intermediate</option>
+            <option value="160300">Graduate</option>
+            <option value="5622">Post graduate</option>
+            <option value="159785">Other Higher Secondary</option>
+            <option value="1067">Don't Know</option>
+        </select>
+        <span class="or-option-translations" style="display:none;"></span>
+    </label>
+    <label class="question non-select ">
+        <span lang="" class="question-label active">Occupation</span>
+        <span class="required">*</span>
+        <input type="text" name="/crvs_death_notification/occupation" required="required" data-type-xml="string"/>
+    </label>
+    <fieldset id="or-preload-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/start" data-preload="timestamp" data-preload-params="start" data-type-xml="dateTime"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/end" data-preload="timestamp" data-preload-params="end" data-type-xml="dateTime"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/today" data-preload="date" data-preload-params="today" data-type-xml="date"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/deviceid" data-preload="property" data-preload-params="deviceid" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/subscriberid" data-preload="property" data-preload-params="subscriberid" data-type-xml="string"/>
+        </label>
+    </fieldset>
+    <fieldset id="or-calculated-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/meta/instanceID" data-calculate="concat('uuid:', uuid())" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_death_notification/formhub/uuid" data-calculate="'36d0e526033c4d9fac11f96bd8ff9ad1'" data-type-xml="string"/>
+        </label>
+    </fieldset>
+</form>

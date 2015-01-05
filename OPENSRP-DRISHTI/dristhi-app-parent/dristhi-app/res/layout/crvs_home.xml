@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#ff313131">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_texture">
+
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scaleType="centerInside" 
+                android:src="@drawable/logo"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                android:paddingTop="30dp" 
+                android:paddingBottom="30dp"
+                android:background="#2E2E2E">
+
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" 
+                    android:background="@drawable/home_list_button">
+
+                <ImageButton
+                        android:id="@+id/btn_crvs_pregnancy_notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" 
+                        android:padding="15dp"
+                        android:scaleType="fitStart" 
+                        android:src="@drawable/pregnancy"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:text="Pregnancy Notification" />
+            </FrameLayout>
+            
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" 
+                    android:background="@drawable/home_list_button" >
+
+                <ImageButton
+                    android:id="@+id/btn_crvs_birth_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/birth" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:text="Birth Notification" />
+            </FrameLayout>
+            
+          <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" 
+                    android:background="@drawable/home_list_button"
+                    >
+
+                <ImageButton
+                        android:id="@+id/btn_crvs_death_notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" 
+                        android:padding="15dp"
+                        android:scaleType="fitStart" 
+                        android:src="@drawable/death"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:text="Death Notification" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" 
+                    android:background="@drawable/home_list_button">
+
+                <ImageButton
+                        android:id="@+id/btn_crvs_verbal_autopsy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" 
+                        android:padding="15dp"
+                        android:scaleType="fitStart" 
+                        android:src="@drawable/va"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:text="Verbal Autopsy" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

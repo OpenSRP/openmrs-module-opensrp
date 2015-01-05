@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="Server"
+        android:key="server">
+
+        <!-- <EditTextPreference
+            android:key="server_url"
+            android:title="Server Url" 
+            android:summary="Defines the server url that handles requests"
+            android:dialogTitle="Server Url"
+            android:dialogMessage="Enter Server Url"    
+            android:defaultValue="http://10.0.2.2:8080/smstarseelweb/smstarseel" 
+            android:persistent="true"/>
+        <EditTextPreference
+            android:key="sim_num"
+            android:title="Sim number" 
+            android:summary="Defines the sim number"
+            android:dialogTitle="Sim number"
+            android:dialogMessage="Enter Sim number"    
+            android:defaultValue=""
+            android:persistent="true"/> -->
+        <EditTextPreference
+            android:key="admin_cell_number"
+            android:title="Admin cell number" 
+            android:summary="Defines the cell number that will be sent alerts for any issues"
+            android:dialogTitle="Admin cell number"
+            android:dialogMessage="Enter Admin cell number"    
+            android:defaultValue=""
+            android:persistent="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="Logs"
+        android:key="logs">
+
+         <ListPreference 
+            android:key="MAX_LOG_FILE_SIZE"
+            android:title="Max size for each log file"
+            android:summary="Define how much will be the maximum size for each each log file"
+            android:defaultValue="2000000" 
+            android:entries="@array/maxLogFileSize"
+            android:entryValues="@array/maxLogFileSizeValues"
+            android:persistent="true"
+        />    
+        <ListPreference 
+            android:key="MAX_LOG_BACKUP_NUM"
+            android:title="Max Log Backups"
+            android:summary="Define how much will be the max num of backups to keep in mobile storage by log4j"
+            android:defaultValue="10" 
+            android:entries="@array/maxLogFileBackups"
+            android:entryValues="@array/maxLogFileBackupsValues"
+            android:persistent="true"
+        />    
+         <ListPreference 
+            android:key="MAX_CONSOLE_BUFFER_LN"
+            android:title="Max Characters in Console Buffer"
+            android:summary="Define how much will be the max amount of characters console buffer can hold"
+            android:defaultValue="5000" 
+            android:entries="@array/maxConsoleBufferCharacters"
+            android:entryValues="@array/maxConsoleBufferCharactersValues"
+            android:persistent="true"
+        />    
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="Services"
+        android:key="service_intervals">
+        <ListPreference 
+            android:key="LOGIN_TIMEOUT_SEC"
+            android:title="Login or unlock session timeout interval (sec)"
+            android:summary="Define after how much time login or screen seesion should timeout and app should ask for credentials"
+            android:defaultValue="60" 
+            android:entries="@array/sessionTimeoutInterval"
+            android:entryValues="@array/sessionTimeoutInterval"
+            android:persistent="true"
+        /> 
+        <ListPreference 
+            android:key="SMS_DISPENSER_FETCH_INTERVAL_SEC"
+            android:title="SMS Dispenser Fetch interval (sec)"
+            android:summary="Define how much will be the delay between two consecutive fetches for pending Outbound sms"
+            android:defaultValue="10" 
+            android:entries="@array/smsDispenserFetchInterval"
+            android:entryValues="@array/smsDispenserFetchIntervalValues"
+            android:persistent="true"
+        />    
+        <ListPreference 
+            android:key="SMS_DISPENSER_INITIAL_DELAY_SEC"
+            android:title="SMS Dispenser Initial delay (sec)"
+            android:summary="Define how much will be the delay in first fetch for pending Outbound sms after service has started"
+            android:defaultValue="60" 
+            android:entries="@array/smsDispenserInitialDelay"
+            android:entryValues="@array/smsDispenserInitialDelayValues"
+            android:persistent="true"
+        />    
+        <ListPreference 
+            android:key="CLEANUP_SRV_REPEAT_INTERVAL_SEC"
+            android:title="Cleanup for sync unsubmitted outbounds (sec)"
+            android:summary="Define how much will be the delay between two consecutive runs of cleanup service i.e. submitting data to server for unsuccessful submits of SmsDispenser"
+            android:defaultValue="900" 
+            android:entries="@array/cleanupServiceRepeatInterval"
+            android:entryValues="@array/cleanupServiceRepeatIntervalValues"
+            android:persistent="true"
+        /> 
+        <ListPreference 
+            android:key="SMS_COLLECTOR_RUN_INTERVAL_SEC"
+            android:title="SMS Collector Read interval (sec)"
+            android:summary="Define how much will be the delay between two consecutive reads (inbox) for Inbound (recieved) sms"
+            android:defaultValue="60" 
+            android:entries="@array/smsCollectorRunInterval"
+            android:entryValues="@array/smsCollectorRunIntervalValues"
+            android:persistent="true"
+        />    
+       <ListPreference 
+            android:key="SMS_COLLECTOR_FETCHSIZE"
+            android:title="SMS Collector fetch size"
+            android:summary="Define how many smses should be read in a single go"
+            android:defaultValue="6" 
+            android:entries="@array/smsCollectorFetchSize"
+            android:entryValues="@array/smsCollectorFetchSize"
+            android:persistent="true"
+        />    
+        <ListPreference 
+            android:key="SMS_COLLECTOR_INITIAL_DELAY_SEC"
+            android:title="SMS Collector Initial delay (sec)"
+            android:summary="Define how much will be the delay in first read for recieved smses (inbox) after service has started"
+            android:defaultValue="60" 
+            android:entries="@array/smsCollectorInitialDelay"
+            android:entryValues="@array/smsCollectorInitialDelayValues"
+            android:persistent="true"
+        /> 
+        <ListPreference 
+            android:key="CALLLOG_READER_RUN_INTERVAL_SEC"
+            android:title="CallLog Reader Run interval (sec)"
+            android:summary="Define how much will be the delay between two consecutive reads for Call Logs"
+            android:defaultValue="60" 
+            android:entries="@array/CallLogReaderRunInterval"
+            android:entryValues="@array/CallLogReaderRunIntervalValues"
+            android:persistent="true"
+        />    
+        <ListPreference 
+            android:key="CALLLOG_READER_FETCHSIZE"
+            android:title="CallLog Reader fetch size"
+            android:summary="Define how many calls should be read in a single go"
+            android:defaultValue="6" 
+            android:entries="@array/CallLogReaderFetchSize"
+            android:entryValues="@array/CallLogReaderFetchSize"
+            android:persistent="true"
+        />    
+        <ListPreference 
+            android:key="CALLLOG_READER_INITIAL_DELAY_SEC"
+            android:title="CallLog Reader Initial delay (sec)"
+            android:summary="Define how much will be the delay in first read for Call Logs after service has started"
+            android:defaultValue="60" 
+            android:entries="@array/CallLogReaderInitialDelay"
+            android:entryValues="@array/CallLogReaderInitialDelayValues"
+            android:persistent="true"
+        /> 
+    </PreferenceCategory>
+
+</PreferenceScreen>

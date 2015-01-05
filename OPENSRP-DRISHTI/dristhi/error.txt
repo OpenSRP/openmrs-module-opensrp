@@ -1,0 +1,1135 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Drishti
+[INFO] drishti-common
+[INFO] drishti-scheduler
+[INFO] drishti-interface
+[INFO] drishti-form
+[INFO] drishti-mother-child
+[INFO] drishti-web
+[INFO] drishti-reporting
+[INFO] drishti-connector
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Drishti 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ drishti ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ drishti ---
+[INFO] Installing g:\IHSProjects\OPENSRP-DRISHTI\dristhi\pom.xml to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti\0.1-SNAPSHOT\drishti-0.1-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building drishti-common 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ drishti-common ---
+[INFO] Deleting G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ drishti-common ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ drishti-common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 28 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\target\classes
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-common/src/main/java/org/ei/drishti/common/util/HttpAgent.java: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\src\main\java\org\ei\drishti\common\util\HttpAgent.java uses or overrides a deprecated API.
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-common/src/main/java/org/ei/drishti/common/util/HttpAgent.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-common/src/main/java/org/ei/drishti/common/domain/ReportingData.java: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\src\main\java\org\ei\drishti\common\domain\ReportingData.java uses unchecked or unsafe operations.
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-common/src/main/java/org/ei/drishti/common/domain/ReportingData.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ drishti-common ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ drishti-common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.9:test (default-test) @ drishti-common ---
+[INFO] Surefire report directory: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.ei.drishti.common.audit.AuditMessageTypeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running org.ei.drishti.common.AuditorTest
+log4j:WARN No appenders could be found for logger (class org.ei.drishti.common.audit.Auditor).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.776 sec
+Running org.ei.drishti.common.domain.ReportMonthTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running org.ei.drishti.common.util.DoubleUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.common.util.IntegerUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ drishti-common ---
+[INFO] Building jar: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\target\drishti-common-0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ drishti-common ---
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\target\drishti-common-0.1-SNAPSHOT.jar to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-common\0.1-SNAPSHOT\drishti-common-0.1-SNAPSHOT.jar
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-common\pom.xml to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-common\0.1-SNAPSHOT\drishti-common-0.1-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building drishti-scheduler 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ drishti-scheduler ---
+[INFO] Deleting G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ drishti-scheduler ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ drishti-scheduler ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ drishti-scheduler ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ drishti-scheduler ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.9:test (default-test) @ drishti-scheduler ---
+[INFO] Surefire report directory: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.ei.drishti.scheduler.router.AlertRouterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.485 sec
+Running org.ei.drishti.scheduler.router.MatcherTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ drishti-scheduler ---
+[INFO] Building jar: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\target\drishti-scheduler-0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ drishti-scheduler ---
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\target\drishti-scheduler-0.1-SNAPSHOT.jar to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-scheduler\0.1-SNAPSHOT\drishti-scheduler-0.1-SNAPSHOT.jar
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-scheduler\pom.xml to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-scheduler\0.1-SNAPSHOT\drishti-scheduler-0.1-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building drishti-interface 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ drishti-interface ---
+[INFO] Deleting G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ drishti-interface ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ drishti-interface ---
+[INFO] Compiling 35 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ drishti-interface ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ drishti-interface ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.9:test (default-test) @ drishti-interface ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ drishti-interface ---
+[INFO] Building jar: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\target\drishti-interface-0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ drishti-interface ---
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\target\drishti-interface-0.1-SNAPSHOT.jar to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-interface\0.1-SNAPSHOT\drishti-interface-0.1-SNAPSHOT.jar
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-interface\pom.xml to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-interface\0.1-SNAPSHOT\drishti-interface-0.1-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building drishti-form 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ drishti-form ---
+[INFO] Deleting G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ drishti-form ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ drishti-form ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ drishti-form ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ drishti-form ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.9:test (default-test) @ drishti-form ---
+[INFO] Surefire report directory: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.ei.drishti.form.service.FormSubmissionServiceTest
+log4j:WARN No appenders could be found for logger (class org.ei.drishti.form.service.FormSubmissionService).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.546 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ drishti-form ---
+[INFO] Building jar: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\target\drishti-form-0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ drishti-form ---
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\target\drishti-form-0.1-SNAPSHOT.jar to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-form\0.1-SNAPSHOT\drishti-form-0.1-SNAPSHOT.jar
+[INFO] Installing G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-form\pom.xml to C:\Users\Maimoona\.m2\repository\org\ei\drishti\drishti-form\0.1-SNAPSHOT\drishti-form-0.1-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building drishti-mother-child 0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ drishti-mother-child ---
+[INFO] Deleting G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ drishti-mother-child ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ drishti-mother-child ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 277 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\classes
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-mother-child/src/main/java/org/ei/drishti/service/formSubmission/handler/ReportFieldsDefinition.java: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\src\main\java\org\ei\drishti\service\formSubmission\handler\ReportFieldsDefinition.java uses unchecked or unsafe operations.
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-mother-child/src/main/java/org/ei/drishti/service/formSubmission/handler/ReportFieldsDefinition.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ drishti-mother-child ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ drishti-mother-child ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 202 source files to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\test-classes
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-mother-child/src/test/java/org/ei/drishti/service/reporting/rules/IsPersonAnaemicRuleTest.java: Some input files use unchecked or unsafe operations.
+[WARNING] /G:/IHSProjects/OPENSRP-DRISHTI/dristhi/drishti-mother-child/src/test/java/org/ei/drishti/service/reporting/rules/IsPersonAnaemicRuleTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.9:test (default-test) @ drishti-mother-child ---
+[INFO] Surefire report directory: G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.ei.drishti.action.AlertCreationActionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.377 sec
+Running org.ei.drishti.action.ANCMissedActionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 sec
+Running org.ei.drishti.action.AutoClosePNCActionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running org.ei.drishti.contract.ScheduleTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.ei.drishti.controller.AlertControllerRoutesTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.301 sec
+Running org.ei.drishti.domain.EligibleCoupleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running org.ei.drishti.listener.FormEventListenerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.144 sec
+Running org.ei.drishti.listener.MCTSReportEventListenerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.18 sec
+Running org.ei.drishti.listener.ReportingEventListenerTest
+2014-10-27 13:39:22,559 ERROR [org.ei.drishti.listener.ReportingEventListener] ANM Reports fetch failed. URL: http://drishti/fetchForAllANMs. Response body: null
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec
+Running org.ei.drishti.repository.it.ReferenceDataRepositoryTest
+2014-10-27 13:39:29,473 ERROR [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7737e352] to prepare test instance [org.ei.drishti.repository.it.ReferenceDataRepositoryTest@762d59a3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'allLocations' defined in file [G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\classes\org\ei\drishti\repository\AllLocations.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1035)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:939)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:103)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.support.DelegatingSmartContextLoader.loadContext(DelegatingSmartContextLoader.java:228)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:124)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:148)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:280)
+	... 46 more
+Caused by: org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.ektorp.support.SimpleViewGenerator.generateView(SimpleViewGenerator.java:420)
+	at org.ektorp.support.SimpleViewGenerator.access$000(SimpleViewGenerator.java:17)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:98)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:95)
+	at org.ektorp.util.ReflectionUtils.eachMethod(ReflectionUtils.java:40)
+	at org.ektorp.support.SimpleViewGenerator.generateViews(SimpleViewGenerator.java:95)
+	at org.ektorp.support.StdDesignDocumentFactory.generateFrom(StdDesignDocumentFactory.java:33)
+	at org.ektorp.support.CouchDbRepositorySupport.initDesignDocInternal(CouchDbRepositorySupport.java:275)
+	at org.ektorp.support.CouchDbRepositorySupport.initStandardDesignDocument(CouchDbRepositorySupport.java:263)
+	at org.motechproject.dao.MotechBaseRepository.<init>(MotechBaseRepository.java:20)
+	at org.ei.drishti.repository.AllLocations.<init>(AllLocations.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+2014-10-27 13:39:34,670 ERROR [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7737e352] to prepare test instance [org.ei.drishti.repository.it.ReferenceDataRepositoryTest@1365e36d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'allLocations' defined in file [G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\classes\org\ei\drishti\repository\AllLocations.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1035)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:939)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:103)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.support.DelegatingSmartContextLoader.loadContext(DelegatingSmartContextLoader.java:228)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:124)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:148)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:280)
+	... 46 more
+Caused by: org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.ektorp.support.SimpleViewGenerator.generateView(SimpleViewGenerator.java:420)
+	at org.ektorp.support.SimpleViewGenerator.access$000(SimpleViewGenerator.java:17)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:98)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:95)
+	at org.ektorp.util.ReflectionUtils.eachMethod(ReflectionUtils.java:40)
+	at org.ektorp.support.SimpleViewGenerator.generateViews(SimpleViewGenerator.java:95)
+	at org.ektorp.support.StdDesignDocumentFactory.generateFrom(StdDesignDocumentFactory.java:33)
+	at org.ektorp.support.CouchDbRepositorySupport.initDesignDocInternal(CouchDbRepositorySupport.java:275)
+	at org.ektorp.support.CouchDbRepositorySupport.initStandardDesignDocument(CouchDbRepositorySupport.java:263)
+	at org.motechproject.dao.MotechBaseRepository.<init>(MotechBaseRepository.java:20)
+	at org.ei.drishti.repository.AllLocations.<init>(AllLocations.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+2014-10-27 13:39:40,095 ERROR [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7737e352] to prepare test instance [org.ei.drishti.repository.it.ReferenceDataRepositoryTest@525e3301]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'allLocations' defined in file [G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\classes\org\ei\drishti\repository\AllLocations.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1035)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:939)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:103)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.support.DelegatingSmartContextLoader.loadContext(DelegatingSmartContextLoader.java:228)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:124)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:148)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:280)
+	... 46 more
+Caused by: org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.ektorp.support.SimpleViewGenerator.generateView(SimpleViewGenerator.java:420)
+	at org.ektorp.support.SimpleViewGenerator.access$000(SimpleViewGenerator.java:17)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:98)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:95)
+	at org.ektorp.util.ReflectionUtils.eachMethod(ReflectionUtils.java:40)
+	at org.ektorp.support.SimpleViewGenerator.generateViews(SimpleViewGenerator.java:95)
+	at org.ektorp.support.StdDesignDocumentFactory.generateFrom(StdDesignDocumentFactory.java:33)
+	at org.ektorp.support.CouchDbRepositorySupport.initDesignDocInternal(CouchDbRepositorySupport.java:275)
+	at org.ektorp.support.CouchDbRepositorySupport.initStandardDesignDocument(CouchDbRepositorySupport.java:263)
+	at org.motechproject.dao.MotechBaseRepository.<init>(MotechBaseRepository.java:20)
+	at org.ei.drishti.repository.AllLocations.<init>(AllLocations.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+2014-10-27 13:39:45,215 ERROR [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7737e352] to prepare test instance [org.ei.drishti.repository.it.ReferenceDataRepositoryTest@3bf4eeae]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'allLocations' defined in file [G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\classes\org\ei\drishti\repository\AllLocations.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1035)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:939)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:103)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.support.DelegatingSmartContextLoader.loadContext(DelegatingSmartContextLoader.java:228)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:124)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:148)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:280)
+	... 46 more
+Caused by: org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.ektorp.support.SimpleViewGenerator.generateView(SimpleViewGenerator.java:420)
+	at org.ektorp.support.SimpleViewGenerator.access$000(SimpleViewGenerator.java:17)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:98)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:95)
+	at org.ektorp.util.ReflectionUtils.eachMethod(ReflectionUtils.java:40)
+	at org.ektorp.support.SimpleViewGenerator.generateViews(SimpleViewGenerator.java:95)
+	at org.ektorp.support.StdDesignDocumentFactory.generateFrom(StdDesignDocumentFactory.java:33)
+	at org.ektorp.support.CouchDbRepositorySupport.initDesignDocInternal(CouchDbRepositorySupport.java:275)
+	at org.ektorp.support.CouchDbRepositorySupport.initStandardDesignDocument(CouchDbRepositorySupport.java:263)
+	at org.motechproject.dao.MotechBaseRepository.<init>(MotechBaseRepository.java:20)
+	at org.ei.drishti.repository.AllLocations.<init>(AllLocations.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+2014-10-27 13:39:50,078 ERROR [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7737e352] to prepare test instance [org.ei.drishti.repository.it.ReferenceDataRepositoryTest@37ec76dc]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:288)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:290)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:104)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'allLocations' defined in file [G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\classes\org\ei\drishti\repository\AllLocations.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1035)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:939)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:103)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.support.DelegatingSmartContextLoader.loadContext(DelegatingSmartContextLoader.java:228)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:124)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:148)
+	... 30 more
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.ei.drishti.repository.AllLocations]: Constructor threw exception; nested exception is org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:280)
+	... 46 more
+Caused by: org.ektorp.support.ViewGenerationException: Could not generate view for method findByLocationId. No get method found for property LocationId in class org.ei.drishti.domain.OLocation
+	at org.ektorp.support.SimpleViewGenerator.generateView(SimpleViewGenerator.java:420)
+	at org.ektorp.support.SimpleViewGenerator.access$000(SimpleViewGenerator.java:17)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:98)
+	at org.ektorp.support.SimpleViewGenerator$1.apply(SimpleViewGenerator.java:95)
+	at org.ektorp.util.ReflectionUtils.eachMethod(ReflectionUtils.java:40)
+	at org.ektorp.support.SimpleViewGenerator.generateViews(SimpleViewGenerator.java:95)
+	at org.ektorp.support.StdDesignDocumentFactory.generateFrom(StdDesignDocumentFactory.java:33)
+	at org.ektorp.support.CouchDbRepositorySupport.initDesignDocInternal(CouchDbRepositorySupport.java:275)
+	at org.ektorp.support.CouchDbRepositorySupport.initStandardDesignDocument(CouchDbRepositorySupport.java:263)
+	at org.motechproject.dao.MotechBaseRepository.<init>(MotechBaseRepository.java:20)
+	at org.ei.drishti.repository.AllLocations.<init>(AllLocations.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 48 more
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 27.519 sec <<< FAILURE!
+Running org.ei.drishti.service.ActionServiceTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running org.ei.drishti.service.ANCRegisterServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec
+Running org.ei.drishti.service.ANCServiceTest
+2014-10-27 13:39:50,331 WARN  [class org.ei.drishti.service.ANCService] Tried to handle ifa tablets given without registered mother. Submission: org.ei.drishti.form.domain.FormSubmission@18ecf9ac[anmId=anmId,instanceId=instance id 1,formName=ifa,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@6dfb97fc[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@20b759cd[bind_type=entity 1,default_bind_path=bind path 1,fields=[org.ei.drishti.form.domain.FormField@6568b282[name=id,value=entity id 1,source=id,custom=<null>], org.ei.drishti.form.domain.FormField@3c9fa8d1[name=numberOfIFATabletsGiven,value=0,source=numberOfIFATabletsGiven,custom=<null>]],sub_forms=[org.ei.drishti.form.domain.SubFormData@1604506f[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,335 WARN  [class org.ei.drishti.service.ANCService] Tried to close case without registered mother for case ID: entity id 1
+2014-10-27 13:39:50,338 WARN  [class org.ei.drishti.service.ANCService] Tried to handle delivery outcome without registered mother. Submission: org.ei.drishti.form.domain.FormSubmission@3fae9650[anmId=anmId,instanceId=instance id 1,formName=form name 1,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@5f0e7ed9[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@30aa0950[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@6b497c25[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,347 WARN  [class org.ei.drishti.service.ANCService] Found mother without registered eligible couple. Ignoring: ec id 1 for mother with id: null for ANM: anm id 1
+2014-10-27 13:39:50,349 WARN  [class org.ei.drishti.service.ANCService] Found ANC visit without registered mother for Entity ID: entity id 1
+2014-10-27 13:39:50,350 WARN  [class org.ei.drishti.service.ANCService] Found mother without registered eligible couple. Ignoring: ec id 1 for mother with id: null for ANM: anm id 1
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec
+Running org.ei.drishti.service.ANMDetailsServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.ei.drishti.service.ANMReportingServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running org.ei.drishti.service.ChildRegisterServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running org.ei.drishti.service.ChildServiceTest
+2014-10-27 13:39:50,445 WARN  [class org.ei.drishti.service.ChildService] Failed to handle children registration as there is no mother registered with id: mother id 1
+2014-10-27 13:39:50,447 WARN  [class org.ei.drishti.service.ChildService] Failed to handle PNC OA children registration as there is no mother registered with id: ec id 1
+2014-10-27 13:39:50,449 WARN  [class org.ei.drishti.service.ChildService] Found close child request without registered child for entity id: child id 1
+2014-10-27 13:39:50,454 WARN  [class org.ei.drishti.service.ChildService] Found immunization update without registered child for entity ID: Case X
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec
+Running org.ei.drishti.service.DrishtiSMSServiceTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running org.ei.drishti.service.ECRegisterServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.ei.drishti.service.ECServiceTest
+2014-10-27 13:39:50,538 WARN  [class org.ei.drishti.service.ActionService] Tried to report FP follow up of a non-existing EC, with submission: org.ei.drishti.form.domain.FormSubmission@7921d3d4[anmId=anmId,instanceId=instance id 1,formName=form name 1,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@1bda416d[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@15fd6964[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@30122f83[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,543 WARN  [class org.ei.drishti.service.ActionService] Tried to report FP Change of a non-existing EC, with submission: org.ei.drishti.form.domain.FormSubmission@324de897[anmId=anmId,instanceId=instance id 1,formName=form name 1,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@18e12b4e[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@66e21aa4[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@64339c1[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,552 WARN  [class org.ei.drishti.service.ActionService] Tried to report FP Renew of a non-existing EC, with submission: org.ei.drishti.form.domain.FormSubmission@11246120[anmId=anmId,instanceId=instance id 1,formName=form name 1,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@6b6484aa[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@1441ebfb[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@73ebb620[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,565 WARN  [class org.ei.drishti.service.ActionService] Tried to report FP Referral follow-up of a non-existing EC, with submission: org.ei.drishti.form.domain.FormSubmission@632ac433[anmId=anmId,instanceId=instance id 1,formName=fp_referral_followup,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@cb72322[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@4b6393b3[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@7675f36f[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,577 WARN  [class org.ei.drishti.service.ActionService] Tried to report FP Complications of a non-existing EC, with submission: org.ei.drishti.form.domain.FormSubmission@5e111b5c[anmId=anmId,instanceId=instance id 1,formName=fp_complications,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@351b6543[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@19952cf2[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@10b9d0fd[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName=<null>]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,583 WARN  [class org.ei.drishti.service.ActionService] ANM has not confirmed the close so not closing EC! Form Submission: org.ei.drishti.form.domain.FormSubmission@6783c490[anmId=anmId,instanceId=instance id 1,formName=ec_close,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@7bddff07[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@2b926419[bind_type=entity 1,default_bind_path=bind path 1,fields=[org.ei.drishti.form.domain.FormField@17e9bba8[name=isECCloseConfirmed,value=no,source=isECCloseConfirmed,custom=<null>]],sub_forms=[org.ei.drishti.form.domain.SubFormData@721f1edb[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName={isECCloseConfirmed=no}]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+2014-10-27 13:39:50,585 WARN  [class org.ei.drishti.service.ActionService] ANM has not confirmed the close so not closing EC! Form Submission: org.ei.drishti.form.domain.FormSubmission@5922f665[anmId=anmId,instanceId=instance id 1,formName=ec_close,entityId=entity id 1,clientVersion=0,formDataDefinitionVersion=1,formInstance=org.ei.drishti.form.domain.FormInstance@65e8e9b[form_data_definition_version=<null>,form=org.ei.drishti.form.domain.FormData@29e46561[bind_type=entity 1,default_bind_path=bind path 1,fields=[],sub_forms=[org.ei.drishti.form.domain.SubFormData@51bbd8c3[name=sub form name,bind_type=<null>,default_bind_path=<null>,fields=<null>,instances=[]]],mapOfFieldsByName={}]],serverVersion=0,type=FormSubmission,id=<null>,revision=<null>,attachments=<null>,conflicts=<null>,revisions=<null>]
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec
+Running org.ei.drishti.service.formSubmission.FormEntityServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running org.ei.drishti.service.formSubmission.FormSubmissionRouterTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 sec
+Running org.ei.drishti.service.formSubmission.handler.ANCInvestigationsHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running org.ei.drishti.service.formSubmission.handler.ANCRegistrationHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.ANCRegistrationOAHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.formSubmission.handler.ANCVisitHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.ChildIllnessHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.ei.drishti.service.formSubmission.handler.ChildRegistrationOAHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.DeliveryOutcomeHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.formSubmission.handler.DeliveryPlanHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.ECRegistrationHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.formSubmission.handler.FPChangeHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.FPComplicationsHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.FPFollowupHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.ei.drishti.service.formSubmission.handler.FPReferralFollowupHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.ei.drishti.service.formSubmission.handler.HbTestHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.ei.drishti.service.formSubmission.handler.PNCCloseHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.ei.drishti.service.formSubmission.handler.PNCRegistrationOAHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.PNCVisitHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.formSubmission.handler.PostpartumFamilyPlanningHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.RenewFPProductHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.TTHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.formSubmission.handler.VitaminAHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.formSubmission.MCTSSMSReportServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running org.ei.drishti.service.FPRegisterServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running org.ei.drishti.service.MCTSServiceCodeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.ei.drishti.service.MCTSSMSServiceTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running org.ei.drishti.service.PNCRegisterServiceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.ei.drishti.service.PNCServiceTest
+2014-10-27 13:39:50,956 WARN  [class org.ei.drishti.service.PNCService] Found PNC visit without registered mother for entity ID: entity id 1
+2014-10-27 13:39:50,983 WARN  [class org.ei.drishti.service.PNCService] Failed to auto close PNC as there is no mother registered with ID: MOTHER-CASE-1
+2014-10-27 13:39:50,994 WARN  [class org.ei.drishti.service.PNCService] Failed to handle delivery outcome as there is no mother registered with ID: mother id 1
+2014-10-27 13:39:50,996 WARN  [class org.ei.drishti.service.PNCService] Failed to handle delivery outcome as there is no mother registered with ID: mother id 1
+2014-10-27 13:39:50,998 WARN  [class org.ei.drishti.service.PNCService] Failed to handle delivery outcome as there is no mother registered with ID: mother id 1
+2014-10-27 13:39:51,006 WARN  [class org.ei.drishti.service.PNCService] Failed to handle PNC registration as there is no mother registered with ec id: ec id 1
+2014-10-27 13:39:51,024 WARN  [class org.ei.drishti.service.PNCService] Failed to close PNC as there is no mother registered with ID: entity id 1
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec
+Running org.ei.drishti.service.RegisterServiceTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.ei.drishti.service.reporting.ChildReporterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.ei.drishti.service.reporting.ChildReportingServiceTest
+2014-10-27 13:39:51,082 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,086 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,089 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,092 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,188 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,194 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,206 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,209 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,236 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting for child with CaseIDCASE Xbecause child's age is more than 5 years.
+2014-10-27 13:39:51,239 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,239 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid value received for childWeight :  for childId : CASE X
+2014-10-27 13:39:51,254 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,259 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,266 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,276 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,284 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,314 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,338 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,412 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: NON_EXISTENT_IMMUNIZATION for childCaseId: CASE X with immunizations provided: [NON_EXISTENT_IMMUNIZATION, bcg]
+2014-10-27 13:39:51,425 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,437 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid immunization: boo for childCaseId: CASE X with immunizations provided: [boo]
+2014-10-27 13:39:51,438 WARN  [class org.ei.drishti.service.reporting.ChildReportingService] Not reporting: Invalid value received for childWeight : --- for childId : CASE X
+Tests run: 73, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.404 sec
+Running org.ei.drishti.service.reporting.ECReportingServiceTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running org.ei.drishti.service.reporting.EligibleCoupleReporterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running org.ei.drishti.service.reporting.FormSubmissionReportServiceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 sec
+Running org.ei.drishti.service.reporting.LocationLoaderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.MCTSReportDefinitionTest
+2014-10-27 13:39:51,617 ERROR [class org.ei.drishti.service.reporting.MCTSReportDefinition] There are more than one form indicator definition for the form: form 1
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.MCTSReporterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.MCTSReportServiceTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.MotherReporterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.ei.drishti.service.reporting.MotherReportingServiceTest
+2014-10-27 13:39:51,767 WARN  [class org.ei.drishti.service.reporting.MotherReportingService] Not reporting ANC visit for mother: EC-CASE-1 as visit number is invalid, visit number:
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.145 sec
+Running org.ei.drishti.service.reporting.ReportDefinitionTest
+2014-10-27 13:39:51,781 ERROR [class org.ei.drishti.service.reporting.ReportDefinition] There are more than one form indicator definition for the form: form 1
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.ReporterFactoryTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running org.ei.drishti.service.reporting.ReportingServiceTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.ei.drishti.service.reporting.rules.CasteIsOthersRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.CasteIsSCRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.CasteIsSTRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsCentchromanRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsCondomRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsEitherMaleOrFemaleSterilizationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsFemaleSterilizationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsIUDRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsMaleSterilizationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.CurrentFPMethodIsOCPRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.DeliveryHappenedAtHomeRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.DeliveryIsAttendedByNonSBATrainedPersonRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.DeliveryIsAttendedBySBATrainedPersonRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsAllImmunizationsGivenEitherWithMeaslesOrMMRRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsAllImmunizationsGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsANCRegisteredWithinTwelveWeeksOfPregnancyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsBCGImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsChildAgeGreaterThanOrEqualTo16MonthsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildBelowFiveYearsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildBelowThreeYearsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsChildBetween12And23MonthsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsChildBetween6to12MonthsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildBetween9to12MonthsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildDiseaseReportedAsDiarrheaDehydrationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildDiseaseReportedAsMalariaRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildDiseaseReportedAsMeaslesRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsChildFemaleRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildLessThan23MonthsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsChildLessThanFourWeeksOldRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.ei.drishti.service.reporting.rules.IsChildLessThanOneYearOldRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsChildMaleRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildMoreThan16MonthsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsChildMoreThan5YearsOldRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathCausedByImmunizationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToAbortionRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToBleedingRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToHighFeverRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToOtherReasonsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToProlongedObstructedLaborRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToSevereHyperTensionOrFitsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToSpontaneousAbortionRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathDueToSterilizationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByAsphyxiaRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByDiarrheaRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByFeverRelatedRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByLBWRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByMeaslesRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByOthersRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedByPneumoniaRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWasCausedBySepsisRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeathWithin24HoursRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDeliveryDateOneYearInThePastRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDPTBooster2ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsDPTBoosterImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsEconomicStatusAPLRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsEconomicStatusBPLRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsFirstANCVisitRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsFourthANCVisitRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsHepB0ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsHypertensionDetectedForFirstTimeRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsHypertensionDetectedRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsJEImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsJsyBeneficiaryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsMeaslesBoosterImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsMeaslesImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsMMRImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsNotOutOfAreaRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsOPV0ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsOPV1ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsOPV2ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsOPV3ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsOPVBoosterImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPentavalent1ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsPentavalent2ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsPentavalent3ImmunizationGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsPersonAnaemicRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsPersonAnaemicStatusChangedRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsPersonModerateAnaemicRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPersonNormalAnaemicRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPersonSevereAnaemicRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPNCVisit48HoursOfDeliveryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPNCVisitBetween2And7DaysOfDeliveryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPNCVisitFirstBetween2And14DaysOfDeliveryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsPNCVisitFirstRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsSecondANCVisitRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsSideEffectDueToSterilizationRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsSterilizationFailureRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.IsThirdANCVisitRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsTT1DoseGivenForMotherTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsTT2DoseGivenForMotherTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsTT2OrTTBoosterDoseGivenForMotherTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsTTBoosterDoseGivenForMotherTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsVitaminA1DoseGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsVitaminA5DoseGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IsVitaminA9DoseGivenRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.IUDRemovedAtHomeAtHomeOrSubCenterRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.MinimumThreeANCVisitsHappenedOnTimeRuleTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.MoreThan100IFATabletsAreProvidedRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.MoreThanZeroCentchromanPillsSuppliedRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.MoreThanZeroCondomsSuppliedRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.MoreThanZeroECPsSuppliedRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.MoreThanZeroOCPStripsSuppliedRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.NewFPMethodIsCentchromanPillsRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.NewFPMethodIsCondomRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.NewFPMethodIsOCPRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running org.ei.drishti.service.reporting.rules.PNCVisitHappenedAtSubCenterOrHomeRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.PNCVisitHappenedBetween2And14DaysOfDeliveryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.PNCVisitHappenedWithin2DaysOfDeliveryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.RelocationIsPermanentRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.ServiceProvidedAtSubCenterRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.ServiceProvidedAtSub_CenterRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.SpontaneousAbortionAtHomeAtHomeOrSubCenterRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.reporting.rules.WomanIsDischargedWithin48HoursOfDeliveryRuleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running org.ei.drishti.service.scheduling.ANCSchedulesServiceTest
+2014-10-27 13:39:51,934 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone ANC 1 of Ante Natal Care - Normal for entity id: Case X
+2014-10-27 13:39:51,937 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone ANC 2 of Ante Natal Care - Normal for entity id: Case X
+2014-10-27 13:39:51,937 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone ANC 3 of Ante Natal Care - Normal for entity id: Case X
+2014-10-27 13:39:51,951 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+2014-10-27 13:39:51,952 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Followup Test of Hb Followup Test for entity id: Case X
+2014-10-27 13:39:51,952 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Test 2 of Hb Test 2 for entity id: Case X
+2014-10-27 13:39:51,955 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+2014-10-27 13:39:51,955 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Followup Test of Hb Followup Test for entity id: Case X
+2014-10-27 13:39:51,980 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone TT 1 of TT 1 for entity id: entity id 1
+2014-10-27 13:39:51,980 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone TT 2 of TT 2 for entity id: entity id 1
+2014-10-27 13:39:51,987 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+2014-10-27 13:39:51,987 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Followup Test of Hb Followup Test for entity id: Case X
+2014-10-27 13:39:51,988 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+2014-10-27 13:39:51,990 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Delivery Plan of Delivery Plan for entity id: Case X
+2014-10-27 13:39:51,991 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone ANC 1 of Ante Natal Care - Normal for entity id: Case X
+2014-10-27 13:39:51,994 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone TT 2 of TT 2 for entity id: Case X
+2014-10-27 13:39:51,995 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+2014-10-27 13:39:51,997 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone TT 1 of TT 1 for entity id: Case X
+2014-10-27 13:39:51,999 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone TT 1 of TT 1 for entity id: entity id 1
+2014-10-27 13:39:52,001 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+2014-10-27 13:39:52,001 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone Hb Followup Test of Hb Followup Test for entity id: Case X
+2014-10-27 13:39:52,001 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Test 2 of Hb Test 2 for entity id: Case X
+2014-10-27 13:39:52,032 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone IFA 1 of IFA 1 for entity id: Case X
+2014-10-27 13:39:52,034 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone IFA 1 of IFA 1 for entity id: Case X
+2014-10-27 13:39:52,035 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone IFA 2 of IFA 2 for entity id: Case X
+2014-10-27 13:39:52,051 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone IFA 1 of IFA 1 for entity id: Case X
+2014-10-27 13:39:52,052 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Tried to fulfill milestone IFA 2 of IFA 2 for entity id: Case X
+2014-10-27 13:39:52,052 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone IFA 3 of IFA 3 for entity id: Case X
+2014-10-27 13:39:52,055 WARN  [class org.ei.drishti.service.scheduling.ANCSchedulesService] Fulfilling milestone Hb Test 1 of Hb Test 1 for entity id: Case X
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec
+Running org.ei.drishti.service.scheduling.ChildSchedulesServiceTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.145 sec
+Running org.ei.drishti.service.scheduling.ECSchedulingServiceTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
+Running org.ei.drishti.service.scheduling.fpMethodStrategy.CondomStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running org.ei.drishti.service.scheduling.fpMethodStrategy.DMPAInjectableStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.ei.drishti.service.scheduling.fpMethodStrategy.FemaleSterilizationStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.ei.drishti.service.scheduling.fpMethodStrategy.IUDStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running org.ei.drishti.service.scheduling.fpMethodStrategy.MaleSterilizationStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running org.ei.drishti.service.scheduling.fpMethodStrategy.OCPStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running org.ei.drishti.service.scheduling.PNCSchedulesServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running org.ei.drishti.service.scheduling.ScheduleServiceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+
+Results :
+
+Tests in error: 
+  shouldReturnNullValueForReferenceFieldsFromEntityWhenThereIsAFieldButNoValue(org.ei.drishti.repository.it.ReferenceDataRepositoryTest): Failed to load ApplicationContext
+  shouldReturnReferenceFieldsWithValueFromDetailsWhenThereIsFieldWithValue(org.ei.drishti.repository.it.ReferenceDataRepositoryTest): Failed to load ApplicationContext
+  shouldReturnReferenceFieldsWithValueFromEntityWhenThereIsFieldWithValue(org.ei.drishti.repository.it.ReferenceDataRepositoryTest): Failed to load ApplicationContext
+  shouldReturnNullWhenThereIsNoEntity(org.ei.drishti.repository.it.ReferenceDataRepositoryTest): Failed to load ApplicationContext
+  shouldReturnNullWhenThereIsNoField(org.ei.drishti.repository.it.ReferenceDataRepositoryTest): Failed to load ApplicationContext
+
+Tests run: 729, Failures: 0, Errors: 5, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Drishti ........................................... SUCCESS [  0.367 s]
+[INFO] drishti-common .................................... SUCCESS [  3.849 s]
+[INFO] drishti-scheduler ................................. SUCCESS [  1.669 s]
+[INFO] drishti-interface ................................. SUCCESS [  1.286 s]
+[INFO] drishti-form ...................................... SUCCESS [  1.539 s]
+[INFO] drishti-mother-child .............................. FAILURE [ 40.356 s]
+[INFO] drishti-web ....................................... SKIPPED
+[INFO] drishti-reporting ................................. SKIPPED
+[INFO] drishti-connector ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 49.289 s
+[INFO] Finished at: 2014-10-27T13:39:52+05:00
+[INFO] Final Memory: 28M/207M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.9:test (default-test) on project drishti-mother-child: There are test failures.
+[ERROR] 
+[ERROR] Please refer to G:\IHSProjects\OPENSRP-DRISHTI\dristhi\drishti-mother-child\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :drishti-mother-child

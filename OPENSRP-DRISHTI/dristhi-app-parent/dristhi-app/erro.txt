@@ -1,0 +1,1582 @@
+Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-14T22:37:52+05:00)
+Maven home: C:\apache-maven-3.2.1\bin\..
+Java version: 1.7.0_04, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.7.0_04\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from C:\apache-maven-3.2.1\bin\..\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\INTEL\.m2\settings.xml
+[DEBUG] Using local repository at C:\Users\INTEL\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for C:\Users\INTEL\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3, ConflictMarker.markTime=1, ConflictMarker.nodeCount=194, ConflictIdSorter.graphTime=2, ConflictIdSorter.topsortTime=1, ConflictIdSorter.conflictIdCount=71, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=23, ConflictResolver.conflictItemCount=130, DefaultDependencyCollector.collectTime=1948, DefaultDependencyCollector.transformTime=34}
+[DEBUG] com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.6.0:
+[DEBUG]    com.android.tools.build:builder:jar:0.4:compile
+[DEBUG]       com.android.tools:sdklib:jar:22.0:compile
+[DEBUG]          org.apache.httpcomponents:httpclient:jar:4.1.1:compile
+[DEBUG]             org.apache.httpcomponents:httpcore:jar:4.1:compile
+[DEBUG]             commons-logging:commons-logging:jar:1.1.1:compile
+[DEBUG]             commons-codec:commons-codec:jar:1.4:compile
+[DEBUG]          org.apache.httpcomponents:httpmime:jar:4.1:compile
+[DEBUG]          com.android.tools.layoutlib:layoutlib-api:jar:22.0:compile
+[DEBUG]          com.android.tools:dvlib:jar:22.0:compile
+[DEBUG]          org.apache.commons:commons-compress:jar:1.0:compile
+[DEBUG]       com.android.tools.build:builder-test-api:jar:0.4:compile
+[DEBUG]       com.android.tools.build:builder-model:jar:0.4:compile
+[DEBUG]          com.android.tools:common:jar:22.0:compile
+[DEBUG]             com.google.guava:guava:jar:13.0.1:compile
+[DEBUG]       com.android.tools:sdk-common:jar:22.0:compile
+[DEBUG]       com.android.tools.ddms:ddmlib:jar:22.0:compile
+[DEBUG]          net.sf.kxml:kxml2:jar:2.3.0:compile
+[DEBUG]       com.android.tools.build:manifest-merger:jar:22.0:compile
+[DEBUG]       org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile
+[DEBUG]          org.bouncycastle:bcprov-jdk15on:jar:1.48:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.0.3:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.0.3:compile
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0.3:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:2.1.1:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:2.1.1:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:no_aop:2.9.4:compile
+[DEBUG]    org.apache.maven:maven-compat:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-7:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0.3:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.11:compile
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.11:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.4:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]    emma:emma:jar:2.1.5320:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.10:compile
+[DEBUG]    commons-jxpath:commons-jxpath:jar:1.3:compile
+[DEBUG]    commons-io:commons-io:jar:2.4:compile
+[DEBUG]    org.ow2.asm:asm:jar:4.1:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.6:compile
+[DEBUG]    org.sonatype.aether:aether-api:jar:1.13.1:compile
+[DEBUG]    org.sonatype.aether:aether-util:jar:1.13.1:compile
+[DEBUG]    com.github.rtyley:android-screenshot-paparazzo:jar:1.9:compile
+[DEBUG]       com.madgag:animated-gif-lib:jar:1.0:compile
+[DEBUG]    com.github.rtyley:android-screenshot-celebrity:jar:1.8:compile
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Created new class realm extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[DEBUG] Importing foreign packages into class realm extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[DEBUG]   Included: com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.6.0
+[DEBUG]   Included: com.android.tools.build:builder:jar:0.4
+[DEBUG]   Included: com.android.tools:sdklib:jar:22.0
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.1.1
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.1
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.4
+[DEBUG]   Included: org.apache.httpcomponents:httpmime:jar:4.1
+[DEBUG]   Included: com.android.tools.layoutlib:layoutlib-api:jar:22.0
+[DEBUG]   Included: com.android.tools:dvlib:jar:22.0
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.0
+[DEBUG]   Included: com.android.tools.build:builder-test-api:jar:0.4
+[DEBUG]   Included: com.android.tools.build:builder-model:jar:0.4
+[DEBUG]   Included: com.android.tools:common:jar:22.0
+[DEBUG]   Included: com.google.guava:guava:jar:13.0.1
+[DEBUG]   Included: com.android.tools:sdk-common:jar:22.0
+[DEBUG]   Included: com.android.tools.ddms:ddmlib:jar:22.0
+[DEBUG]   Included: net.sf.kxml:kxml2:jar:2.3.0
+[DEBUG]   Included: com.android.tools.build:manifest-merger:jar:22.0
+[DEBUG]   Included: org.bouncycastle:bcpkix-jdk15on:jar:1.48
+[DEBUG]   Included: org.bouncycastle:bcprov-jdk15on:jar:1.48
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:2.1.1
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:2.9.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: emma:emma:jar:2.1.5320
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.3
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.6
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.10
+[DEBUG]   Included: commons-jxpath:commons-jxpath:jar:1.3
+[DEBUG]   Included: commons-io:commons-io:jar:2.4
+[DEBUG]   Included: org.ow2.asm:asm:jar:4.1
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.6
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.13.1
+[DEBUG]   Included: com.github.rtyley:android-screenshot-paparazzo:jar:1.9
+[DEBUG]   Included: com.madgag:animated-gif-lib:jar:1.0
+[DEBUG]   Included: com.github.rtyley:android-screenshot-celebrity:jar:1.8
+[DEBUG] Extension realms for project org.ei.drishti:dristhi-app:apk:2.1.3.1: [ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0, parent: sun.misc.Launcher$AppClassLoader@45a8a7e]]
+[DEBUG] Created new class realm project>org.ei.drishti:dristhi-app:2.1.3.1
+[DEBUG] Populating class realm project>org.ei.drishti:dristhi-app:2.1.3.1
+[DEBUG] Looking up lifecyle mappings for packaging apk from ClassRealm[project>org.ei.drishti:dristhi-app:2.1.3.1, parent: ClassRealm[maven.api, parent: null]]
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: org.ei.drishti:dristhi-app:apk:2.1.3.1
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building dristhi-app - Application 2.1.3.1
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Resolving plugin version for org.apache.maven.plugins:maven-install-plugin
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-install-plugin/maven-metadata.xml in local (C:\Users\INTEL\.m2\repository)
+[DEBUG] Skipped remote update check for org.apache.maven.plugins:maven-install-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-install-plugin to 2.5.1 from repository central (http://repo.maven.apache.org/maven2, releases)
+[DEBUG] Resolving plugin version for org.apache.maven.plugins:maven-resources-plugin
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-resources-plugin/maven-metadata.xml in local (C:\Users\INTEL\.m2\repository)
+[DEBUG] Skipped remote update check for org.apache.maven.plugins:maven-resources-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-resources-plugin to 2.6 from repository central (http://repo.maven.apache.org/maven2, releases)
+[DEBUG] Resolving plugin version for org.apache.maven.plugins:maven-surefire-plugin
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-surefire-plugin/maven-metadata.xml in local (C:\Users\INTEL\.m2\repository)
+[DEBUG] Skipped remote update check for org.apache.maven.plugins:maven-surefire-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-surefire-plugin to 2.17 from repository central (http://repo.maven.apache.org/maven2, releases)
+[DEBUG] Resolving plugin version for org.apache.maven.plugins:maven-jar-plugin
+[DEBUG] Could not find metadata org.apache.maven.plugins:maven-jar-plugin/maven-metadata.xml in local (C:\Users\INTEL\.m2\repository)
+[DEBUG] Skipped remote update check for org.apache.maven.plugins:maven-jar-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.apache.maven.plugins:maven-jar-plugin to 2.4 from repository central (http://repo.maven.apache.org/maven2, releases)
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       org.ei.drishti:dristhi-app:2.1.3.1
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] Repositories (dependencies): [drishti.local (file:d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/../libs/, releases+snapshots), motech.drishti (http://nexus.motechproject.org/content/repositories/drishti, releases+snapshots), motech.nexus (http://nexus.motechproject.org/content/repositories/snapshots, releases+snapshots), acra-releases (http://acra.googlecode.com/svn/repository/releases, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.5:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources (default-generate-sources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <genDirectory default-value="${project.build.directory}/generated-sources/r">${android.genDirectory}</genDirectory>
+  <genDirectoryAidl default-value="${project.build.directory}/generated-sources/aidl">${android.genDirectoryAidl}</genDirectoryAidl>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <mergeManifests default-value="false">${android.mergeManifests}</mergeManifests>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">UTF-8</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <projectArtifact default-value="${project.artifact}"/>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <source default-value="1.5">1.6</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.6</target>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:proguard (default-proguard)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <includeJdkLibs>${android.proguard.includeJdkLibs}</includeJdkLibs>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <outputDirectory default-value="proguard">${android.proguard.outputDirectory}</outputDirectory>
+  <pluginDependencies>${plugin.artifacts}</pluginDependencies>
+  <proguardConfig>${android.proguard.config}</proguardConfig>
+  <proguardConfigs>${android.proguard.configs}</proguardConfigs>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <proguardFilterManifest>${android.proguard.filterManifest}</proguardFilterManifest>
+  <proguardFilterMavenDescriptor>${android.proguard.filterMavenDescriptor}</proguardFilterMavenDescriptor>
+  <proguardJvmArguments>${android.proguard.jvmArguments}</proguardJvmArguments>
+  <proguardProguardJarPath>${android.proguard.proguardJarPath}</proguardProguardJarPath>
+  <proguardSkip>${android.proguard.skip}</proguardSkip>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:2.3.2:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">UTF-8</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <source default-value="1.5">1.6</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.6</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <additionalClasspathElements>${maven.test.additionalClasspath}</additionalClasspathElements>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <classpathDependencyExcludes>${maven.test.dependency.excludes}</classpathDependencyExcludes>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <dependenciesToScan>${dependenciesToScan}</dependenciesToScan>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkCount default-value="1">${forkCount}</forkCount>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <parallelOptimized default-value="true">${parallelOptimized}</parallelOptimized>
+  <parallelTestsTimeoutForcedInSeconds>${surefire.parallel.forcedTimeout}</parallelTestsTimeoutForcedInSeconds>
+  <parallelTestsTimeoutInSeconds>${surefire.parallel.timeout}</parallelTestsTimeoutInSeconds>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <reuseForks default-value="true">${reuseForks}</reuseForks>
+  <runOrder default-value="filesystem"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <threadCountClasses default-value="0">${threadCountClasses}</threadCountClasses>
+  <threadCountMethods default-value="0">${threadCountMethods}</threadCountMethods>
+  <threadCountSuites default-value="0">${threadCountSuites}</threadCountSuites>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.kelveden:maven-karma-plugin:1.0:start (default)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <autoWatch>${autoWatch}</autoWatch>
+  <browsers>PhantomJS</browsers>
+  <captureTimeout>${captureTimeout}</captureTimeout>
+  <configFile default-value="${basedir}/karma.conf.js">src/test/js/conf/karma.conf.js</configFile>
+  <reportSlowerThan>${reportSlowerThan}</reportSlowerThan>
+  <reporters>${reporters}</reporters>
+  <singleRun default-value="true">true</singleRun>
+  <skipKarma default-value="false">${skipKarma}</skipKarma>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:emma (default-emma)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <emmaClassFolders default-value="${project.build.directory}/classes/">${android.emma.classFolders}</emmaClassFolders>
+  <emmaEnable default-value="false">${android.emma.enable}</emmaEnable>
+  <emmaFilters>${android.emma.filters}</emmaFilters>
+  <emmaOutputMetaFile default-value="${project.build.directory}/emma/coverage.em">${android.emma.outputMetaFile}</emmaOutputMetaFile>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:dex (default-dex)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <dexCoreLibrary default-value="false">${android.dex.coreLibrary}</dexCoreLibrary>
+  <dexJvmArguments default-value="-Xmx1024M">${android.dex.jvmArguments}</dexJvmArguments>
+  <dexNoLocals default-value="false">${android.dex.noLocals}</dexNoLocals>
+  <dexOptimize default-value="true">${android.dex.optimize}</dexOptimize>
+  <dexPreDex default-value="false">${android.dex.predex}</dexPreDex>
+  <dexPreDexLibLocation default-value="${project.build.directory}${file.separator}dexedLibs">${android.dex.dexPreDexLibLocation}</dexPreDexLibLocation>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:2.4:jar (default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <defaultManifestFile default-value="${project.build.outputDirectory}/META-INF/MANIFEST.MF"/>
+  <finalName default-value="${project.build.finalName}">${jar.finalName}</finalName>
+  <forceCreation default-value="false">${jar.forceCreation}</forceCreation>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <skipIfEmpty default-value="false">${jar.skipIfEmpty}</skipIfEmpty>
+  <useDefaultManifestFile default-value="false">${jar.useDefaultManifestFile}</useDefaultManifestFile>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:apk (default-apk)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <apkDebug>${android.apk.debug}</apkDebug>
+  <apkMetaIncludes default-value="">${android.apk.metaIncludes}</apkMetaIncludes>
+  <apkNativeToolchain>${android.nativeToolchain}</apkNativeToolchain>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractDuplicates default-value="false">${android.extractDuplicates}</extractDuplicates>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <nativeLibrariesOutputDirectory default-value="${project.build.directory}/libs"/>
+  <ndkFinalLibraryName>${android.ndk.build.build.final-library.name}</ndkFinalLibraryName>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameInstrumentationTargetPackage>${android.renameInstrumentationTargetPackage}</renameInstrumentationTargetPackage>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <signDebug default-value="auto">${android.sign.debug}</signDebug>
+  <sourceDirectories default-value="">${android.sourceDirectories}</sourceDirectories>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:internal-pre-integration-test (default-internal-pre-integration-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <mavenIgnoreTestFailure default-value="false">${maven.test.failure.ignore}</mavenIgnoreTestFailure>
+  <mavenSkipTests default-value="false">${skipTests}</mavenSkipTests>
+  <mavenTestSkip default-value="false">${maven.test.skip}</mavenTestSkip>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <testAnnotations>${android.test.annotations}</testAnnotations>
+  <testClasses>${android.test.classes}</testClasses>
+  <testCoverage default-value="false">${android.test.coverage}</testCoverage>
+  <testCoverageFile default-value="expression"/>
+  <testCreateReport default-value="true">${android.test.createreport}</testCreateReport>
+  <testDebug default-value="false">${android.test.debug}</testDebug>
+  <testExcludeAnnotations>${android.test.excludeAnnotations}</testExcludeAnnotations>
+  <testInstrumentationPackage>${android.test.instrumentationPackage}</testInstrumentationPackage>
+  <testInstrumentationRunner>${android.test.instrumentationRunner}</testInstrumentationRunner>
+  <testLogOnly default-value="false">${android.test.logonly}</testLogOnly>
+  <testPackages>${android.test.packages}</testPackages>
+  <testSkip default-value="auto">${android.test.skip}</testSkip>
+  <testTestSize>${android.test.testsize}</testTestSize>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:internal-integration-test (default-internal-integration-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <aaptExtraArgs>${android.aaptExtraArgs}</aaptExtraArgs>
+  <androidManifestFile default-value="${project.basedir}/AndroidManifest.xml">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/AndroidManifest.xml</androidManifestFile>
+  <assetsDirectory default-value="${project.basedir}/assets">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/assets</assetsDirectory>
+  <attachJar default-value="true">${android.attachJar}</attachJar>
+  <attachSources default-value="false">${android.attachSources}</attachSources>
+  <combinedAssets>${project.build.directory}/generated-sources/combined-assets/assets</combinedAssets>
+  <combinedRes>${project.build.directory}/generated-sources/combined-resources/res</combinedRes>
+  <configurations>${android.configurations}</configurations>
+  <customPackage>${android.customPackage}</customPackage>
+  <device>${android.device}</device>
+  <envAndroidHome>${env.ANDROID_HOME}</envAndroidHome>
+  <extractedDependenciesAssets>${project.build.directory}/generated-sources/extracted-dependencies/assets</extractedDependenciesAssets>
+  <extractedDependenciesDirectory>${project.build.directory}/generated-sources/extracted-dependencies</extractedDependenciesDirectory>
+  <extractedDependenciesJavaResources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/resources</extractedDependenciesJavaResources>
+  <extractedDependenciesJavaSources>${project.build.directory}/generated-sources/extracted-dependencies/src/main/java</extractedDependenciesJavaSources>
+  <extractedDependenciesRes>${project.build.directory}/generated-sources/extracted-dependencies/res</extractedDependenciesRes>
+  <generateApk default-value="true">${android.generateApk}</generateApk>
+  <mavenIgnoreTestFailure default-value="false">${maven.test.failure.ignore}</mavenIgnoreTestFailure>
+  <mavenSkipTests default-value="false">${skipTests}</mavenSkipTests>
+  <mavenTestSkip default-value="false">${maven.test.skip}</mavenTestSkip>
+  <nativeLibrariesDirectory default-value="${project.basedir}/libs">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/src/main/native</nativeLibrariesDirectory>
+  <ndkPath>${android.ndk.path}</ndkPath>
+  <proguardFile>${android.proguardFile}</proguardFile>
+  <project>${project}</project>
+  <projectRepos default-value="${project.remoteProjectRepositories}"/>
+  <release default-value="false">${android.release}</release>
+  <renameManifestPackage>${android.renameManifestPackage}</renameManifestPackage>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourceDirectory default-value="${project.basedir}/res">d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app/res</resourceDirectory>
+  <resourceOverlayDirectory default-value="${project.basedir}/res-overlay"/>
+  <sdk>
+    <platform>16</platform>
+  </sdk>
+  <sdkPath>${android.sdk.path}</sdkPath>
+  <sdkPlatform>${android.sdk.platform}</sdkPlatform>
+  <session>${session}</session>
+  <sourceDirectory default-value="${project.build.sourceDirectory}"/>
+  <testAnnotations>${android.test.annotations}</testAnnotations>
+  <testClasses>${android.test.classes}</testClasses>
+  <testCoverage default-value="false">${android.test.coverage}</testCoverage>
+  <testCoverageFile default-value="expression"/>
+  <testCreateReport default-value="true">${android.test.createreport}</testCreateReport>
+  <testDebug default-value="false">${android.test.debug}</testDebug>
+  <testExcludeAnnotations>${android.test.excludeAnnotations}</testExcludeAnnotations>
+  <testInstrumentationPackage>${android.test.instrumentationPackage}</testInstrumentationPackage>
+  <testInstrumentationRunner>${android.test.instrumentationRunner}</testInstrumentationRunner>
+  <testLogOnly default-value="false">${android.test.logonly}</testLogOnly>
+  <testPackages>${android.test.packages}</testPackages>
+  <testSkip default-value="auto">${android.test.skip}</testSkip>
+  <testTestSize>${android.test.testsize}</testTestSize>
+  <undeployBeforeDeploy default-value="false">true</undeployBeforeDeploy>
+  <unpackedApkLibsDirectory>${project.build.directory}/unpack/apklibs</unpackedApkLibsDirectory>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-install-plugin:2.5.1:install (default-install)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifact default-value="${project.artifact}"/>
+  <attachedArtifacts default-value="${project.attachedArtifacts}"/>
+  <createChecksum default-value="false">${createChecksum}</createChecksum>
+  <installAtEnd default-value="false">${installAtEnd}</installAtEnd>
+  <localRepository>${localRepository}</localRepository>
+  <packaging default-value="${project.packaging}"/>
+  <pomFile default-value="${project.file}"/>
+  <reactorProjects default-value="${reactorProjects}"/>
+  <skip default-value="false">${maven.install.skip}</skip>
+  <updateReleaseInfo default-value="false">${updateReleaseInfo}</updateReleaseInfo>
+  <project default-value="${project}"/>
+</configuration>
+[DEBUG] =======================================================================
+[WARNING] The POM for info.guardianproject:sqlcipher:jar:2.2.0 is missing, no dependency information available
+[WARNING] The POM for info.guardianproject:libdatabase_sqlcipher:so:2.2.0 is missing, no dependency information available
+[WARNING] The POM for info.guardianproject:libsqlcipher_android:so:2.2.0 is missing, no dependency information available
+[WARNING] The POM for info.guardianproject:libstlport_shared:so:2.2.0 is missing, no dependency information available
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Using connector WagonRepositoryConnector with priority 0.0 for http://nexus.motechproject.org/content/repositories/snapshots
+[DEBUG] Using connector WagonRepositoryConnector with priority 0.0 for http://nexus.motechproject.org/content/repositories/drishti
+Downloading: http://nexus.motechproject.org/content/repositories/snapshots/org/ei/drishti/drishti-interface/0.1-SNAPSHOT/maven-metadata.xml
+Downloading: http://nexus.motechproject.org/content/repositories/drishti/org/ei/drishti/drishti-interface/0.1-SNAPSHOT/maven-metadata.xml
+[DEBUG] Writing tracking file C:\Users\INTEL\.m2\repository\org\ei\drishti\drishti-interface\0.1-SNAPSHOT\resolver-status.properties
+784/784 B               Downloaded: http://nexus.motechproject.org/content/repositories/drishti/org/ei/drishti/drishti-interface/0.1-SNAPSHOT/maven-metadata.xml (784 B at 0.5 KB/sec)
+[DEBUG] Writing tracking file C:\Users\INTEL\.m2\repository\org\ei\drishti\drishti-interface\0.1-SNAPSHOT\resolver-status.properties
+[DEBUG] Could not find metadata org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml in motech.nexus (http://nexus.motechproject.org/content/repositories/snapshots)
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml, already updated during this session.
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml, already updated during this session.
+[DEBUG] Failure to find org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml in http://nexus.motechproject.org/content/repositories/snapshots was cached in the local repository, resolution will not be reattempted until the update interval of motech.nexus has elapsed or updates are forced
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti-interface:0.1-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti:0.1-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for org.ei.drishti:drishti:0.1-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Using connector WagonRepositoryConnector with priority 0.0 for http://nexus.motechproject.org/content/repositories/drishti
+[DEBUG] Using connector WagonRepositoryConnector with priority 0.0 for http://nexus.motechproject.org/content/repositories/snapshots
+Downloading: http://nexus.motechproject.org/content/repositories/drishti/org/ei/drishti/drishti/0.1-SNAPSHOT/maven-metadata.xml
+Downloading: http://nexus.motechproject.org/content/repositories/snapshots/org/ei/drishti/drishti/0.1-SNAPSHOT/maven-metadata.xml
+            [DEBUG] Writing tracking file C:\Users\INTEL\.m2\repository\org\ei\drishti\drishti\0.1-SNAPSHOT\resolver-status.properties
+600/600 B               Downloaded: http://nexus.motechproject.org/content/repositories/drishti/org/ei/drishti/drishti/0.1-SNAPSHOT/maven-metadata.xml (600 B at 0.0 KB/sec)
+[DEBUG] Writing tracking file C:\Users\INTEL\.m2\repository\org\ei\drishti\drishti\0.1-SNAPSHOT\resolver-status.properties
+[DEBUG] Could not find metadata org.ei.drishti:drishti:0.1-SNAPSHOT/maven-metadata.xml in motech.nexus (http://nexus.motechproject.org/content/repositories/snapshots)
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=115, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=62, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=22, ConflictResolver.conflictItemCount=105, DefaultDependencyCollector.collectTime=37648, DefaultDependencyCollector.transformTime=23}
+[DEBUG] org.ei.drishti:dristhi-app:apk:2.1.3.1
+[DEBUG]    com.google.android:android:jar:4.1.1.4:provided
+[DEBUG]       commons-logging:commons-logging:jar:1.1.1:provided
+[DEBUG]       org.apache.httpcomponents:httpclient:jar:4.0.1:provided
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.0.1:provided
+[DEBUG]       org.khronos:opengl-api:jar:gl1.1-android-2.1_r1:provided
+[DEBUG]       xerces:xmlParserAPIs:jar:2.6.2:provided
+[DEBUG]       xpp3:xpp3:jar:1.1.4c:provided
+[DEBUG]       org.json:json:jar:20080701:compile
+[DEBUG]    org.robolectric:robolectric:jar:2.2:test
+[DEBUG]       org.objenesis:objenesis:jar:1.3:test
+[DEBUG]       org.xerial:sqlite-jdbc:jar:3.7.2:test
+[DEBUG]       org.ow2.asm:asm:jar:4.1:test
+[DEBUG]       org.ow2.asm:asm-commons:jar:4.1:test
+[DEBUG]          org.ow2.asm:asm-tree:jar:4.1:test
+[DEBUG]       org.ow2.asm:asm-util:jar:4.1:test
+[DEBUG]       org.ow2.asm:asm-analysis:jar:4.1:test
+[DEBUG]       com.ximpleware:vtd-xml:jar:2.11:test
+[DEBUG]       com.google.android:support-v4:jar:r7:test
+[DEBUG]       org.easytesting:fest-util:jar:1.2.5:test
+[DEBUG]       org.easytesting:fest-reflect:jar:1.4.1:test
+[DEBUG]       org.apache.maven:maven-ant-tasks:jar:2.1.3:test
+[DEBUG]          org.apache.ant:ant:jar:1.8.0:test
+[DEBUG]             org.apache.ant:ant-launcher:jar:1.8.0:test
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:test
+[DEBUG]          org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:test
+[DEBUG]          org.codehaus.plexus:plexus-utils:jar:1.5.15:test
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.11:test
+[DEBUG]          org.apache.maven:maven-artifact:jar:2.2.1:test
+[DEBUG]          org.apache.maven:maven-artifact-manager:jar:2.2.1:test
+[DEBUG]             org.apache.maven:maven-repository-metadata:jar:2.2.1:test
+[DEBUG]             backport-util-concurrent:backport-util-concurrent:jar:3.1:test
+[DEBUG]          org.apache.maven:maven-model:jar:2.2.1:test
+[DEBUG]          org.apache.maven:maven-project:jar:2.2.1:test
+[DEBUG]             org.apache.maven:maven-profile:jar:2.2.1:test
+[DEBUG]             org.apache.maven:maven-plugin-registry:jar:2.2.1:test
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.2.1:test
+[DEBUG]          org.apache.maven:maven-settings:jar:2.2.1:test
+[DEBUG]          org.apache.maven.wagon:wagon-file:jar:1.0-beta-6:test
+[DEBUG]          org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-6:test
+[DEBUG]             org.apache.maven.wagon:wagon-http-shared:jar:1.0-beta-6:test
+[DEBUG]                nekohtml:xercesMinimal:jar:1.9.6.2:test
+[DEBUG]                nekohtml:nekohtml:jar:1.9.6.2:test
+[DEBUG]          org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-6:test
+[DEBUG]    commons-codec:commons-codec:jar:1.6:compile
+[DEBUG]    commons-io:commons-io:jar:2.1:compile
+[DEBUG]    junit:junit:jar:4.10:test
+[DEBUG]       org.hamcrest:hamcrest-core:jar:1.1:test
+[DEBUG]    com.google.android:android-test:jar:4.1.1.4:test
+[DEBUG]    org.mockito:mockito-all:jar:1.9.0:test
+[DEBUG]    com.google.code.gson:gson:jar:2.2.4:compile
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]    com.google.guava:guava:jar:r09:compile
+[DEBUG]    info.guardianproject:sqlcipher:jar:2.2.0:compile
+[DEBUG]    ch.acra:acra:jar:4.5.0:compile
+[DEBUG]    info.guardianproject:libdatabase_sqlcipher:so:2.2.0:runtime
+[DEBUG]    info.guardianproject:libsqlcipher_android:so:2.2.0:runtime
+[DEBUG]    info.guardianproject:libstlport_shared:so:2.2.0:runtime
+[DEBUG]    org.ei.drishti:drishti-interface:jar:0.1-SNAPSHOT:compile
+[DEBUG]       joda-time:joda-time:jar:2.0:compile
+[DEBUG]       org.codehaus.jackson:jackson-core-asl:jar:1.9.7:compile
+[DEBUG]    org.ocpsoft.prettytime:prettytime:jar:1.0.8.Final:compile
+[DEBUG]    org.mozilla:rhino:jar:1.7R4:compile
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ dristhi-app ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=3, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=3, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=0, ConflictResolver.conflictItemCount=3, DefaultDependencyCollector.collectTime=3, DefaultDependencyCollector.transformTime=0}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.5:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Imported:  < project>org.ei.drishti:dristhi-app:2.1.3.1
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@45a8a7e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic configurator -->
+[DEBUG]   (f) directory = d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes
+[DEBUG]   (f) reportDirectory = d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\site
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\UpdateActionsTaskTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\UpdateActionsTaskTest$4.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\UpdateActionsTaskTest$3.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\UpdateActionsTaskTest$2.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\UpdateActionsTaskTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\dialog\DialogOptionMapperTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\dialog
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\VillageControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\VillageControllerTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ReportIndicatorListViewControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ReportIndicatorDetailViewControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\PNCSmartRegisterControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\PNCSmartRegisterControllerTest$4.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\PNCSmartRegisterControllerTest$3.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\PNCSmartRegisterControllerTest$2.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\PNCSmartRegisterControllerTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\PNCDetailControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\FPSmartRegisterControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\FPSmartRegisterControllerTest$4.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\FPSmartRegisterControllerTest$3.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\FPSmartRegisterControllerTest$2.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\FPSmartRegisterControllerTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\EligibleCoupleDetailControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$8.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$7.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$6.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$5.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$4.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$3.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$2.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ECSmartRegisterControllerTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ChildSmartRegisterControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ChildSmartRegisterControllerTest$4.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ChildSmartRegisterControllerTest$3.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ChildSmartRegisterControllerTest$2.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ChildSmartRegisterControllerTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ChildDetailControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ANCSmartRegisterControllerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ANCSmartRegisterControllerTest$4.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ANCSmartRegisterControllerTest$3.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ANCSmartRegisterControllerTest$2.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ANCSmartRegisterControllerTest$1.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller\ANCDetailControllerTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\controller
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract\SmartRegisterClientsTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract\PregnancyDetailsTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract\mapper\BeneficiaryServiceTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract\mapper
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract\ECClientTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract\ECChildClientTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\contract
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeHomeActivityTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowVillageController.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowECSmartRegisterControllerWithZeroClients.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowECSmartRegisterControllerFor5Clients.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowECSmartRegisterControllerFor25Clients.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowECSmartRegisterControllerFor21Clients.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowECSmartRegisterControllerFor20Clients.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity\NativeECSmartRegisterActivityTest$ShadowECSmartRegisterControllerFor1Clients.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view\activity
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\view
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util\TimelineEventComparatorTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util\StringUtilTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util\IntergerUtilTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util\IntegerUtilTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util\CacheTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util\ActionBuilder.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\util
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\shadows\ShadowContext.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\shadows
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\setup\DrishtiTestSetup.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\setup\DrishtiTestRunner.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\setup
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\UserServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\PendingFormSubmissionServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\MotherServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\FormSubmissionSyncServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\FormSubmissionServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\TTHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\RenewFPProductHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\PNCRegistrationOAHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\PNCCloseHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\HBTestHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\FPComplicationsHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\FPChangeHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\FormSubmissionRouterTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\ECRegistrationHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\DeliveryPlanHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\DeliveryOutcomeHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\ANCVisitHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\ANCRegistrationOAHandlerTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler\ANCRegistrationHandlerTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\formSubmissionHandler
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\EligibleCoupleServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\DrishtiServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\ChildServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\AlertServiceTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service\ActionServiceTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\service
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\repository\AllSharedPreferencesTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\repository\AllSettingsTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\repository\AllReportsTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\repository\AllEligibleCouplesTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\repository\AllBeneficiariesTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\repository
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\domain\TimelineEventTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\domain\ReportIndicatorTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\domain\FPMethodTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\domain\FormSubmissionTest.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\domain
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\adapter\SmartRegisterPaginatedAdapterTest.class
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\adapter\SmartRegisterPaginatedAdapterTest$FakeClientsProvider.class
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti\adapter
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei\drishti
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org\ei
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\org
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes\alerts.json
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\generated-sources\r
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\generated-sources
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\org\ocpsoft\pretty\time\i18n\Resources_short.properties
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\org\ocpsoft\pretty\time\i18n
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\org\ocpsoft\pretty\time
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\org\ocpsoft\pretty
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\org\ocpsoft
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\org
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF\maven\org.ei.drishti\dristhi-app\pom.xml
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF\maven\org.ei.drishti\dristhi-app\pom.properties
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF\maven\org.ei.drishti\dristhi-app
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF\maven\org.ei.drishti
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF\maven
+[INFO] Deleting file D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF\MANIFEST.MF
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes\META-INF
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes
+[INFO] Deleting directory D:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target
+[DEBUG] Skipping non-existing directory d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\classes
+[DEBUG] Skipping non-existing directory d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\test-classes
+[DEBUG] Skipping non-existing directory d:\dristhiSRP\drishtiWorkSpc\dristhi-app-parent\dristhi-app\target\site
+[INFO] 
+[INFO] --- android-maven-plugin:3.6.0:generate-sources (default-generate-sources) @ dristhi-app ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=1, ConflictMarker.nodeCount=194, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=71, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=6, ConflictResolver.conflictItemCount=130, DefaultDependencyCollector.collectTime=24, DefaultDependencyCollector.transformTime=7}
+[DEBUG] com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.6.0:
+[DEBUG]    com.android.tools.build:builder:jar:0.4:compile
+[DEBUG]       com.android.tools:sdklib:jar:22.0:compile
+[DEBUG]          org.apache.httpcomponents:httpclient:jar:4.1.1:compile
+[DEBUG]             org.apache.httpcomponents:httpcore:jar:4.1:compile
+[DEBUG]             commons-logging:commons-logging:jar:1.1.1:compile
+[DEBUG]             commons-codec:commons-codec:jar:1.4:compile
+[DEBUG]          org.apache.httpcomponents:httpmime:jar:4.1:compile
+[DEBUG]          com.android.tools.layoutlib:layoutlib-api:jar:22.0:compile
+[DEBUG]          com.android.tools:dvlib:jar:22.0:compile
+[DEBUG]          org.apache.commons:commons-compress:jar:1.0:compile
+[DEBUG]       com.android.tools.build:builder-test-api:jar:0.4:compile
+[DEBUG]       com.android.tools.build:builder-model:jar:0.4:compile
+[DEBUG]          com.android.tools:common:jar:22.0:compile
+[DEBUG]             com.google.guava:guava:jar:13.0.1:compile
+[DEBUG]       com.android.tools:sdk-common:jar:22.0:compile
+[DEBUG]       com.android.tools.ddms:ddmlib:jar:22.0:compile
+[DEBUG]          net.sf.kxml:kxml2:jar:2.3.0:compile
+[DEBUG]       com.android.tools.build:manifest-merger:jar:22.0:compile
+[DEBUG]       org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile
+[DEBUG]          org.bouncycastle:bcprov-jdk15on:jar:1.48:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.0.3:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.0.3:compile
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0.3:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:2.1.1:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:2.1.1:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:no_aop:2.9.4:compile
+[DEBUG]    org.apache.maven:maven-compat:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-7:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0.3:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0.3:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.11:compile
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.11:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.4:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]    emma:emma:jar:2.1.5320:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.10:compile
+[DEBUG]    commons-jxpath:commons-jxpath:jar:1.3:compile
+[DEBUG]    commons-io:commons-io:jar:2.4:compile
+[DEBUG]    org.ow2.asm:asm:jar:4.1:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.6:compile
+[DEBUG]    org.sonatype.aether:aether-api:jar:1.13.1:compile
+[DEBUG]    org.sonatype.aether:aether-util:jar:1.13.1:compile
+[DEBUG]    com.github.rtyley:android-screenshot-paparazzo:jar:1.9:compile
+[DEBUG]       com.madgag:animated-gif-lib:jar:1.0:compile
+[DEBUG]    com.github.rtyley:android-screenshot-celebrity:jar:1.8:compile
+[DEBUG] Created new class realm plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[DEBUG] Importing foreign packages into class realm plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[DEBUG]   Imported:  < project>org.ei.drishti:dristhi-app:2.1.3.1
+[DEBUG] Populating class realm plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[DEBUG]   Included: com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.6.0
+[DEBUG]   Included: com.android.tools.build:builder:jar:0.4
+[DEBUG]   Included: com.android.tools:sdklib:jar:22.0
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.1.1
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.1
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.4
+[DEBUG]   Included: org.apache.httpcomponents:httpmime:jar:4.1
+[DEBUG]   Included: com.android.tools.layoutlib:layoutlib-api:jar:22.0
+[DEBUG]   Included: com.android.tools:dvlib:jar:22.0
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.0
+[DEBUG]   Included: com.android.tools.build:builder-test-api:jar:0.4
+[DEBUG]   Included: com.android.tools.build:builder-model:jar:0.4
+[DEBUG]   Included: com.android.tools:common:jar:22.0
+[DEBUG]   Included: com.google.guava:guava:jar:13.0.1
+[DEBUG]   Included: com.android.tools:sdk-common:jar:22.0
+[DEBUG]   Included: com.android.tools.ddms:ddmlib:jar:22.0
+[DEBUG]   Included: net.sf.kxml:kxml2:jar:2.3.0
+[DEBUG]   Included: com.android.tools.build:manifest-merger:jar:22.0
+[DEBUG]   Included: org.bouncycastle:bcpkix-jdk15on:jar:1.48
+[DEBUG]   Included: org.bouncycastle:bcprov-jdk15on:jar:1.48
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:2.1.1
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:2.9.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: emma:emma:jar:2.1.5320
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.3
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.6
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.10
+[DEBUG]   Included: commons-jxpath:commons-jxpath:jar:1.3
+[DEBUG]   Included: commons-io:commons-io:jar:2.4
+[DEBUG]   Included: org.ow2.asm:asm:jar:4.1
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.6
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.13.1
+[DEBUG]   Included: com.github.rtyley:android-screenshot-paparazzo:jar:1.9
+[DEBUG]   Included: com.madgag:animated-gif-lib:jar:1.0
+[DEBUG]   Included: com.github.rtyley:android-screenshot-celebrity:jar:1.8
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:3.0.3
+[DEBUG]   Excluded: org.sonatype.sisu:sisu-inject-plexus:jar:2.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-compat:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-model-builder:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-7
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-settings-builder:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:3.0.3
+[DEBUG]   Excluded: org.apache.maven:maven-aether-provider:jar:3.0.3
+[DEBUG]   Excluded: org.sonatype.aether:aether-spi:jar:1.11
+[DEBUG]   Excluded: org.sonatype.aether:aether-impl:jar:1.11
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.4
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG]   Excluded: org.sonatype.aether:aether-api:jar:1.13.1
+[DEBUG] Configuring mojo com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources from plugin realm ClassRealm[plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0, parent: sun.misc.Launcher$AppClassLoader@45a8a7e]
+[WARNING] Error injecting: com.jayway.maven.plugins.android.phase01generatesources.GenerateSourcesMojo
+java.lang.NoClassDefFoundError: Lorg/sonatype/aether/RepositorySystem;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2308)
+	at java.lang.Class.getDeclaredFields(Class.java:1760)
+	at com.google.inject.spi.InjectionPoint.getInjectionPoints(InjectionPoint.java:661)
+	at com.google.inject.spi.InjectionPoint.forInstanceMethodsAndFields(InjectionPoint.java:366)
+	at com.google.inject.internal.ConstructorBindingImpl.getInternalDependencies(ConstructorBindingImpl.java:165)
+	at com.google.inject.internal.InjectorImpl.getInternalDependencies(InjectorImpl.java:609)
+	at com.google.inject.internal.InjectorImpl.cleanup(InjectorImpl.java:565)
+	at com.google.inject.internal.InjectorImpl.initializeJitBinding(InjectorImpl.java:551)
+	at com.google.inject.internal.InjectorImpl.createJustInTimeBinding(InjectorImpl.java:865)
+	at com.google.inject.internal.InjectorImpl.createJustInTimeBindingRecursive(InjectorImpl.java:790)
+	at com.google.inject.internal.InjectorImpl.getJustInTimeBinding(InjectorImpl.java:278)
+	at com.google.inject.internal.InjectorImpl.getBindingOrThrow(InjectorImpl.java:210)
+	at com.google.inject.internal.InjectorImpl.getProviderOrThrow(InjectorImpl.java:986)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1019)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:982)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1032)
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:86)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:55)
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:70)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:100)
+	at org.eclipse.sisu.plexus.PlexusLifecycleManager.onProvision(PlexusLifecycleManager.java:133)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:55)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:68)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47)
+	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:997)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1047)
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:993)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:59)
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:82)
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:260)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:252)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:462)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:120)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: java.lang.ClassNotFoundException: org.sonatype.aether.RepositorySystem
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:259)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:235)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:227)
+	... 57 more
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 43.286 s
+[INFO] Finished at: 2014-06-19T16:14:50+05:00
+[INFO] Final Memory: 15M/96M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources (default-generate-sources) on project dristhi-app: Execution default-generate-sources of goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources failed: A required class was missing while executing com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources: Lorg/sonatype/aether/RepositorySystem;
+[ERROR] -----------------------------------------------------
+[ERROR] realm =    plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+[ERROR] strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+[ERROR] urls[0] = file:/C:/Users/INTEL/.m2/repository/com/jayway/maven/plugins/android/generation2/android-maven-plugin/3.6.0/android-maven-plugin-3.6.0.jar
+[ERROR] urls[1] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder/0.4/builder-0.4.jar
+[ERROR] urls[2] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdklib/22.0/sdklib-22.0.jar
+[ERROR] urls[3] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar
+[ERROR] urls[4] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar
+[ERROR] urls[5] = file:/C:/Users/INTEL/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+[ERROR] urls[6] = file:/C:/Users/INTEL/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+[ERROR] urls[7] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar
+[ERROR] urls[8] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/layoutlib/layoutlib-api/22.0/layoutlib-api-22.0.jar
+[ERROR] urls[9] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/dvlib/22.0/dvlib-22.0.jar
+[ERROR] urls[10] = file:/C:/Users/INTEL/.m2/repository/org/apache/commons/commons-compress/1.0/commons-compress-1.0.jar
+[ERROR] urls[11] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-test-api/0.4/builder-test-api-0.4.jar
+[ERROR] urls[12] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-model/0.4/builder-model-0.4.jar
+[ERROR] urls[13] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/common/22.0/common-22.0.jar
+[ERROR] urls[14] = file:/C:/Users/INTEL/.m2/repository/com/google/guava/guava/13.0.1/guava-13.0.1.jar
+[ERROR] urls[15] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdk-common/22.0/sdk-common-22.0.jar
+[ERROR] urls[16] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/ddms/ddmlib/22.0/ddmlib-22.0.jar
+[ERROR] urls[17] = file:/C:/Users/INTEL/.m2/repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar
+[ERROR] urls[18] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/manifest-merger/22.0/manifest-merger-22.0.jar
+[ERROR] urls[19] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar
+[ERROR] urls[20] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar
+[ERROR] urls[21] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.1.1/sisu-inject-bean-2.1.1.jar
+[ERROR] urls[22] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-guice/2.9.4/sisu-guice-2.9.4-no_aop.jar
+[ERROR] urls[23] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar
+[ERROR] urls[24] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+[ERROR] urls[25] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+[ERROR] urls[26] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+[ERROR] urls[27] = file:/C:/Users/INTEL/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+[ERROR] urls[28] = file:/C:/Users/INTEL/.m2/repository/emma/emma/2.1.5320/emma-2.1.5320.jar
+[ERROR] urls[29] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-archiver/2.3/plexus-archiver-2.3.jar
+[ERROR] urls[30] = file:/C:/Users/INTEL/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+[ERROR] urls[31] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-io/2.0.6/plexus-io-2.0.6.jar
+[ERROR] urls[32] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar
+[ERROR] urls[33] = file:/C:/Users/INTEL/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar
+[ERROR] urls[34] = file:/C:/Users/INTEL/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+[ERROR] urls[35] = file:/C:/Users/INTEL/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+[ERROR] urls[36] = file:/C:/Users/INTEL/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+[ERROR] urls[37] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.jar
+[ERROR] urls[38] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-paparazzo/1.9/android-screenshot-paparazzo-1.9.jar
+[ERROR] urls[39] = file:/C:/Users/INTEL/.m2/repository/com/madgag/animated-gif-lib/1.0/animated-gif-lib-1.0.jar
+[ERROR] urls[40] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-celebrity/1.8/android-screenshot-celebrity-1.8.jar
+[ERROR] Number of foreign imports: 1
+[ERROR] import: Entry[import  from realm ClassRealm[project>org.ei.drishti:dristhi-app:2.1.3.1, parent: ClassRealm[maven.api, parent: null]]]
+[ERROR] 
+[ERROR] -----------------------------------------------------: org.sonatype.aether.RepositorySystem
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources (default-generate-sources) on project dristhi-app: Execution default-generate-sources of goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources failed: A required class was missing while executing com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources: Lorg/sonatype/aether/RepositorySystem;
+-----------------------------------------------------
+realm =    plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+urls[0] = file:/C:/Users/INTEL/.m2/repository/com/jayway/maven/plugins/android/generation2/android-maven-plugin/3.6.0/android-maven-plugin-3.6.0.jar
+urls[1] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder/0.4/builder-0.4.jar
+urls[2] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdklib/22.0/sdklib-22.0.jar
+urls[3] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar
+urls[4] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar
+urls[5] = file:/C:/Users/INTEL/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+urls[6] = file:/C:/Users/INTEL/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+urls[7] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar
+urls[8] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/layoutlib/layoutlib-api/22.0/layoutlib-api-22.0.jar
+urls[9] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/dvlib/22.0/dvlib-22.0.jar
+urls[10] = file:/C:/Users/INTEL/.m2/repository/org/apache/commons/commons-compress/1.0/commons-compress-1.0.jar
+urls[11] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-test-api/0.4/builder-test-api-0.4.jar
+urls[12] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-model/0.4/builder-model-0.4.jar
+urls[13] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/common/22.0/common-22.0.jar
+urls[14] = file:/C:/Users/INTEL/.m2/repository/com/google/guava/guava/13.0.1/guava-13.0.1.jar
+urls[15] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdk-common/22.0/sdk-common-22.0.jar
+urls[16] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/ddms/ddmlib/22.0/ddmlib-22.0.jar
+urls[17] = file:/C:/Users/INTEL/.m2/repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar
+urls[18] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/manifest-merger/22.0/manifest-merger-22.0.jar
+urls[19] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar
+urls[20] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar
+urls[21] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.1.1/sisu-inject-bean-2.1.1.jar
+urls[22] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-guice/2.9.4/sisu-guice-2.9.4-no_aop.jar
+urls[23] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar
+urls[24] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+urls[25] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+urls[26] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+urls[27] = file:/C:/Users/INTEL/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+urls[28] = file:/C:/Users/INTEL/.m2/repository/emma/emma/2.1.5320/emma-2.1.5320.jar
+urls[29] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-archiver/2.3/plexus-archiver-2.3.jar
+urls[30] = file:/C:/Users/INTEL/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+urls[31] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-io/2.0.6/plexus-io-2.0.6.jar
+urls[32] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar
+urls[33] = file:/C:/Users/INTEL/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar
+urls[34] = file:/C:/Users/INTEL/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+urls[35] = file:/C:/Users/INTEL/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+urls[36] = file:/C:/Users/INTEL/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+urls[37] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.jar
+urls[38] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-paparazzo/1.9/android-screenshot-paparazzo-1.9.jar
+urls[39] = file:/C:/Users/INTEL/.m2/repository/com/madgag/animated-gif-lib/1.0/animated-gif-lib-1.0.jar
+urls[40] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-celebrity/1.8/android-screenshot-celebrity-1.8.jar
+Number of foreign imports: 1
+import: Entry[import  from realm ClassRealm[project>org.ei.drishti:dristhi-app:2.1.3.1, parent: ClassRealm[maven.api, parent: null]]]
+
+-----------------------------------------------------
+
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:224)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:76)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:116)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:361)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:155)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution default-generate-sources of goal com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources failed: A required class was missing while executing com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources: Lorg/sonatype/aether/RepositorySystem;
+-----------------------------------------------------
+realm =    plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+urls[0] = file:/C:/Users/INTEL/.m2/repository/com/jayway/maven/plugins/android/generation2/android-maven-plugin/3.6.0/android-maven-plugin-3.6.0.jar
+urls[1] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder/0.4/builder-0.4.jar
+urls[2] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdklib/22.0/sdklib-22.0.jar
+urls[3] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar
+urls[4] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar
+urls[5] = file:/C:/Users/INTEL/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+urls[6] = file:/C:/Users/INTEL/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+urls[7] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar
+urls[8] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/layoutlib/layoutlib-api/22.0/layoutlib-api-22.0.jar
+urls[9] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/dvlib/22.0/dvlib-22.0.jar
+urls[10] = file:/C:/Users/INTEL/.m2/repository/org/apache/commons/commons-compress/1.0/commons-compress-1.0.jar
+urls[11] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-test-api/0.4/builder-test-api-0.4.jar
+urls[12] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-model/0.4/builder-model-0.4.jar
+urls[13] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/common/22.0/common-22.0.jar
+urls[14] = file:/C:/Users/INTEL/.m2/repository/com/google/guava/guava/13.0.1/guava-13.0.1.jar
+urls[15] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdk-common/22.0/sdk-common-22.0.jar
+urls[16] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/ddms/ddmlib/22.0/ddmlib-22.0.jar
+urls[17] = file:/C:/Users/INTEL/.m2/repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar
+urls[18] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/manifest-merger/22.0/manifest-merger-22.0.jar
+urls[19] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar
+urls[20] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar
+urls[21] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.1.1/sisu-inject-bean-2.1.1.jar
+urls[22] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-guice/2.9.4/sisu-guice-2.9.4-no_aop.jar
+urls[23] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar
+urls[24] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+urls[25] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+urls[26] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+urls[27] = file:/C:/Users/INTEL/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+urls[28] = file:/C:/Users/INTEL/.m2/repository/emma/emma/2.1.5320/emma-2.1.5320.jar
+urls[29] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-archiver/2.3/plexus-archiver-2.3.jar
+urls[30] = file:/C:/Users/INTEL/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+urls[31] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-io/2.0.6/plexus-io-2.0.6.jar
+urls[32] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar
+urls[33] = file:/C:/Users/INTEL/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar
+urls[34] = file:/C:/Users/INTEL/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+urls[35] = file:/C:/Users/INTEL/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+urls[36] = file:/C:/Users/INTEL/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+urls[37] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.jar
+urls[38] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-paparazzo/1.9/android-screenshot-paparazzo-1.9.jar
+urls[39] = file:/C:/Users/INTEL/.m2/repository/com/madgag/animated-gif-lib/1.0/animated-gif-lib-1.0.jar
+urls[40] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-celebrity/1.8/android-screenshot-celebrity-1.8.jar
+Number of foreign imports: 1
+import: Entry[import  from realm ClassRealm[project>org.ei.drishti:dristhi-app:2.1.3.1, parent: ClassRealm[maven.api, parent: null]]]
+
+-----------------------------------------------------
+
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:167)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	... 19 more
+Caused by: org.apache.maven.plugin.PluginContainerException: A required class was missing while executing com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0:generate-sources: Lorg/sonatype/aether/RepositorySystem;
+-----------------------------------------------------
+realm =    plugin>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.6.0
+strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+urls[0] = file:/C:/Users/INTEL/.m2/repository/com/jayway/maven/plugins/android/generation2/android-maven-plugin/3.6.0/android-maven-plugin-3.6.0.jar
+urls[1] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder/0.4/builder-0.4.jar
+urls[2] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdklib/22.0/sdklib-22.0.jar
+urls[3] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar
+urls[4] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar
+urls[5] = file:/C:/Users/INTEL/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar
+urls[6] = file:/C:/Users/INTEL/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar
+urls[7] = file:/C:/Users/INTEL/.m2/repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar
+urls[8] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/layoutlib/layoutlib-api/22.0/layoutlib-api-22.0.jar
+urls[9] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/dvlib/22.0/dvlib-22.0.jar
+urls[10] = file:/C:/Users/INTEL/.m2/repository/org/apache/commons/commons-compress/1.0/commons-compress-1.0.jar
+urls[11] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-test-api/0.4/builder-test-api-0.4.jar
+urls[12] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/builder-model/0.4/builder-model-0.4.jar
+urls[13] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/common/22.0/common-22.0.jar
+urls[14] = file:/C:/Users/INTEL/.m2/repository/com/google/guava/guava/13.0.1/guava-13.0.1.jar
+urls[15] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/sdk-common/22.0/sdk-common-22.0.jar
+urls[16] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/ddms/ddmlib/22.0/ddmlib-22.0.jar
+urls[17] = file:/C:/Users/INTEL/.m2/repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar
+urls[18] = file:/C:/Users/INTEL/.m2/repository/com/android/tools/build/manifest-merger/22.0/manifest-merger-22.0.jar
+urls[19] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar
+urls[20] = file:/C:/Users/INTEL/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar
+urls[21] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.1.1/sisu-inject-bean-2.1.1.jar
+urls[22] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/sisu/sisu-guice/2.9.4/sisu-guice-2.9.4-no_aop.jar
+urls[23] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar
+urls[24] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+urls[25] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+urls[26] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+urls[27] = file:/C:/Users/INTEL/.m2/repository/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+urls[28] = file:/C:/Users/INTEL/.m2/repository/emma/emma/2.1.5320/emma-2.1.5320.jar
+urls[29] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-archiver/2.3/plexus-archiver-2.3.jar
+urls[30] = file:/C:/Users/INTEL/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+urls[31] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-io/2.0.6/plexus-io-2.0.6.jar
+urls[32] = file:/C:/Users/INTEL/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar
+urls[33] = file:/C:/Users/INTEL/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar
+urls[34] = file:/C:/Users/INTEL/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+urls[35] = file:/C:/Users/INTEL/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+urls[36] = file:/C:/Users/INTEL/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+urls[37] = file:/C:/Users/INTEL/.m2/repository/org/sonatype/aether/aether-util/1.13.1/aether-util-1.13.1.jar
+urls[38] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-paparazzo/1.9/android-screenshot-paparazzo-1.9.jar
+urls[39] = file:/C:/Users/INTEL/.m2/repository/com/madgag/animated-gif-lib/1.0/animated-gif-lib-1.0.jar
+urls[40] = file:/C:/Users/INTEL/.m2/repository/com/github/rtyley/android-screenshot-celebrity/1.8/android-screenshot-celebrity-1.8.jar
+Number of foreign imports: 1
+import: Entry[import  from realm ClassRealm[project>org.ei.drishti:dristhi-app:2.1.3.1, parent: ClassRealm[maven.api, parent: null]]]
+
+-----------------------------------------------------
+
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:165)
+	... 20 more
+Caused by: java.lang.NoClassDefFoundError: Lorg/sonatype/aether/RepositorySystem;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2308)
+	at java.lang.Class.getDeclaredFields(Class.java:1760)
+	at com.google.inject.spi.InjectionPoint.getInjectionPoints(InjectionPoint.java:661)
+	at com.google.inject.spi.InjectionPoint.forInstanceMethodsAndFields(InjectionPoint.java:366)
+	at com.google.inject.internal.ConstructorBindingImpl.getInternalDependencies(ConstructorBindingImpl.java:165)
+	at com.google.inject.internal.InjectorImpl.getInternalDependencies(InjectorImpl.java:609)
+	at com.google.inject.internal.InjectorImpl.cleanup(InjectorImpl.java:565)
+	at com.google.inject.internal.InjectorImpl.initializeJitBinding(InjectorImpl.java:551)
+	at com.google.inject.internal.InjectorImpl.createJustInTimeBinding(InjectorImpl.java:865)
+	at com.google.inject.internal.InjectorImpl.createJustInTimeBindingRecursive(InjectorImpl.java:790)
+	at com.google.inject.internal.InjectorImpl.getJustInTimeBinding(InjectorImpl.java:278)
+	at com.google.inject.internal.InjectorImpl.getBindingOrThrow(InjectorImpl.java:210)
+	at com.google.inject.internal.InjectorImpl.getProviderOrThrow(InjectorImpl.java:986)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1019)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:982)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1032)
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48)
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:86)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:55)
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:70)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:100)
+	at org.eclipse.sisu.plexus.PlexusLifecycleManager.onProvision(PlexusLifecycleManager.java:133)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:55)
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:68)
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47)
+	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:997)
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1047)
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:993)
+	at com.google.inject.Scopes$1$1.get(Scopes.java:59)
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:82)
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:260)
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:252)
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:462)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:120)
+	... 20 more
+Caused by: java.lang.ClassNotFoundException: org.sonatype.aether.RepositorySystem
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:259)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:235)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:227)
+	... 57 more
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/AetherClassNotFound

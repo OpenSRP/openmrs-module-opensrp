@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenSRP-CRVS</string>
+    <string name="userNameEditText">Enter user name</string>
+    <string name="passwordEditText">Enter password</string>
+    <string name="login_text">Log In</string>
+    <string name="image_description">logo</string>
+    <string name="spacer">spacer</string>
+    <string name="loggin_in_dialog_title">Logging in…</string>
+    <string name="loggin_in_dialog_message">Please wait</string>
+    <string name="login_failed_dialog_title">Log in failed</string>
+    <string name="login_failed_dialog_message">Please check the credentials</string>
+    <string name="form_back_confirm_dialog_message">Are you sure you want to go back? All the data you have entered in
+        this form will be cleared.
+    </string>
+    <string name="form_back_confirm_dialog_title">Confirm form close</string>
+    <string name="yes_button_label">Yes</string>
+    <string name="no_button_label">No</string>
+
+    <string name="home_ec_label">Eligible Couple</string>
+    <string name="home_fp_label">FP</string>
+    <string name="home_anc_label">ANC</string>
+    <string name="home_pnc_label">PNC</string>
+    <string name="home_child_label">Child</string>
+    <string name="home_report_label">Reporting</string>
+    <string name="register_label">Register</string>
+    <string name="home_videos_label">Videos</string>
+
+    <string name="videos_cannot_play_video_dialog_title">Cannot play video.</string>
+    <string name="videos_IEC_not_installed_dialog_message">Please install IEC application to play the videos.
+    </string>
+    <string name="videos_unknown_error_dialog_message">Unable to play video due to technical error.</string>
+    <string name="settings_logout_confirm_title">Confirm Log out</string>
+    <string name="settings_logout_confirm_dialog_message">Are you sure you want to log out? All the data will be
+        cleared.
+    </string>
+    <string name="unsynced_forms_count_message">forms unsynced</string>
+
+    <string name="str_next">"Next &gt;&gt;"</string>
+    <string name="str_previous">"&lt;&lt; Previous"</string>
+    <string name="str_page_info">Page {0} of {1}</string>
+
+    <string name="header_name">NAME</string>
+    <string name="header_ec_no">EC NO.</string>
+    <string name="header_gplsa">GPLSA</string>
+    <string name="header_fp">FP METHOD</string>
+    <string name="header_children">CHILDREN</string>
+    <string name="header_status">STATUS</string>
+    <string name="header_edit"></string>
+
+    <string name="couple_selection">All Eligible Couples</string>
+    <string name="str_search_hint">Search EC Register</string>
+    <string name="label_sorted_by">Sorted By: </string>
+    <string name="label_village">, Village: </string>
+    <string name="ec_register_wife_age">({0})</string>
+
+    <string name="ec_register_male_child">Male\n{0}</string>
+    <string name="ec_register_female_child">Female\n{0}</string>
+    <string name="ec_register_no_fp">No FP</string>
+
+    <string name="status_delivery">Delivery:</string>
+    <string name="str_lmp">LMP:</string>
+    <string name="str_edd">EDD:</string>
+    <string name="str_anc">ANC</string>
+    <string name="str_pnc">PNC</string>
+    <string name="str_fp">FP</string>
+    <string name="str_number_of_strips">No. strips:</string>
+    <string name="str_gravida">G</string>
+    <string name="str_parity">P</string>
+    <string name="str_number_of_living_children">L</string>
+    <string name="str_number_of_still_births">S</string>
+    <string name="str_number_of_abortions">A</string>
+
+    <string name="sort_by_name_label">Name (A to Z)</string>
+    <string name="sort_by_ec_number_label">EC Number</string>
+    <string name="sort_by_sc_label">SC</string>
+    <string name="sort_by_st_label">ST</string>
+    <string name="sort_by_high_priority_label">High Priority (HP)</string>
+    <string name="sort_by_bpl_label">BPL</string>
+
+    <string name="filter_by_all_label">All</string>
+    <string name="filter_by_out_of_area_label">O/A</string>
+    <string name="ec_register_title_in_short">EC: </string>
+
+    <string name="str_register_anc_form">Register ANC</string>
+    <string name="str_register_fp_form">Register FP</string>
+    <string name="str_register_child_form">Register Child</string>
+    <string name="str_edit_ec_form">Edit EC</string>
+    <string name="str_close_ec_form">Close EC</string>
+    <string name="report_month_sample_text">26/03 - 25/04</string>
+    <string name="str_switch_language">Switch Language</string>
+
+    <string name="str_reporting">Reporting</string>
+    <string name="str_videos">Videos</string>
+</resources>
