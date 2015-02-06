@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.contract.SmartRegisterClient;
 import org.ei.drishti.view.viewHolder.ViewStubInflater;
 

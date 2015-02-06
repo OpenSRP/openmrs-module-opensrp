@@ -2,7 +2,7 @@ package org.ei.drishti.view.customControls;
 
 import static java.text.MessageFormat.format;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.contract.SmartRegisterClient;
 import org.ei.drishti.view.viewHolder.ProfilePhotoLoader;
 

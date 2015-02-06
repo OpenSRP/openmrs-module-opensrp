@@ -10,7 +10,7 @@ import static org.ei.drishti.AllConstants.SHORT_DATE_FORMAT;
 
 import java.util.List;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.adapter.SmartRegisterPaginatedAdapter;
 import org.ei.drishti.domain.ReportMonth;
 import org.ei.drishti.provider.SmartRegisterClientsProvider;

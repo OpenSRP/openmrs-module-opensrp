@@ -10,152 +10,104 @@
         <span class="required">*</span>
         <input type="date" name="/crvs_verbal_autopsy/encounter_date" required="required" data-type-xml="date"/>
     </label>
-    <fieldset class="question or-branch pre-init ">
-        <fieldset>
-            <legend>
-                <span lang="" class="question-label active">province</span>
-            </legend>
-            <div class="option-wrapper">
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="kpk" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Khyber Pakhtunkhwah</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="sindh" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Sindh</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="balochistan" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Balochistan</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="punjab" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Punjab</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="gilgit_baltistan" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Gilgit Baltistan</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="kashmir" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Kashmir</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="fata" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">FATA</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/province" data-name="/crvs_verbal_autopsy/province" value="out_of_country" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Out of Country</span>
-                </label>
-            </div>
-        </fieldset>
-    </fieldset>
-    <fieldset class="question or-branch pre-init ">
-        <fieldset>
-            <legend>
-                <span lang="" class="question-label active">district</span>
-            </legend>
-            <div class="option-wrapper">
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/district" data-name="/crvs_verbal_autopsy/district" value="abbottabad" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Abbottabad</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/district" data-name="/crvs_verbal_autopsy/district" value="other" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Other</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/district" data-name="/crvs_verbal_autopsy/district" value="not_applicable" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Not Applicable</span>
-                </label>
-            </div>
-        </fieldset>
-    </fieldset>
-    <fieldset class="question or-branch pre-init ">
-        <fieldset>
-            <legend>
-                <span lang="" class="question-label active">town</span>
-            </legend>
-            <div class="option-wrapper">
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/town" data-name="/crvs_verbal_autopsy/town" value="abbottabad" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Abbottabad</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/town" data-name="/crvs_verbal_autopsy/town" value="havalian" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Havalian</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/town" data-name="/crvs_verbal_autopsy/town" value="other" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Other</span>
-                </label>
-                <label class="">
-                    <input type="radio" name="/crvs_verbal_autopsy/town" data-name="/crvs_verbal_autopsy/town" value="not_applicable" data-relevant="false()" data-type-xml="select1"/>
-                    <span lang="" class="option-label active">Not Applicable</span>
-                </label>
-            </div>
-        </fieldset>
-    </fieldset>
     <label class="note non-select ">
         <span lang="" class="question-label active">Province : 
-            <span class="or-output" data-value=" /crvs_verbal_autopsy/province "></span>, District : 
-            <span class="or-output" data-value=" /crvs_verbal_autopsy/district "></span>, Town : 
-            <span class="or-output" data-value=" /crvs_verbal_autopsy/town "></span>
+            <span class="or-output" data-value=" /crvs_verbal_autopsy/address_encounter_province "></span>, District : 
+            <span class="or-output" data-value=" /crvs_verbal_autopsy/address_encounter_district "></span>, Tehsil : 
+            <span class="or-output" data-value=" /crvs_verbal_autopsy/address_encounter_town "></span>, 
+            <span class="or-output" data-value=" /crvs_verbal_autopsy/uc_name_display "></span>
         </span>
         <input type="text" name="/crvs_verbal_autopsy/location_note" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question or-appearance-minimal ">
-        <span lang="" class="question-label active">UC where VA done</span>
+        <span lang="" class="question-label active">UC/Center where death registered</span>
         <span class="required">*</span>
-        <select name="/crvs_verbal_autopsy/encounter_location" data-name="/crvs_verbal_autopsy/encounter_location" required="required" data-type-xml="select1">
-            <option class="itemset-template" value="" data-items-path="instance('ucs')/root/item[province= /crvs_verbal_autopsy/province  and district= /crvs_verbal_autopsy/district  and town= /crvs_verbal_autopsy/town ]">...</option>
+        <select name="/crvs_verbal_autopsy/address_encounter_center" data-name="/crvs_verbal_autopsy/address_encounter_center" required="required" data-type-xml="select1">
+            <option class="itemset-template" value="" data-items-path="instance('ucs')/root/item[province= /crvs_verbal_autopsy/address_encounter_province  and district= /crvs_verbal_autopsy/address_encounter_district  and town= /crvs_verbal_autopsy/address_encounter_town  and phc= /crvs_verbal_autopsy/phc_identifier ]">...</option>
         </select>
         <span class="or-option-translations" style="display:none;"></span>
         <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
-            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Abbottabad Cantt</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Abbottabad Central</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bagh</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Bagnotar</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Bakot</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Baldhari</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Banda Pir Khan</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Beran Gali</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Berot</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Boi</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Chamad</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Dalola</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Dhamtor</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Jeral</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Jhangi</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Kakul</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Kalabagh Cant</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Kehal</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Kokmung</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Kothiala</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-20">Kuthwal</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-21">Malikpura</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-22">Mirpur</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-23">Nagribala</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-24">Namlimera</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-25">Nathiagali</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-26">Nawansher</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-27">Numbal</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-28">Patta Kalan</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-29">Pawa</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-30">Phalkot</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-31">Pind Kargo Khan</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-32">Pluck</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-33">Salhad</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-34">Sarbana</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-35">Sheikhalbandi</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-36">Sherwan</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-37">Bandi Atai Khan</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-38">Dehwal Manal</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-39">Gari Pulgran</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-40">Gooreni</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-41">Havalian City</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-42">Jhangra</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-43">Langra</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-44">Langrial</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-45">Lora</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-46">Majohan</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-47">Nara</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-48">Nagri Totial</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-49">Phalla</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-50">Seer Gharbi</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-51">Seer Sharqi</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-52">Tajwal</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-53">Women and Children Hospital, Abbottabad</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-54">Ayub Teaching Hospital, Abbottabad</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-55">Other</span>
+            <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-56">Not Applicable</span>
         </span>
     </label>
     <label class="question non-select ">
-        <span lang="" class="or-constraint-msg active">NIC number should be 11 or 13 digits</span>
+        <span lang="" class="or-constraint-msg active">NIC number should be exactly 13 digits long</span>
         <span lang="" class="question-label active">National Identification Number of deceased - NIC</span>
         <span class="required">*</span>
-        <span lang="" class="or-hint active">Digits only; without dashes</span>
-        <input type="number" name="/crvs_verbal_autopsy/nic" required="required" data-constraint=". &gt;= 10000000000 and . &lt;= 9999999999999" data-type-xml="int"/>
+        <span lang="" class="or-hint active">Digits only - without dashes</span>
+        <input type="number" name="/crvs_verbal_autopsy/nic" required="required" data-constraint=". &gt;= 1000000000000 and .&lt;= 9999999999999" data-type-xml="int"/>
     </label>
     <label class="question non-select ">
         <span lang="" class="or-constraint-msg active">NIC number not matches</span>
         <span lang="" class="question-label active">Confirm NIC</span>
         <span class="required">*</span>
+        <span lang="" class="or-hint active">Re-enter NIC for verification</span>
         <input type="number" name="/crvs_verbal_autopsy/nic_confirm" required="required" data-constraint=".=  /crvs_verbal_autopsy/nic " data-type-xml="int"/>
     </label>
     <label class="note non-select ">
         <span lang="" class="question-label active">Information About the Deceased</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_12" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_16" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question non-select ">
         <span lang="" class="question-label active">What was the name of the deceased?</span>
         <span class="required">*</span>
-        <input type="text" name="/crvs_verbal_autopsy/first_name" required="required" data-type-xml="string"/>
+        <input type="text" name="/crvs_verbal_autopsy/given_name" required="required" data-type-xml="string"/>
     </label>
     <fieldset class="question ">
         <fieldset>
@@ -276,7 +228,7 @@
             </span>
         </label>
         <label class="question or-appearance-minimal ">
-            <span lang="" class="question-label active">Town</span>
+            <span lang="" class="question-label active">Tehsil</span>
             <span class="required">*</span>
             <select name="/crvs_verbal_autopsy/address_birthplace/address_birthplace_town" data-name="/crvs_verbal_autopsy/address_birthplace/address_birthplace_town" required="required" data-type-xml="select1">
                 <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_verbal_autopsy/address_birthplace/address_birthplace_province  and district= /crvs_verbal_autopsy/address_birthplace/address_birthplace_district  ) or district='na']">...</option>
@@ -297,26 +249,63 @@
             </select>
             <span class="or-option-translations" style="display:none;"></span>
             <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Abbottabad Cantt</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Abbottabad Central</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bagh</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Bagnotar</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Bakot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Baldhari</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Banda Pir Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Beran Gali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Berot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Boi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Chamad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Dalola</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Dhamtor</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Jeral</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Jhangi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Kakul</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Kalabagh Cant</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Kehal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Kokmung</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Kothiala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-20">Kuthwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-21">Malikpura</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-22">Mirpur</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-23">Nagribala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-24">Namlimera</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-25">Nathiagali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-26">Nawansher</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-27">Numbal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-28">Patta Kalan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-29">Pawa</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-30">Phalkot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-31">Pind Kargo Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-32">Pluck</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-33">Salhad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-34">Sarbana</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-35">Sheikhalbandi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-36">Sherwan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-37">Bandi Atai Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-38">Dehwal Manal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-39">Gari Pulgran</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-40">Gooreni</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-41">Havalian City</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-42">Jhangra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-43">Langra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-44">Langrial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-45">Lora</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-46">Majohan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-47">Nara</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-48">Nagri Totial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-49">Phalla</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-50">Seer Gharbi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-51">Seer Sharqi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-52">Tajwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-53">Women and Children Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-54">Ayub Teaching Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-55">Other</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-56">Not Applicable</span>
             </span>
         </label>
     </section>
@@ -360,7 +349,7 @@
             </span>
         </label>
         <label class="question or-appearance-minimal ">
-            <span lang="" class="question-label active">Town</span>
+            <span lang="" class="question-label active">Tehsil</span>
             <span class="required">*</span>
             <select name="/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_town" data-name="/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_town" required="required" data-type-xml="select1">
                 <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_verbal_autopsy/address_usual_residence/address_usual_residence_province  and district= /crvs_verbal_autopsy/address_usual_residence/address_usual_residence_district  ) or district='na']">...</option>
@@ -381,26 +370,63 @@
             </select>
             <span class="or-option-translations" style="display:none;"></span>
             <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Abbottabad Cantt</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Abbottabad Central</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bagh</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Bagnotar</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Bakot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Baldhari</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Banda Pir Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Beran Gali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Berot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Boi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Chamad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Dalola</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Dhamtor</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Jeral</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Jhangi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Kakul</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Kalabagh Cant</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Kehal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Kokmung</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Kothiala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-20">Kuthwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-21">Malikpura</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-22">Mirpur</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-23">Nagribala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-24">Namlimera</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-25">Nathiagali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-26">Nawansher</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-27">Numbal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-28">Patta Kalan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-29">Pawa</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-30">Phalkot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-31">Pind Kargo Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-32">Pluck</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-33">Salhad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-34">Sarbana</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-35">Sheikhalbandi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-36">Sherwan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-37">Bandi Atai Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-38">Dehwal Manal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-39">Gari Pulgran</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-40">Gooreni</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-41">Havalian City</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-42">Jhangra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-43">Langra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-44">Langrial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-45">Lora</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-46">Majohan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-47">Nara</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-48">Nagri Totial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-49">Phalla</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-50">Seer Gharbi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-51">Seer Sharqi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-52">Tajwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-53">Women and Children Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-54">Ayub Teaching Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-55">Other</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-56">Not Applicable</span>
             </span>
         </label>
     </section>
@@ -441,7 +467,7 @@
             </span>
         </label>
         <label class="question or-appearance-minimal ">
-            <span lang="" class="question-label active">Town</span>
+            <span lang="" class="question-label active">Tehsil</span>
             <select name="/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_town" data-name="/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_town" data-type-xml="select1">
                 <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_verbal_autopsy/address_previous_residence/address_previous_residence_province  and district= /crvs_verbal_autopsy/address_previous_residence/address_previous_residence_district  ) or district='na']">...</option>
             </select>
@@ -460,26 +486,63 @@
             </select>
             <span class="or-option-translations" style="display:none;"></span>
             <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Abbottabad Cantt</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Abbottabad Central</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bagh</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Bagnotar</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Bakot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Baldhari</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Banda Pir Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Beran Gali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Berot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Boi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Chamad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Dalola</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Dhamtor</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Jeral</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Jhangi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Kakul</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Kalabagh Cant</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Kehal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Kokmung</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Kothiala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-20">Kuthwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-21">Malikpura</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-22">Mirpur</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-23">Nagribala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-24">Namlimera</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-25">Nathiagali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-26">Nawansher</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-27">Numbal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-28">Patta Kalan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-29">Pawa</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-30">Phalkot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-31">Pind Kargo Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-32">Pluck</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-33">Salhad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-34">Sarbana</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-35">Sheikhalbandi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-36">Sherwan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-37">Bandi Atai Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-38">Dehwal Manal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-39">Gari Pulgran</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-40">Gooreni</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-41">Havalian City</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-42">Jhangra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-43">Langra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-44">Langrial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-45">Lora</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-46">Majohan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-47">Nara</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-48">Nagri Totial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-49">Phalla</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-50">Seer Gharbi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-51">Seer Sharqi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-52">Tajwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-53">Women and Children Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-54">Ayub Teaching Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-55">Other</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-56">Not Applicable</span>
             </span>
         </label>
     </section>
@@ -523,7 +586,7 @@
             </span>
         </label>
         <label class="question or-appearance-minimal ">
-            <span lang="" class="question-label active">Town</span>
+            <span lang="" class="question-label active">Tehsil</span>
             <span class="required">*</span>
             <select name="/crvs_verbal_autopsy/address_deathplace/address_deathplace_town" data-name="/crvs_verbal_autopsy/address_deathplace/address_deathplace_town" required="required" data-type-xml="select1">
                 <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_verbal_autopsy/address_deathplace/address_deathplace_province  and district= /crvs_verbal_autopsy/address_deathplace/address_deathplace_district  ) or district='na']">...</option>
@@ -544,30 +607,97 @@
             </select>
             <span class="or-option-translations" style="display:none;"></span>
             <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Abbottabad Cantt</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Abbottabad Central</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bagh</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Bagnotar</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Bakot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Baldhari</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Banda Pir Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Beran Gali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Berot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Boi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Chamad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Dalola</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Dhamtor</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Jeral</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Jhangi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Kakul</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Kalabagh Cant</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Kehal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Kokmung</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Kothiala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-20">Kuthwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-21">Malikpura</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-22">Mirpur</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-23">Nagribala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-24">Namlimera</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-25">Nathiagali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-26">Nawansher</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-27">Numbal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-28">Patta Kalan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-29">Pawa</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-30">Phalkot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-31">Pind Kargo Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-32">Pluck</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-33">Salhad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-34">Sarbana</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-35">Sheikhalbandi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-36">Sherwan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-37">Bandi Atai Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-38">Dehwal Manal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-39">Gari Pulgran</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-40">Gooreni</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-41">Havalian City</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-42">Jhangra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-43">Langra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-44">Langrial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-45">Lora</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-46">Majohan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-47">Nara</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-48">Nagri Totial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-49">Phalla</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-50">Seer Gharbi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-51">Seer Sharqi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-52">Tajwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-53">Women and Children Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-54">Ayub Teaching Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-55">Other</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-56">Not Applicable</span>
             </span>
         </label>
     </section>
     <!--end of group -->
+    <fieldset class="question ">
+        <fieldset>
+            <legend>
+                <span lang="" class="question-label active">Place of Death</span>
+                <span class="required">*</span>
+            </legend>
+            <div class="option-wrapper">
+                <label class="">
+                    <input type="radio" name="/crvs_verbal_autopsy/death_place" data-name="/crvs_verbal_autopsy/death_place" value="1589" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Hospital</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_verbal_autopsy/death_place" data-name="/crvs_verbal_autopsy/death_place" value="1588" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Other Health Facility</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_verbal_autopsy/death_place" data-name="/crvs_verbal_autopsy/death_place" value="1536" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Home</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_verbal_autopsy/death_place" data-name="/crvs_verbal_autopsy/death_place" value="5622" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Other</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="/crvs_verbal_autopsy/death_place" data-name="/crvs_verbal_autopsy/death_place" value="1067" required="required" data-type-xml="select1"/>
+                    <span lang="" class="option-label active">Don't Know</span>
+                </label>
+            </div>
+        </fieldset>
+    </fieldset>
     <fieldset class="question or-branch pre-init ">
         <fieldset>
             <legend>
@@ -719,7 +849,7 @@
     </label>
     <label class="note non-select ">
         <span lang="" class="question-label active">Vital Registration and Certification</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_58" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_63" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question non-select ">
         <span lang="" class="question-label active">Death Registration/Certificate Number</span>
@@ -768,7 +898,7 @@
             </span>
         </label>
         <label class="question or-appearance-minimal ">
-            <span lang="" class="question-label active">Town</span>
+            <span lang="" class="question-label active">Tehsil</span>
             <span class="required">*</span>
             <select name="/crvs_verbal_autopsy/address_death_registration/address_death_registration_town" data-name="/crvs_verbal_autopsy/address_death_registration/address_death_registration_town" required="required" data-type-xml="select1">
                 <option class="itemset-template" value="" data-items-path="instance('towns')/root/item[(province= /crvs_verbal_autopsy/address_death_registration/address_death_registration_province  and district= /crvs_verbal_autopsy/address_death_registration/address_death_registration_district  ) or district='na']">...</option>
@@ -789,33 +919,70 @@
             </select>
             <span class="or-option-translations" style="display:none;"></span>
             <span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId">
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Jhangi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Mirpur</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bandi Atai Khan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Dehwal Manal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Gari Pulgran</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Gooreni</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Havalian City</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Jhangra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Langra</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Langrial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Lora</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Majohan</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Nara</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Nagri Totial</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Phalla</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Seer Gharbi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Seer Sharqi</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Tajwal</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Other</span>
-                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Not Applicable</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-0">Abbottabad Cantt</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-1">Abbottabad Central</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-2">Bagh</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-3">Bagnotar</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-4">Bakot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-5">Baldhari</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-6">Banda Pir Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-7">Beran Gali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-8">Berot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-9">Boi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-10">Chamad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-11">Dalola</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-12">Dhamtor</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-13">Jeral</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-14">Jhangi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-15">Kakul</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-16">Kalabagh Cant</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-17">Kehal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-18">Kokmung</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-19">Kothiala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-20">Kuthwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-21">Malikpura</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-22">Mirpur</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-23">Nagribala</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-24">Namlimera</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-25">Nathiagali</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-26">Nawansher</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-27">Numbal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-28">Patta Kalan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-29">Pawa</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-30">Phalkot</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-31">Pind Kargo Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-32">Pluck</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-33">Salhad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-34">Sarbana</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-35">Sheikhalbandi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-36">Sherwan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-37">Bandi Atai Khan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-38">Dehwal Manal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-39">Gari Pulgran</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-40">Gooreni</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-41">Havalian City</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-42">Jhangra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-43">Langra</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-44">Langrial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-45">Lora</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-46">Majohan</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-47">Nara</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-48">Nagri Totial</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-49">Phalla</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-50">Seer Gharbi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-51">Seer Sharqi</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-52">Tajwal</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-53">Women and Children Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-54">Ayub Teaching Hospital, Abbottabad</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-55">Other</span>
+                <span lang="en" class="option-label active" data-itext-id="static_instance-ucs-56">Not Applicable</span>
             </span>
         </label>
     </section>
     <!--end of group -->
     <label class="note non-select ">
         <span lang="" class="question-label active">Respondent Information</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_69" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_74" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question non-select ">
         <span lang="" class="question-label active">Name of respondent</span>
@@ -1797,7 +1964,7 @@
         </h4>
         <label class="note non-select ">
             <span lang="" class="question-label active">Signs and Symptoms Associated with Pregnancy</span>
-            <input type="text" name="/crvs_verbal_autopsy/group_pregnancy/generated_note_name_178" data-type-xml="string" readonly="readonly"/>
+            <input type="text" name="/crvs_verbal_autopsy/group_pregnancy/generated_note_name_183" data-type-xml="string" readonly="readonly"/>
         </label>
         <label class="question or-appearance-minimal ">
             <span lang="" class="question-label active">Was she neither pregnant, nor delivered, within 6 weeks of her death?</span>
@@ -2006,7 +2173,7 @@
             </label>
             <label class="question or-appearance-minimal ">
                 <span lang="" class="question-label active">Did she deliver or try to deliver an abnormally positioned baby?</span>
-                <select name="/crvs_verbal_autopsy/group_pregnancy/group_pregnancy_yes/breech_delivery" data-name="/crvs_verbal_autopsy/group_pregnancy/group_pregnancy_yes/breech_delivery" data-type-xml="select1">
+                <select name="/crvs_verbal_autopsy/group_pregnancy/group_pregnancy_yes/delivery_breech" data-name="/crvs_verbal_autopsy/group_pregnancy/group_pregnancy_yes/delivery_breech" data-type-xml="select1">
                     <option value="">...</option>
                     <option value="1065">Yes</option>
                     <option value="1066">No</option>
@@ -2604,7 +2771,7 @@
     <!--end of group -->
     <label class="note non-select ">
         <span lang="" class="question-label active">History of Injuries/Accidents</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_266" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_271" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question or-appearance-minimal ">
         <span lang="" class="question-label active">Did (s)he suffer from any injury or accident that led to her/his death?</span>
@@ -2932,7 +3099,7 @@
     <!--end of group -->
     <label class="note non-select ">
         <span lang="" class="question-label active">Risk Factors</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_302" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_307" data-type-xml="string" readonly="readonly"/>
     </label>
     <fieldset class="question or-branch pre-init ">
         <fieldset>
@@ -2978,7 +3145,7 @@
     </fieldset>
     <label class="note non-select ">
         <span lang="" class="question-label active">Health Service Utilisation</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_306" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_311" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question or-appearance-minimal ">
         <span lang="" class="question-label active">Was (s)he adequately vaccinated?</span>
@@ -3085,7 +3252,7 @@
     <!--end of group -->
     <label class="note non-select ">
         <span lang="" class="question-label active">Context</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_320" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_325" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question or-appearance-minimal ">
         <span lang="" class="question-label active">In the final days before death, did (s)he travel to a hospital or health facility?</span>
@@ -3189,7 +3356,7 @@
     </label>
     <label class="note non-select ">
         <span lang="" class="question-label active">Open Narrative (Optional)</span>
-        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_332" data-type-xml="string" readonly="readonly"/>
+        <input type="text" name="/crvs_verbal_autopsy/generated_note_name_337" data-type-xml="string" readonly="readonly"/>
     </label>
     <label class="question non-select ">
         <span lang="" class="question-label active">Any comments that may provide additional information.</span>
@@ -3213,6 +3380,15 @@
         </label>
     </fieldset>
     <fieldset id="or-calculated-items" style="display:none;">
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_verbal_autopsy/uc_name_display" data-calculate="if( /crvs_verbal_autopsy/phc_identifier ='uc','',concat('UC: ', /crvs_verbal_autopsy/phc_name ))" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_verbal_autopsy/address_encounter_center_type" data-calculate="if( /crvs_verbal_autopsy/phc_identifier ='uc','uc','hospital')" data-type-xml="string"/>
+        </label>
+        <label class="calculation non-select ">
+            <input type="hidden" name="/crvs_verbal_autopsy/address_encounter_uc" data-calculate="if( /crvs_verbal_autopsy/phc_identifier  != 'uc',  /crvs_verbal_autopsy/phc_name ,  /crvs_verbal_autopsy/address_encounter_center )" data-type-xml="string"/>
+        </label>
         <label class="calculation non-select ">
             <input type="hidden" name="/crvs_verbal_autopsy/agedays" data-calculate=" /crvs_verbal_autopsy/death_date - /crvs_verbal_autopsy/birth_date " data-type-xml="string"/>
         </label>

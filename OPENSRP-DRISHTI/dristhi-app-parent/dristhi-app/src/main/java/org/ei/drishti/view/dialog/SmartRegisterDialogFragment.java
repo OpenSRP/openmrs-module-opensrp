@@ -1,6 +1,6 @@
 package org.ei.drishti.view.dialog;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.activity.SecuredNativeSmartRegisterActivity;
 
 import android.app.DialogFragment;

@@ -2,7 +2,7 @@ package org.ei.drishti.provider;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.contract.SmartRegisterClient;
 import org.ei.drishti.view.contract.SmartRegisterClients;
 import org.ei.drishti.view.controller.ECSmartRegisterController;

@@ -5,7 +5,7 @@ import static org.ei.drishti.view.contract.SmartRegisterClient.EC_NUMBER_COMPARA
 import java.util.Collections;
 
 import org.ei.drishti.Context;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.contract.SmartRegisterClients;
 
 public class ECNumberSort implements SortOption {

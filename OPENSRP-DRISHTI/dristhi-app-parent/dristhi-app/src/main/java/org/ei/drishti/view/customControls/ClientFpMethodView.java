@@ -1,7 +1,7 @@
 package org.ei.drishti.view.customControls;
 
 import org.apache.commons.lang3.StringUtils;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.domain.FPMethod;
 import org.ei.drishti.view.contract.SmartRegisterClient;
 

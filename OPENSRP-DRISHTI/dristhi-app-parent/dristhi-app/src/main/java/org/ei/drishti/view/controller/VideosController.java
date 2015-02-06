@@ -2,7 +2,7 @@ package org.ei.drishti.view.controller;
 
 import java.text.MessageFormat;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.util.Log;
 
 import android.app.AlertDialog;

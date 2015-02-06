@@ -3,7 +3,7 @@ package org.ei.drishti.view;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 
 import android.content.res.Resources;
 

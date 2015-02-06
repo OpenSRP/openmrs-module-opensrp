@@ -12,7 +12,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 import org.ei.drishti.Context;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.domain.LoginResponse;
 import org.ei.drishti.event.Listener;
 import org.ei.drishti.sync.DrishtiSyncScheduler;

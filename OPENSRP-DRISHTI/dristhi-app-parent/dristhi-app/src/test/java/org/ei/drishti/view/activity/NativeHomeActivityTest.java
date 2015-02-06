@@ -2,7 +2,7 @@ package org.ei.drishti.view.activity;
 
 import static org.junit.Assert.assertEquals;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.setup.DrishtiTestRunner;
 import org.ei.drishti.shadows.ShadowContext;
 import org.junit.Before;

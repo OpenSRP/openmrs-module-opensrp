@@ -9,10 +9,10 @@ import static org.ei.drishti.AllConstants.FORM_SUBMISSION_ROUTER;
 import static org.ei.drishti.AllConstants.INSTANCE_ID_PARAM;
 import static org.ei.drishti.AllConstants.REPOSITORY;
 import static org.ei.drishti.AllConstants.ZIGGY_FILE_LOADER;
-import static org.ei.drishti.R.string.form_back_confirm_dialog_message;
-import static org.ei.drishti.R.string.form_back_confirm_dialog_title;
-import static org.ei.drishti.R.string.no_button_label;
-import static org.ei.drishti.R.string.yes_button_label;
+import static org.ei.drishti.crvs.pk.R.string.form_back_confirm_dialog_message;
+import static org.ei.drishti.crvs.pk.R.string.form_back_confirm_dialog_title;
+import static org.ei.drishti.crvs.pk.R.string.no_button_label;
+import static org.ei.drishti.crvs.pk.R.string.yes_button_label;
 import static org.ei.drishti.util.Log.logError;
 
 import java.io.IOException;

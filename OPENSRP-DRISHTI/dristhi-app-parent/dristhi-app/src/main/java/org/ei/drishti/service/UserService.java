@@ -61,6 +61,12 @@ public class UserService {
     public boolean hasARegisteredUser() {
         return !allSharedPreferences.fetchRegisteredANM().equals("");
     }
+    
+    public void crvsLogout(){
+    	logoutSession();
+        allSettings.registerANM("", "");
+        allSettings.savePreviousFetchIndex("0");
+    }
 
     public void logout() {
         logoutSession();

@@ -14,4 +14,8 @@
             android:id="@+id/switchLanguageMenuItem"
             android:title="@string/str_switch_language"
             android:icon="@drawable/ic_menu_edit"/>
+    
+    <item
+            android:id="@+id/logoutMenuItem"
+            android:title="@string/logout_text"/>
 </menu>

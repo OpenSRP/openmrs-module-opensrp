@@ -2,7 +2,7 @@ package org.ei.drishti.view.dialog;
 
 import org.apache.commons.lang3.StringUtils;
 import org.ei.drishti.Context;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.contract.SmartRegisterClient;
 
 public class ECSearchOption implements FilterOption {

@@ -1,6 +1,6 @@
 package org.ei.drishti.view.viewHolder;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.customControls.ClientChildrenView;
 import org.ei.drishti.view.customControls.ClientFpMethodView;
 import org.ei.drishti.view.customControls.ClientGplsaView;

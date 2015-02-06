@@ -5,7 +5,7 @@ import static org.ei.drishti.event.Event.FORM_SUBMITTED;
 import static org.ei.drishti.event.Event.SYNC_COMPLETED;
 import static org.ei.drishti.event.Event.SYNC_STARTED;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.event.Listener;
 import org.ei.drishti.service.PendingFormSubmissionService;
 import org.ei.drishti.view.controller.HomeController;

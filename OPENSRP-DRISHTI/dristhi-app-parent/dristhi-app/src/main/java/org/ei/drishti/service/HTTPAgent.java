@@ -126,7 +126,7 @@ public class HTTPAgent {
     private SocketFactory sslSocketFactoryWithDrishtiCertificate() {
         try {
             KeyStore trustedKeystore = KeyStore.getInstance("BKS");
-            InputStream inputStream = context.getResources().openRawResource(org.ei.drishti.R.raw.drishti_client);
+            InputStream inputStream = context.getResources().openRawResource(org.ei.drishti.crvs.pk.R.raw.dristhi_client);
             try {
                 trustedKeystore.load(inputStream, "phone red pen".toCharArray());
             } finally {

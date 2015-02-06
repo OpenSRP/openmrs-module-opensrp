@@ -10,52 +10,52 @@
                 "shouldLoadValue": true
             },
             {
-                "bind": "/model/instance/crvs_verbal_autopsy/encounter_date",
-                "name": "encounter_date"
+            "bind":"/model/instance/crvs_verbal_autopsy/encounter_date",
+            "name":"encounter_date"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_encounter_province",
+            "name":"address_encounter_province"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_encounter_district",
+            "name":"address_encounter_district"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_encounter_town",
+            "name":"address_encounter_town"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/phc_identifier",
+            "name":"phc_identifier"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/phc_name",
+            "name":"phc_name"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_encounter_center_type",
+            "name":"address_encounter_center_type"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_encounter_center",
+            "name":"address_encounter_center"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_encounter_uc",
+            "name":"address_encounter_uc"
+         },
+            {
+                "bind": "/model/instance/crvs_verbal_autopsy/nic",
+                "name": "nic"
             },
             {
-                "bind": "/model/instance/crvs_verbal_autopsy/province",
-                "name": "province"
+                "bind": "/model/instance/crvs_verbal_autopsy/nic_confirm",
+                "name": "nic_confirm"
             },
             {
-                "bind": "/model/instance/crvs_verbal_autopsy/district",
-                "name": "district"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/town",
-                "name": "town"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/encounter_location",
-                "name": "encounter_location"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/encounter_date",
-                "name": "encounter_date"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/province",
-                "name": "province"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/district",
-                "name": "district"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/town",
-                "name": "town"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/location_note",
-                "name": "location_note"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/encounter_location",
-                "name": "encounter_location"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/first_name",
-                "name": "first_name"
+                "bind": "/model/instance/crvs_verbal_autopsy/given_name",
+                "name": "given_name"
             },
             {
                 "bind": "/model/instance/crvs_verbal_autopsy/gender",
@@ -90,21 +90,93 @@
                 "name": "ethnicity"
             },
             {
-                "bind": "/model/instance/crvs_verbal_autopsy/address_birthplace",
-                "name": "string"
-            },
+            "bind":"/model/instance/crvs_verbal_autopsy/address_birthplace/address_birthplace_street",
+            "name":"address_birthplace_street"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_birthplace/address_birthplace_province",
+            "name":"address_birthplace_province"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_birthplace/address_birthplace_district",
+            "name":"address_birthplace_district"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_birthplace/address_birthplace_town",
+            "name":"address_birthplace_town"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_birthplace/address_birthplace_uc",
+            "name":"address_birthplace_uc"
+         },
             {
-                "bind": "/model/instance/crvs_verbal_autopsy/address_usual_residence",
-                "name": "address_usual_residence"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/address_previous_residence",
-                "name": "address_previous_residence"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/address_deathplace",
-                "name": "address_deathplace"
-            },
+            "bind":"/model/instance/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_street",
+            "name":"address_usual_residence_street"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_province",
+            "name":"address_usual_residence_province"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_district",
+            "name":"address_usual_residence_district"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_town",
+            "name":"address_usual_residence_town"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_usual_residence/address_usual_residence_uc",
+            "name":"address_usual_residence_uc"
+         },
+         
+
+{
+            "bind":"/model/instance/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_street",
+            "name":"address_previous_residence_street"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_province",
+            "name":"address_previous_residence_province"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_district",
+            "name":"address_previous_residence_district"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_town",
+            "name":"address_previous_residence_town"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_previous_residence/address_previous_residence_uc",
+            "name":"address_previous_residence_uc"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_deathplace/address_deathplace_street",
+            "name":"address_deathplace_street"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_deathplace/address_deathplace_province",
+            "name":"address_deathplace_province"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_deathplace/address_deathplace_district",
+            "name":"address_deathplace_district"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_deathplace/address_deathplace_town",
+            "name":"address_deathplace_town"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_deathplace/address_deathplace_uc",
+            "name":"address_deathplace_uc"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/death_place",
+            "name":"death_place"
+         },
             {
                 "bind": "/model/instance/crvs_verbal_autopsy/marital_status",
                 "name": "marital_status"
@@ -146,13 +218,26 @@
                 "name": "death_registration_date"
             },
             {
-                "bind": "/model/instance/crvs_verbal_autopsy/address_death_registration",
-                "name": "address_death_registration"
-            },
-            {
-                "bind": "/model/instance/crvs_verbal_autopsy/nic",
-                "name": "nic"
-            },
+            "bind":"/model/instance/crvs_verbal_autopsy/address_death_registration/address_death_registration_street",
+            "name":"address_death_registration_street"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_death_registration/address_death_registration_province",
+            "name":"address_death_registration_province"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_death_registration/address_death_registration_district",
+            "name":"address_death_registration_district"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_death_registration/address_death_registration_town",
+            "name":"address_death_registration_town"
+         },
+         {
+            "bind":"/model/instance/crvs_verbal_autopsy/address_death_registration/address_death_registration_uc",
+            "name":"address_death_registration_uc"
+         },
+            
             {
                 "bind": "/model/instance/crvs_verbal_autopsy/respondent_name",
                 "name": "respondent_name"

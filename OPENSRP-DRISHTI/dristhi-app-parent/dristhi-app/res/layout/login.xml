@@ -30,7 +30,9 @@
         android:width="260dp"
         android:layout_gravity="center"
         android:textColorHint="#bfbfbf"
-        android:textColor="#666666"/>
+        android:textColor="#666666" 
+        android:textCursorDrawable="@null" 
+        android:cursorVisible="true" />
 
     <EditText
         android:id="@+id/login_passwordText"
@@ -47,7 +49,9 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:textColorHint="#bfbfbf"
-        android:textColor="#666666"/>
+        android:textColor="#666666" 
+        android:textCursorDrawable="@null" 
+        android:cursorVisible="true" />
 
     <TextView
         android:id="@+id/settingstv"

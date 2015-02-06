@@ -14,13 +14,15 @@ import java.util.Map;
 
 import org.ei.drishti.AllConstants;
 import org.ei.drishti.Context;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.event.Listener;
 import org.ei.drishti.view.controller.ANMController;
 import org.ei.drishti.view.controller.FormController;
 import org.ei.drishti.view.controller.NavigationController;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -82,15 +84,18 @@ public abstract class SecuredActivity extends Activity {
                 String newLanguagePreference = context.userService().switchLanguagePreference();
                 Toast.makeText(this, "Language preference set to " + newLanguagePreference + ". Please restart the application.", LENGTH_SHORT).show();
             }
+            case R.id.logoutMenuItem: {
+                Context.getInstance().userService().crvsLogout();
+            }
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    public void logoutUser() {
+    /*public void logoutUser() {
         context.userService().logout();
         startActivity(new Intent(this, LoginActivity.class));
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,8 +122,8 @@ public abstract class SecuredActivity extends Activity {
         Intent intent = new Intent(this, formType);
         intent.putExtra(FORM_NAME_PARAM, formName);
         intent.putExtra(ENTITY_ID_PARAM, entityId);
-        System.out.println("METADATAAAAAAAAAAAAAAAAAAAAAAAAAAA:::::::::"+metaData);
         addFieldOverridesIfExist(intent);
+        System.out.println("METADATAAAAAAAAAAAAAAAAAAAAAAAAAAA:::::::::"+metaData);
         startActivityForResult(intent, FORM_SUCCESSFULLY_SUBMITTED_RESULT_CODE);
     }
 
@@ -146,5 +151,18 @@ public abstract class SecuredActivity extends Activity {
         if (metaDataMap.containsKey(ENTITY_ID) && metaDataMap.containsKey(ALERT_NAME_PARAM)) {
             Context.getInstance().alertService().changeAlertStatusToInProcess(metaDataMap.get(ENTITY_ID), metaDataMap.get(ALERT_NAME_PARAM));
         }
+        
+        new AlertDialog.Builder(this)
+        .setMessage(R.string.form_saved_alert_message)
+        .setTitle(R.string.form_saved_alert_title)
+        .setCancelable(true)
+        .setNeutralButton(android.R.string.ok,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int whichButton) {
+                        dialog.dismiss();
+                    }
+                })
+        .show();
     }
 }

@@ -5,7 +5,7 @@ import static org.ei.drishti.view.contract.SmartRegisterClient.HIGH_PRIORITY_COM
 import java.util.Collections;
 
 import org.ei.drishti.Context;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.view.contract.SmartRegisterClients;
 
 public class HighPrioritySort implements SortOption {

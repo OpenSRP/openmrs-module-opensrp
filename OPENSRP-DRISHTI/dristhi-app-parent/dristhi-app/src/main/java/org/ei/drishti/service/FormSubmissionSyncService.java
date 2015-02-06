@@ -77,7 +77,8 @@ public class FormSubmissionSyncService {
                     baseURL,
                     FORM_SUBMISSIONS_PATH,
                     anmId,
-                    allSettings.fetchPreviousFormSyncIndex(),
+                    /////////////////////////////////////////TODO MARKED AS LATEST TO PULL TO DISABLE SYNC
+                    "2526480798000",//allSettings.fetchPreviousFormSyncIndex(),
                     downloadBatchSize);
             Response<String> response = httpAgent.fetch(uri);
             if (response.isFailure()) {

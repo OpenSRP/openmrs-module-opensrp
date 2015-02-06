@@ -12,7 +12,7 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import org.ei.drishti.AllConstants;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.setup.DrishtiTestRunner;
 import org.ei.drishti.shadows.ShadowContext;
 import org.ei.drishti.view.contract.ECClient;

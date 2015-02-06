@@ -1,6 +1,6 @@
 package org.ei.drishti.view.customControls;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.util.Cache;
 import org.ei.drishti.util.CacheableData;
 

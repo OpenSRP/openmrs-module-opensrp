@@ -7,7 +7,7 @@ import static org.ei.drishti.util.Log.logDebug;
 import static org.ei.drishti.util.Log.logError;
 
 import org.acra.ACRA;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.sync.SyncAfterFetchListener;
 import org.ei.drishti.sync.SyncProgressIndicator;
 import org.ei.drishti.sync.UpdateActionsTask;

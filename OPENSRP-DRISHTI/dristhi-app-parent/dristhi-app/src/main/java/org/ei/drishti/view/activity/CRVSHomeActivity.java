@@ -7,7 +7,7 @@ import static org.ei.drishti.event.Event.SYNC_COMPLETED;
 import static org.ei.drishti.event.Event.SYNC_STARTED;
 
 import org.ei.drishti.Context;
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.event.Listener;
 import org.ei.drishti.service.PendingFormSubmissionService;
 import org.ei.drishti.sync.SyncAfterFetchListener;
@@ -174,11 +174,13 @@ public class CRVSHomeActivity extends SecuredActivity {
         	String locs = context.allSettings().fetchANMLocation();
             ANMLocation anmLocation = new Gson().fromJson(locs, ANMLocation.class);
             
-            String anmloc = "{\"fieldOverrides\":\"{\\\"district\\\":\\\""+anmLocation.getDistrict()+"\\\",\\\"town\\\":\\\""+anmLocation.getSubCenter()+"\\\",\\\"province\\\":\\\"kpk\\\"}\"}";
+//            String anmloc = "{\"fieldOverrides\":\"{\\\"address_encounter_district\\\":\\\""+anmLocation.getDistrict()+"\\\",\\\"address_encounter_town\\\":\\\""+anmLocation.getSubCenter()+"\\\",\\\"address_encounter_province\\\":\\\"kpk\\\"}\"}";
+            String anmloc = "{\"fieldOverrides\":\"{\\\"address_encounter_district\\\":\\\""+anmLocation.getDistrict()+"\\\",\\\"address_encounter_town\\\":\\\""+anmLocation.getSubCenter()+"\\\",\\\"address_encounter_province\\\":\\\"kpk\\\",\\\"phc_identifier\\\":\\\""+anmLocation.getPhcIdentifier()+"\\\",\\\"phc_name\\\":\\\""+anmLocation.getPhcName()+"\\\"}\"}";
 
-           System.out.println("LOCCCCCCCCCCCCCCCCCS:::::::::"+locs);
+            System.out.println("LOCCCCCCCCCCCCCCCCCS:::::::::"+locs);
             switch (view.getId()) {
                 case R.id.btn_crvs_birth_notification:
+                	//anmloc = "{\"fieldOverrides\":\"{\\\"tpo1\\\":\\\"tone\\\",\\\"tpo2\\\":\\\"ttwo\\\",\\\"tpo3\\\":\\\"tthree\\\"}\"}";
                     formController.startFormActivity("crvs_birth_notification", null, anmloc);
                     break;
 

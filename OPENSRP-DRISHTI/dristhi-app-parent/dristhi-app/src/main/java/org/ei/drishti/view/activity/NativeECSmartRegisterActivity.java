@@ -9,7 +9,7 @@ import static org.ei.drishti.AllConstants.FormNames.EC_EDIT;
 import static org.ei.drishti.AllConstants.FormNames.EC_REGISTRATION;
 import static org.ei.drishti.AllConstants.FormNames.FP_CHANGE;
 
-import org.ei.drishti.R;
+import org.ei.drishti.crvs.pk.R;
 import org.ei.drishti.adapter.SmartRegisterPaginatedAdapter;
 import org.ei.drishti.domain.form.FieldOverrides;
 import org.ei.drishti.provider.ECSmartRegisterClientsProvider;

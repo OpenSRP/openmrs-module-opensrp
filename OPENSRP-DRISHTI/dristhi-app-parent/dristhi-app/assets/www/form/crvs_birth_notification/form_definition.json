@@ -7,59 +7,117 @@
       "fields":[
          {
             "name":"id",
-            "shouldLoadValue":true,
-            "custom": {"cust1":"test1"}
+            "shouldLoadValue":true
          },
          {
             "bind":"/model/instance/crvs_birth_notification/encounter_date",
             "name":"encounter_date"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/province",
-            "name":"province"
+            "bind":"/model/instance/crvs_birth_notification/address_encounter_province",
+            "name":"address_encounter_province"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/district",
-            "name":"district"
+            "bind":"/model/instance/crvs_birth_notification/address_encounter_district",
+            "name":"address_encounter_district"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/town",
-            "name":"town"
+            "bind":"/model/instance/crvs_birth_notification/address_encounter_town",
+            "name":"address_encounter_town"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/encounter_location",
-            "name":"encounter_location"
+            "bind":"/model/instance/crvs_birth_notification/phc_identifier",
+            "name":"phc_identifier"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_name",
-            "name":"mother_name",
-            "custom": {"cust2":"test2"}
+            "bind":"/model/instance/crvs_birth_notification/phc_name",
+            "name":"phc_name"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_age",
-            "name":"mother_age",
-            "custom":{"cust3":"test3"}
+            "bind":"/model/instance/crvs_birth_notification/address_encounter_center_type",
+            "name":"address_encounter_center_type"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_marital_status",
-            "name":"mother_marital_status"
+            "bind":"/model/instance/crvs_birth_notification/address_encounter_center",
+            "name":"address_encounter_center"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_education",
-            "name":"mother_education"
+            "bind":"/model/instance/crvs_birth_notification/address_encounter_uc",
+            "name":"address_encounter_uc"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/applicant_name",
+            "name":"applicant_name"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_occupation",
-            "name":"mother_occupation"
+            "bind":"/model/instance/crvs_birth_notification/applicant_nic",
+            "name":"applicant_nic"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_citizenship",
-            "name":"mother_citizenship"
+            "bind":"/model/instance/crvs_birth_notification/applicant_relationship",
+            "name":"applicant_relationship"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/given_name",
+            "name":"given_name"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_address_usual_residence",
-            "name":"mother_address_usual_residence"
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/gender",
+            "name":"gender"
          },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/religion",
+            "name":"religion"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/birth_date",
+            "name":"birth_date"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_usual_residence/address_usual_residence_street",
+            "name":"address_usual_residence_street"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_usual_residence/address_usual_residence_province",
+            "name":"address_usual_residence_province"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_usual_residence/address_usual_residence_district",
+            "name":"address_usual_residence_district"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_usual_residence/address_usual_residence_town",
+            "name":"address_usual_residence_town"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_usual_residence/address_usual_residence_uc",
+            "name":"address_usual_residence_uc"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_birthplace/address_birthplace_street",
+            "name":"address_birthplace_street"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_birthplace/address_birthplace_province",
+            "name":"address_birthplace_province"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_birthplace/address_birthplace_district",
+            "name":"address_birthplace_district"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_birthplace/address_birthplace_town",
+            "name":"address_birthplace_town"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/newborn_info/address_birthplace/address_birthplace_uc",
+            "name":"address_birthplace_uc"
+         },
+         
          {
             "bind":"/model/instance/crvs_birth_notification/parent_info/father_name",
             "name":"father_name"
@@ -89,33 +147,84 @@
             "name":"father_nic"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/parent_info/father_address_usual_residence",
-            "name":"father_address_usual_residence"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/father_address_usual_residence/father_address_usual_residence_street",
+            "name":"father_address_usual_residence_street"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/newborn_info/newborn_name",
-            "name":"given_name"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/father_address_usual_residence/father_address_usual_residence_province",
+            "name":"father_address_usual_residence_province"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/newborn_info/newborn_gender",
-            "name":"gender"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/father_address_usual_residence/father_address_usual_residence_district",
+            "name":"father_address_usual_residence_district"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/newborn_info/birth_date",
-            "name":"birth_date"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/father_address_usual_residence/father_address_usual_residence_town",
+            "name":"father_address_usual_residence_town"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/newborn_info/birth_time",
-            "name":"birth_time"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/father_address_usual_residence/father_address_usual_residence_uc",
+            "name":"father_address_usual_residence_uc"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_name",
+            "name":"mother_name"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/newborn_info/birth_weight",
-            "name":"birth_weight"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_age",
+            "name":"mother_age"
          },
          {
-            "bind":"/model/instance/crvs_birth_notification/newborn_info/birth_place",
-            "name":"birth_place"
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_marital_status",
+            "name":"mother_marital_status"
          },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_education",
+            "name":"mother_education"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_occupation",
+            "name":"mother_occupation"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_citizenship",
+            "name":"mother_citizenship"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_nic",
+            "name":"mother_nic"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_address_usual_residence/mother_address_usual_residence_street",
+            "name":"mother_address_usual_residence_street"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_address_usual_residence/mother_address_usual_residence_province",
+            "name":"mother_address_usual_residence_province"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_address_usual_residence/mother_address_usual_residence_district",
+            "name":"mother_address_usual_residence_district"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_address_usual_residence/mother_address_usual_residence_town",
+            "name":"mother_address_usual_residence_town"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/mother_address_usual_residence/mother_address_usual_residence_uc",
+            "name":"mother_address_usual_residence_uc"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/grandfather_name",
+            "name":"grandfather_name"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/parent_info/grandfather_nic",
+            "name":"grandfather_nic"
+         },
+        
          {
             "bind":"/model/instance/crvs_birth_notification/pregnancy_info/gravida",
             "name":"gravida"
@@ -124,6 +233,20 @@
             "bind":"/model/instance/crvs_birth_notification/pregnancy_info/parity",
             "name":"parity"
          },
+         {
+            "bind":"/model/instance/crvs_birth_notification/pregnancy_info/birth_time",
+            "name":"birth_time"
+         },
+         
+         {
+            "bind":"/model/instance/crvs_birth_notification/pregnancy_info/birth_place",
+            "name":"birth_place"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/pregnancy_info/birth_weight",
+            "name":"birth_weight"
+         },
+         
          {
             "bind":"/model/instance/crvs_birth_notification/pregnancy_info/gestational_age",
             "name":"gestational_age"
@@ -139,6 +262,10 @@
          {
             "bind":"/model/instance/crvs_birth_notification/pregnancy_info/delivery_assistant",
             "name":"delivery_assistant"
+         },
+         {
+            "bind":"/model/instance/crvs_birth_notification/vaccinated_adequately",
+            "name":"vaccinated_adequately"
          },
          {
             "bind":"/model/instance/crvs_birth_notification/start",
