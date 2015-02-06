@@ -4,9 +4,6 @@
 
 package org.openmrs.module.mobile.shared;
 
-import org.openmrs.module.mobile.shared.App;
-import org.openmrs.module.mobile.shared.ErrorType;
-import org.openmrs.module.mobile.shared.InfoType;
 
 /**
  * @author owais.hussain@irdresearch.org

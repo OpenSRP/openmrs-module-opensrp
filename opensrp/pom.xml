@@ -76,7 +76,8 @@
 	</dependencyManagement>
 
 	<properties>
-		<openMRSVersion>1.8.0</openMRSVersion>
+		<openMRSVersion>1.9.7</openMRSVersion>
+		<MODULE_PACKAGE>org.openmrs.module.opensrp</MODULE_PACKAGE>
 	</properties>
 
 	<build>

@@ -7,7 +7,6 @@ package org.openmrs.module.mobile.util;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.openmrs.module.mobile.util.JsonUtil;
 
 /**
  * @author owais.hussain@irdresearch.org
