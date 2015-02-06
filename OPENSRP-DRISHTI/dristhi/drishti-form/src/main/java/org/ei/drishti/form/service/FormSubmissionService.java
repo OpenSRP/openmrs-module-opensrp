@@ -1,6 +1,7 @@
 package org.ei.drishti.form.service;
 
 import ch.lambdaj.function.convert.Converter;
+
 import org.ei.drishti.common.util.DateUtil;
 import org.ei.drishti.dto.form.FormSubmissionDTO;
 import org.ei.drishti.form.domain.FormSubmission;
@@ -64,6 +65,18 @@ public class FormSubmissionService {
     public List<FormSubmission> getSubmissionByFormName(String formName, long serverVersion) {
         return allFormSubmissions.findByFormName(formName, serverVersion);
     }
+    
+    public List<FormSubmission> getSubmissionByOpenmrsNotSynced(String formName) {
+        return allFormSubmissions.findByOpenmrsNotSynced(formName);
+    }
+    
+    public List<FormSubmission> getSubmissionByFormAndNICFieldValue(String formName, String nicFieldName, String nicValue) {
+        return allFormSubmissions.findByNICFields(formName, nicFieldName, nicValue);
+    }
+    
+    public void update(FormSubmission fs) {
+		allFormSubmissions.update(fs);
+	}
     
     private Comparator<FormSubmission> timeStampComparator() {
         return new Comparator<FormSubmission>() {

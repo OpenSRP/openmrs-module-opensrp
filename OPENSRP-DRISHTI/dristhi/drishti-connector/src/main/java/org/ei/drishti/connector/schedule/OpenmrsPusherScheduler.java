@@ -19,7 +19,7 @@ import static org.joda.time.DateTimeConstants.MILLIS_PER_MINUTE;
 @Component
 public class OpenmrsPusherScheduler {
     public static final String SUBJECT = "OPENRMS-PUSHER-SCHEDULE";
-    private static final int START_DELAY = 1;
+    private static final int START_DELAY = 3;
     private final MotechSchedulerService schedulerService;
     private static Logger logger = LoggerFactory.getLogger(OpenmrsPusherScheduler.class.toString());
     private long pollIntervalInHours;

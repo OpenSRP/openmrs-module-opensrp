@@ -67,4 +67,25 @@ public class AllFormSubmissions extends MotechBaseRepository<FormSubmission> {
                 .includeDocs(true), FormSubmission.class);
     }
 
+    @View(name = "formSubmission_by_form_name_not_openmrs_synced", 
+    		map = "function(doc) { if (doc.type === 'FormSubmission') { try{ if(doc.formMetaData.openmrsSynced === true){return;} }catch(e){} emit(doc.formName); }}")
+    public List<FormSubmission> findByOpenmrsNotSynced(String formName) {
+        return db.queryView(createQuery("formSubmission_by_form_name_not_openmrs_synced")
+                .key(formName)
+                .includeDocs(true), FormSubmission.class);
+    }
+    
+    @View(name = "formSubmission_by_form_name_and_nic_fields", 
+    		map = "function(doc) { if (doc.type === 'FormSubmission') { "
+    				+ "    	for(var i=0;i<doc.formInstance.form.fields.length;i++){"
+    				+ "    	if(doc.formInstance.form.fields[i].name.indexOf('nic') !==-1 && doc.formInstance.form.fields[i].value){"
+    				+ "    	emit([doc.formName, doc.formInstance.form.fields[i].name, doc.formInstance.form.fields[i].value]);"
+    				+ "    	}} }}")
+    public List<FormSubmission> findByNICFields(String formName, String nicFieldName, String nicValue) {
+        ComplexKey key = ComplexKey.of(formName, nicFieldName, nicValue);
+    	return db.queryView(createQuery("formSubmission_by_form_name_and_nic_fields")
+                .key(key)
+                .includeDocs(true), FormSubmission.class);
+    }
 }
+

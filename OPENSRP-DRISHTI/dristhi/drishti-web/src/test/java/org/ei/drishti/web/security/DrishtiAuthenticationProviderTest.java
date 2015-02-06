@@ -10,6 +10,7 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import java.util.UUID;
 
 import org.ei.drishti.domain.DrishtiUser;
+import org.ei.drishti.repository.AllDrishtiUsers;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -24,8 +25,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import com.google.gson.Gson;
 
 public class DrishtiAuthenticationProviderTest {
-  //  @Mock
-   // private AllDrishtiUsers allDrishtiUsers;
+    @Mock
+    private AllDrishtiUsers allDrishtiUsers;
     @Mock
     private ShaPasswordEncoder passwordEncoder;
     @Rule
@@ -101,11 +102,41 @@ public class DrishtiAuthenticationProviderTest {
     }
     
     public static void main(String[] args) throws Exception {
-		new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("demo1",	"1");
-		new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhshavalian",	"lhsh123456");
-		new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("epitechavalian",	"epitechh123456");
-		new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("districtkhatibabbottabad",	"distkhatiba123456");
-		new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("imamhavalian",	"imamh123456");
-		new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("ucsecreterymirpur",	"ucsecm123456");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("demo1","demo1321");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("testuser","test321");
+
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhwsadcabt","lhwabt123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhslora","lhsora123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhsjhangi","lhsngi123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhsbaldhari","lhsari123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhshavalianvill","lhsill123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhshavalianurban","lhsban123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhsjhangra","lhsgra123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhstajwal","lhswal123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhsnagribala","lhsala123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhsmajuhan","lhshan123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhslangra","lhsgra123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lhsgariphulgran","lhsran123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phchajiagali","phcali123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phcseergharbi","phcrbi123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phcsumagarakha","phckha123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phcseersharqi","phcrqi123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phcdewal","phcwal123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phchavalian","phcian123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phclora","phcora123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("distkhatibatd","disatd123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("khatibhavalian","khaian123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lgucsechavalian","lguian123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lgucsectajwal","lguwal123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lgucsecabturban","lguban123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lgucsecmirpur","lgupur123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("lgucseclora","lguora123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("patucmirpur1","patur1123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("patucmirpur2","patur2123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("patuchaval1","patal1123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("patuchaval2","patal2123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phcwch","phcwch123");
+    	new DrishtiAuthenticationProviderTest().toGenerateUserPasswordsAndSalt("phcath","phcath123");
+
 	}
 }

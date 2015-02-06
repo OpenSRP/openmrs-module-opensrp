@@ -1,6 +1,8 @@
 package org.ei.drishti.connector.openmrs;
 
-import java.text.SimpleDateFormat;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -9,8 +11,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.management.InvalidAttributeValueException;
+
 import org.ei.drishti.common.util.HttpAgent;
 import org.ei.drishti.common.util.HttpResponse;
+import org.ei.drishti.connector.Emailer;
+import org.ei.drishti.connector.constants.OpenmrsConstants;
 import org.ei.drishti.connector.constants.OpenmrsConstants.FormField;
 import org.ei.drishti.connector.constants.OpenmrsConstants.Location;
 import org.ei.drishti.connector.constants.OpenmrsConstants.PersonField;
@@ -18,36 +24,39 @@ import org.ei.drishti.domain.OLocation;
 import org.ei.drishti.form.domain.FormSubmission;
 import org.ei.drishti.form.service.FormSubmissionService;
 import org.ei.drishti.service.LocationService;
+import org.ihs.emailer.EmailEngine;
+import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.motechproject.scheduler.MotechSchedulerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.ibm.icu.text.SimpleDateFormat;
 import com.mysql.jdbc.StringUtils;
 
 @Service
 public class OpenmrsService {
-    private static final String SUBJECT = "OPENMRS_PUSHER_SCHEDULE";
-	private static Logger logger = LoggerFactory.getLogger(OpenmrsService.class.toString());
+    private static Logger logger = LoggerFactory.getLogger("OMRS_SERVICE");
+
     private static String openmrsOpenmrsUrl;
     private static String openmrsUsername;
     private static String openmrsPassword;
     private static String openmrsOpenSrpConnectorUrl;
     private static String openmrsOpenSrpConnectorContentParam;
     private static String openmrsLocationListUrl;
+    private static final String OPENMRS_SYNC_ATTR_NAME = "openmrsSynced";
+    private static final String OPENMRS_CASEID_ATTR_NAME = "openmrsCaseId";
 
     private HttpAgent httpAgent;
     private FormSubmissionService formSubmissionService;
-    private MotechSchedulerService schedulerService;
     private LocationService locationService;
 
     @Autowired
-    public OpenmrsService(MotechSchedulerService schedulerService, FormSubmissionService formSubmissionService, 
+    public OpenmrsService(FormSubmissionService formSubmissionService, 
     		LocationService locationService,
     		@Value("#{drishti['openmrs.url']}") String openmrsOpenmrsUrl,
     		@Value("#{drishti['openmrs.username']}") String openmrsUsername,
@@ -56,128 +65,470 @@ public class OpenmrsService {
     		@Value("#{drishti['openmrs.opensrp-connector.content-param']}") String openmrsOpenSrpConnectorContentParam, 
     		@Value("#{drishti['openmrs.location-list.url']}") String openmrsLocationListUrl,
     		HttpAgent httpAgent) {
-        this.openmrsOpenmrsUrl = openmrsOpenmrsUrl;
-        this.openmrsUsername = openmrsUsername;
-        this.openmrsPassword = openmrsPassword;
-        this.openmrsOpenSrpConnectorUrl = openmrsOpenSrpConnectorUrl;
-        this.openmrsOpenSrpConnectorContentParam = openmrsOpenSrpConnectorContentParam;
-        this.openmrsLocationListUrl = openmrsLocationListUrl;
+        OpenmrsService.openmrsOpenmrsUrl = openmrsOpenmrsUrl;
+        OpenmrsService.openmrsUsername = openmrsUsername;
+        OpenmrsService.openmrsPassword = openmrsPassword;
+        OpenmrsService.openmrsOpenSrpConnectorUrl = openmrsOpenSrpConnectorUrl;
+        OpenmrsService.openmrsOpenSrpConnectorContentParam = openmrsOpenSrpConnectorContentParam;
+        OpenmrsService.openmrsLocationListUrl = openmrsLocationListUrl;
+        
         this.httpAgent = httpAgent;
         this.formSubmissionService = formSubmissionService;
-        this.schedulerService = schedulerService;
         this.locationService = locationService;
     }
 
-    public String pushDataToOpenmrs(String formToPush, long serverVersion) throws JSONException {
-			List<FormSubmission> fsl = formSubmissionService.getSubmissionByFormName(formToPush, serverVersion);
-			//System.out.println(formToPush+":FORM:"+fsl);
-			JSONObject json = new JSONObject();
-			json.put("app_ver", "1.4.1");
-			json.put("username", "admin");
-			
-			JSONArray mainObj = new JSONArray();
-			
-			for (FormSubmission fs : fsl) {
-				JSONObject pd = new JSONObject();
-
-				JSONObject patient = new JSONObject();
-				patient.put(PersonField.IDENTIFIER.OMR_FIELD(), fs.entityId());//TODO change id type
-				String firstname = fs.getField(PersonField.FIRST_NAME.SRP_FIELD());
-				String lastname = fs.getField(PersonField.LAST_NAME.SRP_FIELD());
-				patient.put(PersonField.FIRST_NAME.OMR_FIELD(), StringUtils.isEmptyOrWhitespaceOnly(firstname)?"NONAME":firstname);
-				patient.put(PersonField.LAST_NAME.OMR_FIELD(), StringUtils.isEmptyOrWhitespaceOnly(lastname)?"NONAME":lastname);
-				patient.put(PersonField.GENDER.OMR_FIELD(), fs.getField(PersonField.GENDER.SRP_FIELD()));
-				patient.put(PersonField.BIRTHDATE.OMR_FIELD(), fs.getField(PersonField.BIRTHDATE.SRP_FIELD()));
-				patient.put(PersonField.BIRTHDATE_IS_APPROX.OMR_FIELD(), false);
-				patient.put(PersonField.DEATHDATE.OMR_FIELD(), fs.getField(PersonField.DEATHDATE.SRP_FIELD()));
-				patient.put(PersonField.DE_USER.OMR_FIELD(), 1);
-				
-				JSONArray en = new JSONArray();
-				
-				if(fs.formName().toLowerCase().contains("birth")){
-					en.put(createBirthEncounterAndObs(fs));
-				}
-				else if(fs.formName().toLowerCase().contains("death")){
-					patient.put(PersonField.LAST_NAME.OMR_FIELD(), fs.getField(PersonField.LAST_NAME.SRP_FIELD()));
-
-					en.put(createDeathEncounterAndObs(fs));
-				}
-				else if(fs.formName().toLowerCase().contains("pregnancy")){
-					patient.put(PersonField.GENDER.OMR_FIELD(), "FEMALE");
-					Calendar bdc = Calendar.getInstance();
-					bdc.add(Calendar.YEAR, -Integer.parseInt(fs.getField(PersonField.AGE.SRP_FIELD())));
-					patient.put(PersonField.BIRTHDATE.OMR_FIELD(), new SimpleDateFormat("yyyy-MM-dd").format(bdc.getTime()));
-
-					en.put(createPregnancyNotificationEncounterAndObs(fs));
-				}
-
-				pd.put("patient", patient);
-
-				pd.put("encounter", en);
-				
-				JSONObject j = new JSONObject();
-				j.put("patientData", pd);
-				
-				mainObj.put(j);
-			}
-						
-			json.put("MainObj",mainObj);
+    public String pushDataToOpenmrs(String formToPush, long serverVersion) throws JSONException, FileNotFoundException, IOException {
+    	List<FormSubmission> fsl = formSubmissionService.getSubmissionByOpenmrsNotSynced(formToPush);
+    	
+		for (FormSubmission formSubmission : fsl) {
+			try{
+			JSONObject json = makeRequestContent(formSubmission);
 			
 			String appUrl = removeEndingSlash(openmrsOpenmrsUrl);
-			String serviceUrl =  removeEndingSlash(openmrsOpenSrpConnectorUrl);
+			String serviceUrl =  removeTrailingSlash(removeEndingSlash(openmrsOpenSrpConnectorUrl));
+			
+			logger.info("URL:"+appUrl+"/"+serviceUrl+"\nJSON::"+json.toString());
+
 			HttpResponse response = httpAgent.post(appUrl+"/"+serviceUrl, "username="+openmrsUsername+"&password="+openmrsPassword, json.toString(), openmrsOpenSrpConnectorContentParam);
-			System.out.println("BODY:::"+response.body());
-			return response.body();
+			
+			logger.info("RESPONSE:"+response.body());
+			
+			JSONObject resp = new JSONObject(response.body());
+			
+			String openmrsCaseId = (String) formSubmission.getFormMetaData().get(OPENMRS_CASEID_ATTR_NAME);
+			
+			if(!response.isSuccess() || resp.has("ERROR")){
+				String subject = "ERROR IN SUBMITTED "+formToPush +" FORM FOR OMRS-ID "+openmrsCaseId;
+				String message = "FORM: "+formToPush+"\nOMRS-ID: "+openmrsCaseId+"\nFS-ID: "+formSubmission.entityId()+"\nOpenMRS RESPONSE:\n"+resp.getString("ERROR_MESSAGE");
+				EmailEngine.getInstance().emailReportToAdminInSeparateThread(subject, message);
+				// if error mark as synced and put error message to avoid spamming with errors
+				formSubmission.getFormMetaData().put(OPENMRS_SYNC_ATTR_NAME, true);
+				formSubmission.getFormMetaData().put("ERROR", resp.getString("ERROR_MESSAGE"));
+				formSubmissionService.update(formSubmission);
+			}
+			else if(resp.has(openmrsCaseId) && resp.getString(openmrsCaseId).equalsIgnoreCase("success")){
+				formSubmission.getFormMetaData().put(OPENMRS_SYNC_ATTR_NAME, true);
+				formSubmissionService.update(formSubmission);
+			}
+			
+			}
+			catch(Exception e){
+				e.printStackTrace();
+				
+				String subject = "ERROR POSTING "+formToPush +" FORM FOR FS-ID "+formSubmission.entityId();
+				String message = "FORM: "+formToPush+"\nFS-ID: "+formSubmission.entityId()+"\nEXCEPTION:\n"+ExceptionUtil.getStackTrace(e);
+
+				EmailEngine.getInstance().emailReportToAdminInSeparateThread(subject, message);
+				logger.error(subject+ "\nEXCEPTION : " + ExceptionUtil.getStackTrace(e));
+			}
+		}
+		return "DONE";
 	}
     
+    public JSONObject makeRequestContent(FormSubmission fs) throws JSONException, InvalidAttributeValueException{
+    	JSONObject json = new JSONObject();
+		
+		JSONArray mainObj = new JSONArray();
+		
+		JSONObject pd = new JSONObject();
+
+		//PATIENT/PERSON INFO
+		JSONObject patient = new JSONObject();
+		patient.put(PersonField.IDENTIFIER.OMR_FIELD(), fs.entityId());
+		patient.put(PersonField.IDENTIFIER_TYPE.OMR_FIELD(), "CRVS_IDENTIFIER");
+		String firstname = PersonField.FIRST_NAME.SRP_VALUE(fs);
+		String lastname = PersonField.LAST_NAME.SRP_VALUE(fs);
+		patient.put(PersonField.FIRST_NAME.OMR_FIELD(), StringUtils.isEmptyOrWhitespaceOnly(firstname)?".":firstname);
+		patient.put(PersonField.LAST_NAME.OMR_FIELD(), StringUtils.isEmptyOrWhitespaceOnly(lastname)?".":lastname);
+		patient.put(PersonField.GENDER.OMR_FIELD(), PersonField.GENDER.SRP_VALUE(fs));
+		
+		if(PersonField.BIRTHDATE.SRP_VALUE(fs) != null){
+			patient.put(PersonField.BIRTHDATE.OMR_FIELD(), PersonField.BIRTHDATE.SRP_VALUE(fs));
+			patient.put(PersonField.BIRTHDATE_IS_APPROX.OMR_FIELD(), false);
+		}
+		else if(PersonField.AGE.SRP_VALUE(fs) != null){
+			Calendar bdc = Calendar.getInstance();
+			bdc.add(Calendar.YEAR, -Integer.parseInt(PersonField.AGE.SRP_VALUE(fs)));
+			patient.put(PersonField.BIRTHDATE.OMR_FIELD(), OpenmrsConstants.OPENMRS_DATE.format(bdc.getTime()));
+		}
+		
+		patient.put(PersonField.DEATHDATE.OMR_FIELD(), PersonField.DEATHDATE.SRP_VALUE(fs));
+		patient.put(FormField.FORM_CREATOR.OMR_FIELD(), fs.anmId());
+		
+		//ENCOUNTER/EVENT/FORM INFO
+		JSONArray en = new JSONArray();
+		
+		if(fs.formName().toLowerCase().contains("pregnancy")){
+			patient.put(PersonField.GENDER.OMR_FIELD(), "FEMALE");
+
+			patient.put(PersonField.IS_NEW_PERSON.OMR_FIELD(), true);
+			fs.getFormMetaData().put(OPENMRS_CASEID_ATTR_NAME, fs.entityId());
+			en.put(createPregnancyNotificationEncounterAndObs(fs));
+		}
+		else if(fs.formName().toLowerCase().contains("birth")){
+			patient.put(PersonField.IS_NEW_PERSON.OMR_FIELD(), true);
+			fs.getFormMetaData().put(OPENMRS_CASEID_ATTR_NAME, fs.entityId());
+			en.put(createBirthEncounterAndObs(fs));
+		}
+		else if(fs.formName().toLowerCase().contains("death")){
+			patient.put(PersonField.IS_NEW_PERSON.OMR_FIELD(), true);
+			fs.getFormMetaData().put(OPENMRS_CASEID_ATTR_NAME, fs.entityId());
+			en.put(createDeathEncounterAndObs(fs));
+		}
+		else if(fs.formName().toLowerCase().contains("autopsy")){
+			if(!Emailer.EMAILER_INSTANTIATED)// TODO hack to instantiate emailengine if not done
+			{
+				Emailer.intantiateEmailer();
+			}
+			// override ID to be same as of person occupying same NIC..... i.e. linking Death and VA form
+			List<FormSubmission> deathfs = formSubmissionService.getSubmissionByFormAndNICFieldValue("crvs_death_notification", FormField.NIC.OSRP_FIELD(), FormField.NIC.SRP_VALUE(fs));
+			if(deathfs.size() == 0){
+				String message = "NO Death Notification Form was found for Verbal Autopsy filled for NIC : "+FormField.NIC.SRP_VALUE(fs) 
+						+ "\n VA - EntityID : "+fs.entityId()
+						+ "\n FormInstance ID : "+FormField.FORM_BACKLOG_ID.SRP_VALUE(fs);
+				EmailEngine.getInstance().emailReportToAdminInSeparateThread("NO DEATH NOTIFICATION FOUND", message);
+				fs.getFormMetaData().put(OPENMRS_SYNC_ATTR_NAME, true);
+				fs.getFormMetaData().put("ERROR", "NO DEATH NOTIFICATION FOUND");
+				formSubmissionService.update(fs);
+				throw new InvalidAttributeValueException(message);
+			}
+			else if(deathfs.size() > 1){
+				String message = "MULTIPLE Death Notification Forms found for Verbal Autopsy filled for NIC : "+FormField.NIC.SRP_VALUE(fs) 
+						+ "\n VA - EntityID : "+fs.entityId()
+						+ "\n FormInstance ID : "+FormField.FORM_BACKLOG_ID.SRP_VALUE(fs)
+						+ ""
+						+ "\n\n Assigned VA-form to first entity with CRVS_ID : "+deathfs.get(0).entityId();
+				EmailEngine.getInstance().emailReportToAdminInSeparateThread("MULTIPLE DEATH NOTIFICATIONS FOUND", message);
+			}
+			
+			if(deathfs.get(0).getFormMetaData().get(OPENMRS_SYNC_ATTR_NAME) == null
+					|| !deathfs.get(0).getFormMetaData().get(OPENMRS_SYNC_ATTR_NAME).toString().equalsIgnoreCase("true")){
+				throw new InvalidAttributeValueException("DEATH Notification Form still not PUSHED to openmrs. Can not continue without before Death Form is pushed");
+			}
+			
+			patient.put(PersonField.IDENTIFIER.OMR_FIELD(), deathfs.get(0).entityId());
+			patient.put(PersonField.IDENTIFIER_TYPE.OMR_FIELD(), "CRVS_IDENTIFIER");
+			patient.put(PersonField.IS_NEW_PERSON.OMR_FIELD(), false);
+			fs.getFormMetaData().put(OPENMRS_CASEID_ATTR_NAME, deathfs.get(0).entityId());
+			en.put(createVerbalAutopsyEncounterAndObs(fs));
+		}
+
+		pd.put("patient", patient);
+
+		pd.put("encounter", en);
+		
+		JSONObject j = new JSONObject();
+		j.put("patientData", pd);
+		
+		mainObj.put(j);
+					
+		json.put("MainObj",mainObj);
+		
+		return json;
+    }
+    
+    /**
+     * Variables Covered in obs filler
+     * <ul><li>PERSON_IDENTIFIER,
+     * <li>PERSON_FULL_NAME,
+     * <li>BIRTHDATE,
+     * <li>DEATHDATE,
+     * <li>GENDER,
+     * <li>AGE,
+     * <li>MARITAL_STATUS,
+     * <li>MARRIAGE_DATE,
+     * <li>ABILITY_READ_WRITE,
+     * <li>CITIZENSHIP,
+     * <li>ECONOMIC_ACTIVITY_STATUS,
+     * <li>EDUCATION,
+     * <li>ETHNICITY,
+     * <li>NIC,
+     * <li>RELIGION,
+     * <li>OCCUPATION</ul>
+     * @param fs - formSubmission to fill data From
+     * @param obarr - jsonArray object to make openmrs acceptable obs list
+     * @param indexObsStart - index / obs number to start from and to return so that calling method can maintain proper obs ids/numbering 
+     * @return obs_id/index to assign to next obs for the encounter object`s obs list
+     * @throws JSONException
+     */
+    private int fillPersonDetailsObs(FormSubmission fs, JSONArray obarr, int indexObsStart) throws JSONException{
+    	//Person details in OBS
+		FormField.PERSON_IDENTIFIER.createConceptObs(obarr, fs, indexObsStart++, null);
+		
+		String firstName = PersonField.FIRST_NAME.SRP_VALUE(fs);
+		String lastName = PersonField.LAST_NAME.SRP_VALUE(fs);
+		if(!StringUtils.isEmptyOrWhitespaceOnly(firstName)){ 
+			if(!StringUtils.isEmptyOrWhitespaceOnly(lastName)){
+				FormField.PERSON_FULL_NAME.createConceptObsWithValue(obarr, firstName + " " + lastName, indexObsStart++, null);
+			}
+			else {
+				FormField.PERSON_FULL_NAME.createConceptObsWithValue(obarr, firstName, indexObsStart++, null);
+			}
+		}
+		
+		FormField.BIRTHDATE.createConceptObs(obarr, fs, indexObsStart++, null);
+		FormField.DEATHDATE.createConceptObs(obarr, fs, indexObsStart++, null);
+		FormField.GENDER.createConceptObs(obarr, fs, indexObsStart++, null);
+		
+		String age = fs.getField(FormField.AGE.OSRP_FIELD());
+		// To make sure that floating point doenot go with age since it throws error.precision exception
+		age = StringUtils.isEmptyOrWhitespaceOnly(age)?null:""+((int)Double.parseDouble(age));
+		FormField.AGE.createConceptObsWithValue(obarr, age, indexObsStart++, null);
+		
+		FormField.MARITAL_STATUS.createConceptObs(obarr, fs, indexObsStart++, null);
+		FormField.MARRIAGE_DATE.createConceptObs(obarr, fs, indexObsStart++, null);
+		FormField.ABILITY_READ_WRITE.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.CITIZENSHIP.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.ECONOMIC_ACTIVITY_STATUS.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.EDUCATION.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.ETHNICITY.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.NIC.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.RELIGION.createConceptObs(obarr, fs, indexObsStart, null);
+		FormField.OCCUPATION.createConceptObs(obarr, fs, indexObsStart, null);
+		
+		return indexObsStart;
+    }
+    
+    public static void main(String[] args) throws ParseException {
+		logger.info("LOGGEDDDDDDDDDDDDDDDDDDDDDDD");
+
+    	SimpleDateFormat sd = new SimpleDateFormat("HH:mm");
+		System.out.println(sd.parse("23:11"));
+    	//String age = "777";
+		//System.out.println((int)Double.parseDouble(age));
+		
+//		System.out.println(OpenmrsConstants.OPENMRS_DATETIME.format(new Date(org.joda.time.DateTime.parse("2015-01-09T11:43:29.000+05:00").getMillis())));
+	}
+    private int fillEncounterAndFormDetailsObs(FormSubmission fs, JSONObject encounter, JSONArray obarr, int indexObsStart) throws JSONException{
+    	//Form details in OBS
+    	encounter.put(FormField.ENCOUNTER_LOCATION.OMR_FIELD(), FormField.ENCOUNTER_LOCATION.SRP_VALUE(fs));
+		encounter.put(FormField.ENCOUNTER_DATE.OMR_FIELD(), FormField.ENCOUNTER_DATE.SRP_VALUE(fs)+" 00:00:00");
+		encounter.put(FormField.FORM_CREATOR.OMR_FIELD(), fs.anmId());
+
+		JSONObject address = FormField.ADDRESS_ENCOUNTER.createParentObs(indexObsStart++);
+		obarr.put(address);
+		
+		FormField.ADDRESS_ENCOUNTER_STREET.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_ENCOUNTER_PROVINCE.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_ENCOUNTER_DISTRICT.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_ENCOUNTER_TOWN.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_ENCOUNTER_UC.createConceptObs(obarr, fs, indexObsStart++, address);
+		
+		FormField.ENCOUNTER_CENTER_TYPE.createConceptObs(obarr, fs, indexObsStart++, null);
+		FormField.ENCOUNTER_CENTER.createConceptObs(obarr, fs, indexObsStart++, null);
+		
+		FormField.FORM_BACKLOG_ID.createConceptObsWithValue(obarr, fs.getId(), indexObsStart++, null);
+		FormField.FORM_DATE.createConceptObs(obarr, fs, indexObsStart++, null);
+		
+		String vfs = OpenmrsConstants.OPENMRS_DATETIME.format(new Date(DateTime.parse(FormField.FORM_START_DATETIME.SRP_VALUE(fs)).getMillis()));
+		FormField.FORM_START_DATETIME.createConceptObsWithValue(obarr, vfs, indexObsStart++, null);
+		
+		String vfe = OpenmrsConstants.OPENMRS_DATETIME.format(new Date(DateTime.parse(FormField.FORM_END_DATETIME.SRP_VALUE(fs)).getMillis()));
+		FormField.FORM_END_DATETIME.createConceptObsWithValue(obarr, vfe, indexObsStart++, null);
+		
+		return indexObsStart;
+    }
+    
+    private int fillAddressUsualResidenceObs(FormSubmission fs, JSONArray obarr, int indexObsStart) throws JSONException{
+		JSONObject address = FormField.ADDRESS_USUAL_RESIDENCE.createParentObs(indexObsStart++);
+		obarr.put(address);
+		
+		FormField.ADDRESS_USUAL_RESIDENCE_STREET.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_USUAL_RESIDENCE_PROVINCE.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_USUAL_RESIDENCE_DISTRICT.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_USUAL_RESIDENCE_TOWN.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_USUAL_RESIDENCE_UC.createConceptObs(obarr, fs, indexObsStart++, address);
+		
+		return indexObsStart;
+    }
+    
+    private int fillAddressPreviousResidenceObs(FormSubmission fs, JSONArray obarr, int indexObsStart) throws JSONException{
+    	JSONObject address = FormField.ADDRESS_PREVIOUS_RESIDENCE.createParentObs(indexObsStart++);
+		obarr.put(address);
+		
+		FormField.ADDRESS_PREVIOUS_RESIDENCE_STREET.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_PREVIOUS_RESIDENCE_PROVINCE.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_PREVIOUS_RESIDENCE_DISTRICT.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_PREVIOUS_RESIDENCE_TOWN.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_PREVIOUS_RESIDENCE_UC.createConceptObs(obarr, fs, indexObsStart++, address);
+		
+		return indexObsStart;
+    }
+    
+    private int fillAddressBirthplaceObs(FormSubmission fs, JSONArray obarr, int indexObsStart) throws JSONException{
+    	JSONObject address = FormField.ADDRESS_BIRTHPLACE.createParentObs(indexObsStart++);
+		obarr.put(address);
+		
+		FormField.ADDRESS_BIRTHPLACE_STREET.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_BIRTHPLACE_PROVINCE.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_BIRTHPLACE_DISTRICT.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_BIRTHPLACE_TOWN.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_BIRTHPLACE_UC.createConceptObs(obarr, fs, indexObsStart++, address);
+		
+		return indexObsStart;
+    }
+    
+    private int fillAddressDeathplaceObs(FormSubmission fs, JSONArray obarr, int indexObsStart) throws JSONException{
+    	JSONObject address = FormField.ADDRESS_DEATHPLACE.createParentObs(indexObsStart++);
+		obarr.put(address);
+		
+		FormField.ADDRESS_DEATHPLACE_STREET.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATHPLACE_PROVINCE.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATHPLACE_DISTRICT.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATHPLACE_TOWN.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATHPLACE_UC.createConceptObs(obarr, fs, indexObsStart++, address);
+		
+		return indexObsStart;
+    }
+    
+    private int fillAddressDeathRegistrationObs(FormSubmission fs, JSONArray obarr, int indexObsStart) throws JSONException{
+    	JSONObject address = FormField.ADDRESS_DEATH_REGISTRATION.createParentObs(indexObsStart++);
+		obarr.put(address);
+		
+		FormField.ADDRESS_DEATH_REGISTRATION_STREET.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATH_REGISTRATION_PROVINCE.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATH_REGISTRATION_DISTRICT.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATH_REGISTRATION_TOWN.createConceptObs(obarr, fs, indexObsStart++, address);
+		FormField.ADDRESS_DEATH_REGISTRATION_UC.createConceptObs(obarr, fs, indexObsStart++, address);
+		
+		return indexObsStart;
+    }
+    
+    private JSONObject createPregnancyNotificationEncounterAndObs(FormSubmission fs) throws JSONException{
+		JSONObject encounter = new JSONObject();
+		encounter.put(FormField.PREGNANCY_NOTIFICATION_FORM_TYPE.OMR_FIELD(), FormField.PREGNANCY_NOTIFICATION_FORM_TYPE.DEFAULT_VALUE());
+		encounter.put(FormField.PREGNANCY_NOTIFICATION_FORM_NAME.OMR_FIELD(), FormField.PREGNANCY_NOTIFICATION_FORM_NAME.DEFAULT_VALUE());
+
+		//Fill other encounter and Form details in the end so that observations`s data comes in the end....
+		int i = 1;
+		JSONArray obarr = new JSONArray();
+
+		// must get i so tht obs ids donot get repeated
+		i = fillPersonDetailsObs(fs, obarr, i);
+		
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressUsualResidenceObs(fs, obarr, i);
+		
+		FormField.NEXT_OF_KIN.createConceptObs(obarr, fs, i++, null);
+		
+		FormField.ANC_REGISTRATION_DATE.createConceptObs(obarr, fs, i++, null);
+		FormField.ANC_REGISTRATION_LOCATION.createConceptObs(obarr, fs, i++, null);
+		FormField.ANC_NUMBER.createConceptObs(obarr, fs, i++, null);
+		FormField.LMP.createConceptObs(obarr, fs, i++, null);
+		FormField.EDD.createConceptObs(obarr, fs, i++, null);
+		FormField.PLANNED_FACILITY_OF_DELIVERY.createConceptObs(obarr, fs, i++, null);
+		FormField.PLANNED_TRANSPORT_FOR_DELIVERY.createConceptObs(obarr, fs, i++, null);
+		FormField.ENROLLED_IN_HIV_CARE.createConceptObs(obarr, fs, i++, null);
+		//FormField.ENROLLED_DATE_HIV_CARE.createConceptObs(obarr, fs, i++, null);
+		//FormField.HIV_CARE_ART_NUMBER.createConceptObs(obarr, fs, i++, null);
+		FormField.GRAVIDA.createConceptObs(obarr, fs, i++, null);
+		FormField.PARITY.createConceptObs(obarr, fs, i++, null);
+		FormField.CHRONIC_MEDICAL_CONDITIONS.createConceptObs(obarr, fs, i++, null);
+		FormField.BLOOD_GROUP.createConceptObs(obarr, fs, i++, null);
+		FormField.HEIGHT.createConceptObs(obarr, fs, i++, null);
+		FormField.BASELINE_WEIGHT.createConceptObs(obarr, fs, i++, null);
+		
+		// must get i so tht obs ids donot get repeated
+		i = fillEncounterAndFormDetailsObs(fs, encounter, obarr, i);
+		
+		encounter.put("obs", obarr);
+		
+		return encounter;
+	}
 	private JSONObject createBirthEncounterAndObs(FormSubmission fs) throws JSONException{
 		JSONObject encounter = new JSONObject();
-		encounter.put(FormField.BIRTH_FORM_ID.OMR_FIELD(), FormField.BIRTH_FORM_ID.DEFAULT_VALUE());
 		encounter.put(FormField.BIRTH_FORM_TYPE.OMR_FIELD(), FormField.BIRTH_FORM_TYPE.DEFAULT_VALUE());
-		encounter.put(FormField.LOCATON.OMR_FIELD(), FormField.LOCATON.DEFAULT_VALUE());
-		encounter.put(FormField.REGISTRATION_DATE.OMR_FIELD(), fs.getField(FormField.REGISTRATION_DATE.SRP_FIELD())+" 00:00:00");
+		encounter.put(FormField.BIRTH_FORM_NAME.OMR_FIELD(), FormField.BIRTH_FORM_NAME.DEFAULT_VALUE());
 
 		int i = 1;
 		JSONArray obarr = new JSONArray();
 		
-		FormField.PERSON_IDENTIFIER.createConceptObs(obarr, fs, i++, null);
-		FormField.PERSON_FULL_NAME.createConceptObsWithValue(obarr, fs.getField(PersonField.FIRST_NAME.SRP_FIELD()), i++, null);
-		FormField.BIRTHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.DEATHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.GENDER.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillPersonDetailsObs(fs, obarr, i);
 		
-		JSONObject mother = FormField.MOTHER.createParentObs(i++);
-		obarr.put(mother);
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressUsualResidenceObs(fs, obarr, i);
+				
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressBirthplaceObs(fs, obarr, i);
+		// applicant data		
+		FormField.INFORMANT_FULL_NAME.createConceptObs(obarr, fs, i++, null);
 
-		FormField.MOTHER_NAME.createConceptObs(obarr, fs, i++, mother);
-		FormField.MOTHER_AGE.createConceptObs(obarr, fs, i++, mother);
-		FormField.MOTHER_MARITAL_STATUS.createConceptObs(obarr, fs, i++, mother);
-		FormField.MOTHER_EDUCATION.createConceptObs(obarr, fs, i++, mother);
-		FormField.MOTHER_OCCUPATION.createConceptObs(obarr, fs, i++, mother);
-		FormField.MOTHER_CITIZENSHIP.createConceptObs(obarr, fs, i++, mother);
-		FormField.MOTHER_ADDRESS_USUAL_RESIDENCE.createConceptObs(obarr, fs, i++, mother);
+		JSONObject applicant = FormField.INFORMANT_INFORMATION.createParentObs(i++);
+		obarr.put(applicant);
 		
+		FormField.INFORMANT_NIC.createConceptObs(obarr, fs, i++, applicant);
+		FormField.INFORMANT_RELATIONSHIP.createConceptObs(obarr, fs, i++, applicant);
+		
+		//father data
+		FormField.FATHER_NAME.createConceptObs(obarr, fs, i++, null);
+
 		JSONObject father = FormField.FATHER.createParentObs(i++);
 		obarr.put(father);
 		
-		FormField.FATHER_NAME.createConceptObs(obarr, fs, i++, father);
 		FormField.FATHER_AGE.createConceptObs(obarr, fs, i++, father);
 		FormField.FATHER_MARITAL_STATUS.createConceptObs(obarr, fs, i++, father);
 		FormField.FATHER_EDUCATION.createConceptObs(obarr, fs, i++, father);
 		FormField.FATHER_OCCUPATION.createConceptObs(obarr, fs, i++, father);
 		FormField.FATHER_CITIZENSHIP.createConceptObs(obarr, fs, i++, father);
 		FormField.FATHER_NIC.createConceptObs(obarr, fs, i++, father);
-		FormField.FATHER_ADDRESS_USUAL_RESIDENCE.createConceptObs(obarr, fs, i++, father);
 
+		JSONObject fatherAddressUsualResidence = FormField.FATHER_ADDRESS_USUAL_RESIDENCE.createParentObs(i++);
+		obarr.put(fatherAddressUsualResidence);
+		
+		FormField.FATHER_ADDRESS_USUAL_RESIDENCE_STREET.createConceptObs(obarr, fs, i++, fatherAddressUsualResidence);
+		FormField.FATHER_ADDRESS_USUAL_RESIDENCE_PROVINCE.createConceptObs(obarr, fs, i++, fatherAddressUsualResidence);
+		FormField.FATHER_ADDRESS_USUAL_RESIDENCE_DISTRICT.createConceptObs(obarr, fs, i++, fatherAddressUsualResidence);
+		FormField.FATHER_ADDRESS_USUAL_RESIDENCE_TOWN.createConceptObs(obarr, fs, i++, fatherAddressUsualResidence);
+		FormField.FATHER_ADDRESS_USUAL_RESIDENCE_UC.createConceptObs(obarr, fs, i++, fatherAddressUsualResidence);
+		
+		//mother data
+		FormField.MOTHER_NAME.createConceptObs(obarr, fs, i++, null);
+
+		JSONObject mother = FormField.MOTHER.createParentObs(i++);
+		obarr.put(mother);
+
+		FormField.MOTHER_AGE.createConceptObs(obarr, fs, i++, mother);
+		FormField.MOTHER_MARITAL_STATUS.createConceptObs(obarr, fs, i++, mother);
+		FormField.MOTHER_EDUCATION.createConceptObs(obarr, fs, i++, mother);
+		FormField.MOTHER_OCCUPATION.createConceptObs(obarr, fs, i++, mother);
+		FormField.MOTHER_CITIZENSHIP.createConceptObs(obarr, fs, i++, mother);
+		FormField.MOTHER_NIC.createConceptObs(obarr, fs, i++, mother);
+		
+		JSONObject motherAddressUsualResidence = FormField.MOTHER_ADDRESS_USUAL_RESIDENCE.createParentObs(i++);
+		obarr.put(motherAddressUsualResidence);
+		
+		FormField.MOTHER_ADDRESS_USUAL_RESIDENCE_STREET.createConceptObs(obarr, fs, i++, motherAddressUsualResidence);
+		FormField.MOTHER_ADDRESS_USUAL_RESIDENCE_PROVINCE.createConceptObs(obarr, fs, i++, motherAddressUsualResidence);
+		FormField.MOTHER_ADDRESS_USUAL_RESIDENCE_DISTRICT.createConceptObs(obarr, fs, i++, motherAddressUsualResidence);
+		FormField.MOTHER_ADDRESS_USUAL_RESIDENCE_TOWN.createConceptObs(obarr, fs, i++, motherAddressUsualResidence);
+		FormField.MOTHER_ADDRESS_USUAL_RESIDENCE_UC.createConceptObs(obarr, fs, i++, motherAddressUsualResidence);
+		
+		//paternal grandfather data
+		FormField.GRANDFATHER_NAME.createConceptObs(obarr, fs, i++, null);
+
+		JSONObject grandpa = FormField.GRANDFATHER.createParentObs(i++);
+		obarr.put(grandpa);
+
+		FormField.GRANDFATHER_NIC.createConceptObs(obarr, fs, i++, grandpa);
+		
+		// pregnancy and delivery info
 		FormField.BIRTH_TIME.createConceptObs(obarr, fs, i++, null);
-		FormField.BIRTH_WEIGHT.createConceptObs(obarr, fs, i++, null);
+		
 		FormField.BIRTH_PLACE.createConceptObs(obarr, fs, i++, null);
+		FormField.BIRTH_WEIGHT.createConceptObs(obarr, fs, i++, null);
 		FormField.GRAVIDA.createConceptObs(obarr, fs, i++, null);
 		FormField.PARITY.createConceptObs(obarr, fs, i++, null);
 		FormField.GESTATIONAL_AGE.createConceptObs(obarr, fs, i++, null);
 		FormField.BIRTH_TYPE.createConceptObs(obarr, fs, i++, null);
 		FormField.DELIVERY_TYPE.createConceptObs(obarr, fs, i++, null);
 		FormField.DELIVERY_ASSISTANT.createConceptObs(obarr, fs, i++, null);
+
+		// other
+		FormField.VACCINATED_ADEQUATELY.createConceptObs(obarr, fs, i++, null);
+
+		// must get i so tht obs ids donot get repeated
+		i = fillEncounterAndFormDetailsObs(fs, encounter, obarr, i);
 
 		encounter.put("obs", obarr);
 		
@@ -186,162 +537,119 @@ public class OpenmrsService {
 	
 	private JSONObject createDeathEncounterAndObs(FormSubmission fs) throws JSONException{
 		JSONObject encounter = new JSONObject();
-		encounter.put(FormField.DEATH_FORM_ID.OMR_FIELD(), FormField.DEATH_FORM_ID.DEFAULT_VALUE());
 		encounter.put(FormField.DEATH_FORM_TYPE.OMR_FIELD(), FormField.DEATH_FORM_TYPE.DEFAULT_VALUE());
-		encounter.put(FormField.LOCATON.OMR_FIELD(), FormField.LOCATON.DEFAULT_VALUE());
-		encounter.put(FormField.REGISTRATION_DATE.OMR_FIELD(), fs.getField(FormField.REGISTRATION_DATE.SRP_FIELD())+" 00:00:00");
+		encounter.put(FormField.DEATH_FORM_NAME.OMR_FIELD(), FormField.DEATH_FORM_NAME.DEFAULT_VALUE());
 
 		int i = 1;
 		JSONArray obarr = new JSONArray();
 
-		FormField.PERSON_IDENTIFIER.createConceptObs(obarr, fs, i++, null);
-		String lname = fs.getField(PersonField.LAST_NAME.SRP_FIELD());
-		FormField.PERSON_FULL_NAME.createConceptObsWithValue(obarr, fs.getField(PersonField.FIRST_NAME.SRP_FIELD())+(StringUtils.isEmptyOrWhitespaceOnly(lname)?"": " "+lname), i++, null);
-		FormField.BIRTHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.DEATHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.GENDER.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillPersonDetailsObs(fs, obarr, i);
+
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressUsualResidenceObs(fs, obarr, i);
 		
-		FormField.MOTHER_NAME.createConceptObs(obarr, fs, i++, null);
+		// applicant data		
+		FormField.INFORMANT_FULL_NAME.createConceptObs(obarr, fs, i++, null);
+
+		JSONObject applicant = FormField.INFORMANT_INFORMATION.createParentObs(i++);
+		obarr.put(applicant);
+		
+		FormField.INFORMANT_NIC.createConceptObs(obarr, fs, i++, applicant);
+		FormField.INFORMANT_RELATIONSHIP.createConceptObs(obarr, fs, i++, applicant);
+		
+		// father info 
 		FormField.FATHER_NAME.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUSAL_RESIDENCE.createConceptObs(obarr, fs, i++, null);
 
-		FormField.CAUSE_OF_DEATH.createConceptObs(obarr, fs, i++, null);
+		JSONObject father = FormField.FATHER.createParentObs(i++);
+		obarr.put(father);
+		
+		FormField.FATHER_NIC.createConceptObs(obarr, fs, i++, father);
+
+		// mother info
+		FormField.MOTHER_NAME.createConceptObs(obarr, fs, i++, null);
+
+		JSONObject mother = FormField.MOTHER.createParentObs(i++);
+		obarr.put(mother);
+
+		FormField.MOTHER_BIRTHDATE.createConceptObs(obarr, fs, i++, mother);
+		
+		//husband info
+		FormField.HUSBAND_NAME.createConceptObs(obarr, fs, i++, null);
+
+		JSONObject husband = FormField.HUSBAND.createParentObs(i++);
+		obarr.put(husband);
+
+		FormField.HUSBAND_NIC.createConceptObs(obarr, fs, i++, husband);
+		
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressDeathplaceObs(fs, obarr, i);
+
 		FormField.DEATH_PLACE.createConceptObs(obarr, fs, i++, null);
+		FormField.HEALTH_CARETAKER_NAME.createConceptObs(obarr, fs, i, null);
+		FormField.BURIAL_DATE.createConceptObs(obarr, fs, i, null);
+		FormField.GRAVEYARD_NAME.createConceptObs(obarr, fs, i, null);
+		FormField.FINAL_ILLNESS_DURATION.createConceptObs(obarr, fs, i, null);
+		FormField.DEATH_TYPE.createConceptObs(obarr, fs, i, null);
+		FormField.DEATH_NATURE.createConceptObs(obarr, fs, i, null);
+		FormField.CAUSE_OF_DEATH.createConceptObs(obarr, fs, i++, null);
 
-		FormField.NIC.createConceptObs(obarr, fs, i++, null);
-		FormField.EDUCATION.createConceptObs(obarr, fs, i++, null);
-		FormField.CITIZENSHIP.createConceptObs(obarr, fs, i++, null);
-		FormField.ETHNICITY.createConceptObs(obarr, fs, i++, null);
-		FormField.MARITAL_STATUS.createConceptObs(obarr, fs, i++, null);
+		// relative info
+		FormField.RELATIVE_NAME.createConceptObs(obarr, fs, i++, null);
+
+		JSONObject relative = FormField.RELATIVE.createParentObs(i++);
+		obarr.put(relative);
+
+		FormField.NIC.createConceptObs(obarr, fs, i++, relative);
+		FormField.RELATIVE_RELATIONSHIP.createConceptObs(obarr, fs, i++, relative);
+
+		FormField.ADDITIONAL_NOTE.createConceptObs(obarr, fs, i++, null);
+		
+		// must get i so tht obs ids donot get repeated
+		i = fillEncounterAndFormDetailsObs(fs, encounter, obarr, i);
 		
 		encounter.put("obs", obarr);
 		
 		return encounter;
 	}
 	
-	private JSONObject createPregnancyNotificationEncounterAndObs(FormSubmission fs) throws JSONException{
-		JSONObject encounter = new JSONObject();
-		encounter.put(FormField.PREGNANCY_NOTIFICATION_FORM_ID.OMR_FIELD(), FormField.PREGNANCY_NOTIFICATION_FORM_ID.DEFAULT_VALUE());
-		encounter.put(FormField.PREGNANCY_NOTIFICATION_FORM_TYPE.OMR_FIELD(), FormField.PREGNANCY_NOTIFICATION_FORM_TYPE.DEFAULT_VALUE());
-		encounter.put(FormField.LOCATON.OMR_FIELD(), FormField.LOCATON.DEFAULT_VALUE());
-		encounter.put(FormField.REGISTRATION_DATE.OMR_FIELD(), fs.getField(FormField.REGISTRATION_DATE.SRP_FIELD())+" 00:00:00");
-
-		int i = 1;
-		JSONArray obarr = new JSONArray();
-
-		FormField.PERSON_IDENTIFIER.createConceptObs(obarr, fs, i++, null);
-		FormField.PERSON_FULL_NAME.createConceptObsWithValue(obarr, fs.getField(PersonField.FIRST_NAME.SRP_FIELD()), i++, null);
-		FormField.BIRTHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.DEATHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.GENDER.createConceptObs(obarr, fs, i++, null);
-		
-		FormField.ANC_REGISTRATION_DATE.createConceptObs(obarr, fs, i++, null);
-		FormField.ANC_REGISTRATION_LOCATION.createConceptObs(obarr, fs, i++, null);
-		
-		FormField.AGE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUSAL_RESIDENCE.createConceptObs(obarr, fs, i++, null);
-		FormField.MARITAL_STATUS.createConceptObs(obarr, fs, i++, null);
-		FormField.NEXT_OF_KIN.createConceptObs(obarr, fs, i++, null);
-		FormField.ANC_NUMBER.createConceptObs(obarr, fs, i++, null);
-		FormField.LMP.createConceptObs(obarr, fs, i++, null);
-		FormField.EDD.createConceptObs(obarr, fs, i++, null);
-		FormField.PLANNED_FACILITY_OF_DELIVERY.createConceptObs(obarr, fs, i++, null);
-		FormField.PLANNED_TRANSPORT_FOR_DELIVERY.createConceptObs(obarr, fs, i++, null);
-		FormField.ENROLLED_IN_HIV_CARE.createConceptObs(obarr, fs, i++, null);
-		FormField.ENROLLED_DATE_HIV_CARE.createConceptObs(obarr, fs, i++, null);
-		FormField.HIV_CARE_ART_NUMBER.createConceptObs(obarr, fs, i++, null);
-		FormField.GRAVIDA.createConceptObs(obarr, fs, i++, null);
-		FormField.PARITY.createConceptObs(obarr, fs, i++, null);
-		FormField.CHRONIC_MEDICAL_CONDITIONS.createConceptObs(obarr, fs, i++, null);
-		FormField.BLOOD_GROUP.createConceptObs(obarr, fs, i++, null);
-		FormField.HEIGHT.createConceptObs(obarr, fs, i++, null);
-		FormField.BASELINE_WEIGHT.createConceptObs(obarr, fs, i++, null);
-		
-		encounter.put("obs", obarr);
-		
-		return encounter;
-	}
 	
 
 	private JSONObject createVerbalAutopsyEncounterAndObs(FormSubmission fs) throws JSONException{
 		JSONObject encounter = new JSONObject();
-		encounter.put(FormField.VERBAL_AUTOPSY_FORM_ID.OMR_FIELD(), FormField.VERBAL_AUTOPSY_FORM_ID.DEFAULT_VALUE());
 		encounter.put(FormField.VERBAL_AUTOPSY_FORM_TYPE.OMR_FIELD(), FormField.VERBAL_AUTOPSY_FORM_TYPE.DEFAULT_VALUE());
-		encounter.put(FormField.LOCATION.OMR_FIELD(), FormField.LOCATION.DEFAULT_VALUE());
-		encounter.put(FormField.REGISTRATION_DATE.OMR_FIELD(), fs.getField(FormField.REGISTRATION_DATE.SRP_FIELD())+" 00:00:00");
-
-		FormField.ENCOUNTER_DATE.createConceptObs(obarr, fs, i++, null);
-		FormField.PROVINCE.createConceptObs(obarr, fs, i++, null);
-		FormField.DISTRICT.createConceptObs(obarr, fs, i++, null);
-		FormField.TOWN.createConceptObs(obarr, fs, i++, null);
-		
-
-		FormField.START.createConceptObs(obarr, fs, i++, null);
-		FormField.END.createConceptObs(obarr, fs, i++, null);
-		FormField.TODAY.createConceptObs(obarr, fs, i++, null);
-		FormField.DEVICEID.createConceptObs(obarr, fs, i++, null);
-		FormField.SUBSCRIBERID.createConceptObs(obarr, fs, i++, null);
+		encounter.put(FormField.VERBAL_AUTOPSY_FORM_NAME.OMR_FIELD(), FormField.VERBAL_AUTOPSY_FORM_NAME.DEFAULT_VALUE());
 		
 		int i = 1;
 		JSONArray obarr = new JSONArray();
 
-		FormField.PERSON_IDENTIFIER.createConceptObs(obarr, fs, i++, null);
-		FormField.PERSON_FULL_NAME.createConceptObsWithValue(obarr, fs.getField(PersonField.FIRST_NAME.SRP_FIELD()), i++, null);
-		FormField.BIRTHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.DEATHDATE.createConceptObs(obarr, fs, i++, null);
-		FormField.GENDER.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillPersonDetailsObs(fs, obarr, i);
 		
-		FormField.NIC.createConceptObs(obarr, fs, i++, null);
-		FormField.AGE.createConceptObs(obarr, fs, i++, null);
-		FormField.MATERNAL_DEATH.createConceptObs(obarr, fs, i++, null);
-		FormField.CITIZENSHIP.createConceptObs(obarr, fs, i++, null);
-		FormField.ETHNICITY.createConceptObs(obarr, fs, i++, null);
 		
-		FormField.ADDRESS_BIRTHPLACE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_BIRTHPLACE_STREET.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_BIRTHPLACE_PROVINCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_BIRTHPLACE_DISTRICT.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_BIRTHPLACE_TOWN.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_BIRTHPLACE_UC.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressBirthplaceObs(fs, obarr, i);
 		
-		FormField.ADDRESS_USUAL_RESIDENCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUAL_RESIDENCE_STREET.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUAL_RESIDENCE_PROVINCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUAL_RESIDENCE_DISTRICT.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUAL_RESIDENCE_TOWN.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_USUAL_RESIDENCE_UC.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressUsualResidenceObs(fs, obarr, i);
 
-		FormField.ADDRESS_PREVIOUS_RESIDENCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_PREVIOUS_RESIDENCE_STREET.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_PREVIOUS_RESIDENCE_PROVINCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_PREVIOUS_RESIDENCE_DISTRICT.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_PREVIOUS_RESIDENCE_TOWN.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_PREVIOUS_RESIDENCE_UC.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressPreviousResidenceObs(fs, obarr, i);
 
-		FormField.ADDRESS_DEATHPLACE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATHPLACE_STREET.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATHPLACE_PROVINCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATHPLACE_DISTRICT.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATHPLACE_TOWN.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATHPLACE_UC.createConceptObs(obarr, fs, i++, null);
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressDeathplaceObs(fs, obarr, i);
 
-		FormField.MARITAL_STATUS.createConceptObs(obarr, fs, i++, null);
 		FormField.MARRIAGE_DATE.createConceptObs(obarr, fs, i++, null);
 		FormField.FATHER_NAME.createConceptObs(obarr, fs, i++, null);
 		FormField.MOTHER_NAME.createConceptObs(obarr, fs, i++, null);
-		FormField.EDUCATION.createConceptObs(obarr, fs, i++, null);
-		FormField.ABILITY_READ_WRITE.createConceptObs(obarr, fs, i++, null);
-		FormField.ECONOMIC_ACTIVITY_STATUS.createConceptObs(obarr, fs, i++, null);
-		FormField.OCCUPATION.createConceptObs(obarr, fs, i++, null);
+
+		FormField.CITIZENSHIP_TYPE.createConceptObs(obarr, fs, i++, null);
 
 		FormField.DEATH_REGISTRATION_NUMBER.createConceptObs(obarr, fs, i++, null);
 		FormField.DEATH_REGISTRATION_DATE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATH_REGISTRATION.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATH_REGISTRATION_STREET.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATH_REGISTRATION_PROVINCE.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATH_REGISTRATION_DISTRICT.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATH_REGISTRATION_TOWN.createConceptObs(obarr, fs, i++, null);
-		FormField.ADDRESS_DEATH_REGISTRATION_UC.createConceptObs(obarr, fs, i++, null);
+
+		// must get i so tht obs ids donot get repeated
+		i = fillAddressDeathRegistrationObs(fs, obarr, i);
 
 		FormField.RESPONDENT_NAME.createConceptObs(obarr, fs, i++, null);
 		FormField.RESPONDENT_RELATIONSHIP.createConceptObs(obarr, fs, i++, null);
@@ -577,6 +885,11 @@ public class OpenmrsService {
 		FormField.FINALILLNESS_TREATMENT_EXCEED_OFFORDABILITY.createConceptObs(obarr, fs, i++, null);
 
 		FormField.ADDITIONAL_NOTE.createConceptObs(obarr, fs, i++, null);
+
+		FormField.VERBAL_AUTOPSY_RECORD_ID.createConceptObsWithValue(obarr, fs.entityId(), i++, null);
+
+		// must get i so tht obs ids donot get repeated
+		i = fillEncounterAndFormDetailsObs(fs, encounter, obarr, i);
 		
 		encounter.put("obs", obarr);
 		
@@ -689,5 +1002,8 @@ public class OpenmrsService {
 
 	private String removeEndingSlash(String str){
 		return str.endsWith("/")?str.substring(0, str.lastIndexOf("/")):str;
+	}
+	private String removeTrailingSlash(String str){
+		return str.startsWith("/")?str.substring(1):str;
 	}
 }

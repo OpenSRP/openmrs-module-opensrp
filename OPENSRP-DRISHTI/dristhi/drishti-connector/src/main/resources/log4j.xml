@@ -10,10 +10,12 @@
     </appender>
 
     <appender name="RollingLog" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="drishti.log"/>
+        <param name="File" value="g:\\drishti.log"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <param name="maxFileSize" value="10MB" />
+	   	<param name="maxBackupIndex" value="5" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{ddMMyyyy HH:mm:ss,SSS} %-5p [%t] [%c{1}] %m%n"/>
+            <param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %m%n"/>
         </layout>
     </appender>
 
@@ -50,6 +52,10 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
 
+    <logger name="OMRS_SERVICE">
+        <appender-ref ref="RollingLog"/>
+    </logger>
+    
     <root>
         <priority value="INFO"/>
         <!--<appender-ref ref="RollingLog"/>-->

@@ -1,5 +1,7 @@
 package org.ei.drishti.connector.constants;
 
+import java.text.SimpleDateFormat;
+
 import org.ei.drishti.form.domain.FormSubmission;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -7,28 +9,20 @@ import org.json.JSONObject;
 
 public class OpenmrsConstants {
 
+	public static SimpleDateFormat OPENMRS_DATE = new SimpleDateFormat("yyyy-MM-dd");
+	public static SimpleDateFormat OPENMRS_DATETIME = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
 	public static enum PersonField{
+		IS_NEW_PERSON("is_new_person", null),
 		IDENTIFIER("identifier", "entityId"),
-		FIRST_NAME("person_name", "given_name"),
+		IDENTIFIER_TYPE("identifier_type", "entityId"),
+		FIRST_NAME("given_name", "given_name"),
 		LAST_NAME("family_name", "family_name"),
 		GENDER("gender", "gender"),
 		AGE("age", "age"),
 		BIRTHDATE("birth_date", "birth_date"),
 		BIRTHDATE_IS_APPROX("birthdate_estimated", null),
 		DEATHDATE("death_date", "death_date"),
-		DE_USER("creator", null),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
-		//DEATHDATE("death_date", "death_date"),
 		;
 		
 		private String openmrsfieldName;
@@ -36,8 +30,11 @@ public class OpenmrsConstants {
 		public String OMR_FIELD(){
 			return openmrsfieldName;
 		}
-		public String SRP_FIELD(){
+		public String OSRP_FIELD(){
 			return drishtifieldName;
+		}
+		public String SRP_VALUE(FormSubmission fs){
+			return fs.getField(drishtifieldName);
 		}
 		private PersonField(String openmrsfieldName, String drishtifieldName) {
 			this.openmrsfieldName = openmrsfieldName;
@@ -47,38 +44,63 @@ public class OpenmrsConstants {
 	}
 	
 	public static enum FormField {
-		BIRTH_FORM_TYPE("encounter_type", null, "BIRTH NOTIFICATION"),
+		BIRTH_FORM_TYPE("encounter_type", null, "BIRTH DETAILED REPORT"),
 		BIRTH_FORM_ID("form_id", null, "4"),
+		BIRTH_FORM_NAME("form_name", null, "birth notification mobile"),
 		
-		DEATH_FORM_TYPE("encounter_type", null, "DEATH NOTIFICATION"),
+		DEATH_FORM_TYPE("encounter_type", null, "DEATH DETAILED REPORT"),
 		DEATH_FORM_ID("form_id", null, "6"),
+		DEATH_FORM_NAME("form_name", null, "death notification mobile"),
 		
-		PREGNANCY_NOTIFICATION_FORM_TYPE("encounter_type", null, "PREGNANCY NOTIFICATION"),
+		PREGNANCY_NOTIFICATION_FORM_TYPE("encounter_type", null, "PREGNANCY DETAILED REPORT"),
 		PREGNANCY_NOTIFICATION_FORM_ID("form_id", null, "35"),
+		PREGNANCY_NOTIFICATION_FORM_NAME("form_name", null, "pregnancy notification mobile"),
 
 		VERBAL_AUTOPSY_FORM_TYPE("encounter_type", null, "VERBAL AUTOPSY"),
 		VERBAL_AUTOPSY_FORM_ID("form_id", null, "3005"),//TODO FORMID
+		VERBAL_AUTOPSY_FORM_NAME("form_name", null, "verbal autopsy mobile"),
 		
-		LOCATION("location_id", "encounter_location", null),
-		REGISTRATION_DATE("encounter_datetime", "today", null),
+		ENCOUNTER_LOCATION("location_id", "address_encounter_center", null),
+		ENCOUNTER_DATE("encounter_datetime", "today", null),
+
+		ENCOUNTER_CENTER_TYPE("164375", "address_encounter_center_type", null),
+		ENCOUNTER_CENTER("164385", "address_encounter_center", null),
+
+		ADDRESS_ENCOUNTER("164372", "address_encounter", null),
+		ADDRESS_ENCOUNTER_STREET("162318", "address_encounter_street", null),
+		ADDRESS_ENCOUNTER_PROVINCE("162307", "address_encounter_province", null),
+		ADDRESS_ENCOUNTER_DISTRICT("162319", "address_encounter_district", null),
+		ADDRESS_ENCOUNTER_TOWN("162308", "address_encounter_town", null),
+		ADDRESS_ENCOUNTER_UC("163036", "address_encounter_uc", null),
+		
+		FORM_CREATOR("creator", "creator", null),
+
+		FORM_START_DATETIME("164373","start",null),
+		FORM_END_DATETIME("164374","end",null),
+		FORM_DATE("163064","today",null),
+		FORM_BACKLOG_ID("163041",null, null),
+		//DEVICEID("","deviceid",null),
+		//SUBSCRIBERID("","subscriberid",null),
+
+		INFORMANT_INFORMATION("163052", "applicant_information", null),
+		INFORMANT_FULL_NAME("163055", "applicant_name", null),
+		INFORMANT_NIC("162849", "applicant_nic", null),
+		INFORMANT_RELATIONSHIP("164384", "applicant_relationship", null),
 
 		ADDITIONAL_NOTE("161011","additional_note",null),
 		
-		START("","start",null),
-		END("","end",null),
-		TODAY("","today",null),
-		DEVICEID("","deviceid",null),
-		SUBSCRIBERID("","subscriberid",null),
-
 		PERSON_FULL_NAME("163061", null, null),
 		PERSON_IDENTIFIER("163121", "entityId", null),
 		GENDER("163122", "gender", null),
 		BIRTHDATE("163123", "birth_date", null),
 		DEATHDATE("1543", "death_date", null),
-		PERSON_AGE("age", "age", null),
+		AGE("160617", "age", null),
 		MARITAL_STATUS("162265", "marital_status", null),
 		MARRIAGE_DATE("162275","marriage_date",null),
 		CITIZENSHIP("162296", "citizenship", null),
+		CITIZENSHIP_TYPE("164404", "citizenship", null),
+		NIC("162849", "nic", null),
+		RELIGION("163043", "religion", null),
 		ETHNICITY("162294", "ethnicity", null),
 		EDUCATION("1712", "education", null),
 		OCCUPATION("162807", "occupation", null),
@@ -123,17 +145,19 @@ public class OpenmrsConstants {
 		DEATH_REGISTRATION_NUMBER("162771","death_registration_number",null),
 		DEATH_REGISTRATION_DATE("162766","death_registration_date",null),
 		
-		NIC("162849", "nic", null),
-
-		AGE("160617", "woman_age", null),
+		GRANDFATHER("160725", null, null),
+		GRANDFATHER_NAME("163024", "grandfather_name", null),
+		GRANDFATHER_NIC("162849", "grandfather_nic", null),
+		
 		MOTHER("970", null, null),
-		FATHER("971", null, null),
 		MOTHER_NAME("163050", "mother_name", null),
 		MOTHER_AGE("162270", "mother_age", null),
+		MOTHER_BIRTHDATE("163123", "mother_birth_date", null),
 		MOTHER_MARITAL_STATUS("162265", "mother_marital_status", null),
 		MOTHER_EDUCATION("1712", "mother_education", null),
 		MOTHER_OCCUPATION("162807", "mother_occupation", null),
 		MOTHER_CITIZENSHIP("162296", "mother_citizenship", null),
+		MOTHER_NIC("162849", "mother_nic", null),
 		MOTHER_ADDRESS_USUAL_RESIDENCE("162312", "mother_address_usual_residence", null),
 		MOTHER_ADDRESS_USUAL_RESIDENCE_STREET("162318", "mother_address_usual_residence_street", null),
 		MOTHER_ADDRESS_USUAL_RESIDENCE_PROVINCE("162307", "mother_address_usual_residence_province", null),
@@ -141,6 +165,7 @@ public class OpenmrsConstants {
 		MOTHER_ADDRESS_USUAL_RESIDENCE_TOWN("162308", "mother_address_usual_residence_town", null),
 		MOTHER_ADDRESS_USUAL_RESIDENCE_UC("163036", "mother_address_usual_residence_uc", null),
 		
+		FATHER("971", null, null),
 		FATHER_NAME("163051", "father_name", null),
 		FATHER_AGE("162270", "father_age", null),
 		FATHER_MARITAL_STATUS("162265", "father_marital_status", null),
@@ -155,6 +180,15 @@ public class OpenmrsConstants {
 		FATHER_ADDRESS_USUAL_RESIDENCE_TOWN("162308", "father_address_usual_residence_town", null),
 		FATHER_ADDRESS_USUAL_RESIDENCE_UC("163036", "father_address_usual_residence_uc", null),
 
+		HUSBAND("164387", null, null),
+		HUSBAND_NAME("164391", "husband_name", null),
+		HUSBAND_NIC("162849", "husband_nic", null),
+		
+		RELATIVE("164398", null, null),
+		RELATIVE_NAME("160750", "relative_name", null),
+		RELATIVE_NIC("162849", "relative_nic", null),
+		RELATIVE_RELATIONSHIP("164390", "relative_relationship", null),
+		
 		BIRTH_PLACE("1572", "birth_place", null),
 		BIRTH_TIME("162279", "birth_time", null),
 		BIRTH_WEIGHT("162206", "birth_weight", null),
@@ -165,9 +199,17 @@ public class OpenmrsConstants {
 		DELIVERY_TYPE("5630", "delivery_type", null),
 		DELIVERY_ASSISTANT("162214", "delivery_assistant", null),
 		
+		HEALTH_CARETAKER_NAME("164403", "health_caretaker_name", null),
+		
 		CAUSE_OF_DEATH("160218", "cause_of_death", null),
 		DEATH_PLACE("1541", "death_place", null),
 
+		BURIAL_DATE("164392", "burial_date", null),
+		GRAVEYARD_NAME("164393", "graveyard_name", null),
+
+		DEATH_TYPE("164395", "death_type", null),
+		DEATH_NATURE("164397", "death_nature", null),
+		
 		ANC_REGISTRATION_DATE("163106", "anc_reg_date", null),
 		ANC_REGISTRATION_LOCATION("163107", "health_facility_name", null),
 		NEXT_OF_KIN("163109", "contact_person", null),
@@ -185,6 +227,7 @@ public class OpenmrsConstants {
 		BASELINE_WEIGHT("160696", "weight_start_pregnancy", null),
 
 		///VERBAL AUTOPSY
+		VERBAL_AUTOPSY_RECORD_ID("1646",null,null),
 		MATERNAL_DEATH("162834","maternal_death",null),
 		
 		RESPONDENT_NAME("162809","respondent_name",null),
@@ -237,7 +280,7 @@ public class OpenmrsConstants {
 		CHESTPAIN("154948","chestpain",null),
 		DIARRHOEA("142412","diarrhoea",null),
 		DIARRHOEA_DURATION("162776","diarrhoea_duration",null),
-		HEMATOCHEZIA ("117671","hematochezia ",null),
+		HEMATOCHEZIA("117671","hematochezia",null),
 		VOMIT("122983","vomit",null),
 		VOMIT_COFFEE_GROUNDS("154068","vomit_coffee_grounds",null),
 		ABDOMINAL_PROBLEM("142135","abdominal_problem",null),
@@ -281,7 +324,7 @@ public class OpenmrsConstants {
 		LUMPS_ARMPIT("155221","lumps_armpit",null),
 		LUMPS_GROIN("139247","lumps_groin",null),
 		LUMPS_BREAST("146931","lumps_breast",null),
-		HEMIPLEGIA ("117655","hemiplegia ",null),
+		HEMIPLEGIA ("117655","hemiplegia",null),
 		DYSPHAGIA("155939","dysphagia",null),
 		DISCOLORATION_EYES("162762","discoloration_eyes",null),
 		DISCOLORATION_HAIR("162814","discoloration_hair",null),
@@ -337,7 +380,7 @@ public class OpenmrsConstants {
 		NUCHAL_CORD("162218","nuchal_cord",null),
 		BABY_MALFORMATION("143849","baby_malformation",null),
 		BABY_BACK_DEFECTED("143767","baby_back_defected",null),
-		MACROCEPHALY ("135427","macrocephaly ",null),
+		MACROCEPHALY ("135427","macrocephaly",null),
 		MICROCEPHALUS("134213","microcephalus",null),
 		BABY_ABNORMAL_GROWTH("162219","baby_abnormal_growth",null),
 		BLUEBABY("147112","bluebaby",null),
@@ -370,8 +413,8 @@ public class OpenmrsConstants {
 		ACCIDENT_COUNTERPART_KNOWN("162237","accident_counterpart_known",null),
 		ACCIDENT_BY_PEDESTRIAN("162238","accident_by_pedestrian",null),
 		ACCIDENT_BY_STATIONARY_OBJECT("162239","accident_by_stationary_object",null),
-		ACCIDENT_BY_CAR("162240 ","accident_by_car",null),
-		ACCIDENT_BY_HEAVY_VEHICLE("162241 ","accident_by_heavy_vehicle",null),
+		ACCIDENT_BY_CAR("162240","accident_by_car",null),
+		ACCIDENT_BY_HEAVY_VEHICLE("162241","accident_by_heavy_vehicle",null),
 		ACCIDENT_BY_BIKE("162845","accident_by_bike",null),
 		ACCIDENT_BY_CYCLE("162242","accident_by_cycle",null),
 		ACCIDENT_BY_OTHER("162846","accident_by_other",null),
@@ -425,8 +468,11 @@ public class OpenmrsConstants {
 		public String OMR_FIELD(){
 			return openmrsfieldName;
 		}
-		public String SRP_FIELD(){
+		public String OSRP_FIELD(){
 			return drishtifieldName;
+		}
+		public String SRP_VALUE(FormSubmission fs){
+			return fs.getField(drishtifieldName);
 		}
 		public Object DEFAULT_VALUE(){
 			return defaultValue;
@@ -437,28 +483,15 @@ public class OpenmrsConstants {
 			this.defaultValue = defaultValue;
 		}
 		
-		public void createConceptObs(JSONArray obsArray, Object value, int obsId, JSONObject parent) throws JSONException {
-			if(value != null){
-				JSONObject obs = new JSONObject();
-				obs.put("obs_data_type", "concept");
-				obs.put("concept_id", this.OMR_FIELD());
-				obs.put("obs_id", obsId);
-				if(parent != null) obs.put("obs_group_id", parent.get("obs_id"));
-				
-				obs.put("value", value);
-				obsArray.put(obs);
-			}
-		}
-		
 		public void createConceptObs(JSONArray obsArray, FormSubmission fs, int obsId, JSONObject parent) throws JSONException {
-			if(fs.getField(this.SRP_FIELD()) != null){
+			if(fs.getField(this.OSRP_FIELD()) != null){
 				JSONObject obs = new JSONObject();
 				obs.put("obs_data_type", "concept");
 				obs.put("concept_id", this.OMR_FIELD());
 				obs.put("obs_id", obsId);
 				if(parent != null) obs.put("obs_group_id", parent.get("obs_id"));
 				
-				obs.put("value", fs.getField(this.SRP_FIELD()));
+				obs.put("value", fs.getField(this.OSRP_FIELD()));
 				obsArray.put(obs);
 			}
 		}
@@ -484,7 +517,6 @@ public class OpenmrsConstants {
 			return obs;
 
 		}
-		
 	}
 	
 	public static enum Location{
