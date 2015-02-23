@@ -78,6 +78,10 @@ public class OpenmrsService {
     }
 
     public String pushDataToOpenmrs(String formToPush, long serverVersion) throws JSONException, FileNotFoundException, IOException {
+    	if(!Emailer.EMAILER_INSTANTIATED)// TODO hack to instantiate emailengine if not done
+		{
+			Emailer.intantiateEmailer();
+		}
     	List<FormSubmission> fsl = formSubmissionService.getSubmissionByOpenmrsNotSynced(formToPush);
     	
 		for (FormSubmission formSubmission : fsl) {
